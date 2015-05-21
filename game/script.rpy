@@ -1,9 +1,10 @@
-﻿#ROOMS - SF-IO - a sf adventure game
+﻿#ROOMS - SF-IO - a sf adventure rpg game
 
-# eg. image eileen happy = "eileen_happy.png"
 image bgcolor = "#112119"
 image black = "#000"
 image white = "#ffffff"
+image green = "#8dd35f"
+
 image positionpic = "pics/position.png"
 image targetpic = "pics/target.png"
 image title = "pics/title.png"
@@ -419,7 +420,7 @@ init:
     
     $ sunrace = 0 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race done.
     
-    $ bardrink = 0
+    $ bardrink = 0 #drink player balance in the colony bar
     
     
     
@@ -448,22 +449,20 @@ label start:
     
     if superdev == True:
         call superdev
+        
+    if superdev == False:
+        jump playername
     
     
     menu:
         "start game":
-            python:
-                playername = renpy.input("Please enter you name:")
-                playername = playername.strip()
-                if not playername:
-                    playername = "Me"
-            
             hide starssmall
             hide starsmid
             hide starsbig
             hide title  
             with Dissolve(1.0)
-            jump prisoncell
+            jump playername
+            
 
         #"get 50 cash":
         #    $ cash += 50
@@ -480,10 +479,24 @@ label start:
             
         
         "exit":
-            return
+           return
+
     
 
-
+label playername:
+    python:
+        playername = renpy.input("Please enter you name:")
+        playername = playername.strip()
+        if not playername:
+            playername = "Me"
+    
+    hide starssmall
+    hide starsmid
+    hide starsbig
+    hide title  
+    with Dissolve(1.0)
+    jump prisoncell
+    
             
         
 #SPACESHIP

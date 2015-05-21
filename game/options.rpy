@@ -13,7 +13,7 @@ init -1 python hide:
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
 
-    config.developer = True
+    config.developer = False
 
     ## These control the width and height of the screen.
 
@@ -71,17 +71,15 @@ init -1 python hide:
         label = "#e5fcc2",
 
         ## The color of a frame containing widgets.
-        frame = "#547980",
+        #frame = "#547980",
+        frame =  "#112119",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#594f4f",
+        #mm_root = "#594f4f",
+        mm_root = "pics/bgmenu.png",
 
-        ## The background of the game menu. This can be a color
-        ## beginning with '#', or an image filename. The latter
-        ## should take up the full height and width of the screen.
-        gm_root = "#594f4f",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -139,10 +137,10 @@ init -1 python hide:
     ## the number is interpreted as a fraction of the size of the
     ## displayable or screen.
 
-    # style.mm_menu_frame.xpos = 0.5
-    # style.mm_menu_frame.xanchor = 0.5
-    # style.mm_menu_frame.ypos = 0.75
-    # style.mm_menu_frame.yanchor = 0.5
+    style.mm_menu_frame.xpos = 795
+    style.mm_menu_frame.xanchor = 1.0
+    style.mm_menu_frame.ypos = 475
+    style.mm_menu_frame.yanchor = 0.5
 
 
     #########################################

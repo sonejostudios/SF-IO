@@ -108,6 +108,11 @@ init -2:
         yminimum 70
         ymaximum 70
 
+    style menu_choice_button2 is button:
+        xminimum 90
+        yminimum 70
+        ymaximum 70
+
 
 ##############################################################################
 # Input
@@ -195,15 +200,19 @@ screen main_menu():
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .98
-        yalign .98
+        #xalign .98
+        #yalign .98
+        xanchor 1.0
+        yanchor 1.0
+        xpos 795
+        ypos 475
 
         has vbox
 
         textbutton _("Start Game") action Start() style "menu_choice_button"
         textbutton _("Load Game") action ShowMenu("load") style "menu_choice_button"
         textbutton _("Preferences") action ShowMenu("preferences") style "menu_choice_button"
-        textbutton _("Help") action Help() style "menu_choice_button"
+        textbutton _("Credits") action [Jump("credits")] style "menu_choice_button"
         textbutton _("Quit") action Quit(confirm=False) style "menu_choice_button"
 
 init -2:
@@ -225,22 +234,28 @@ screen navigation():
     # The background of the game menu.
     window:
         style "gm_root"
+        add "pics/bgmenu2.png" at Position(xpos=0, ypos=0)
 
     # The various buttons.
     frame:
         style_group "gm_nav"
-        xalign .98
-        yalign .98
+        #xalign .98
+        #yalign .98
+        xanchor 1.0
+        yanchor 1.0
+        xpos 795
+        ypos 475
 
         has vbox
 
-        textbutton _("Return") action Return()
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
-        textbutton _("Main Menu") action MainMenu()
-        textbutton _("Help") action Help()
-        textbutton _("Quit") action Quit()
+        textbutton _("Save Game") action ShowMenu("save") style "menu_choice_button"
+        textbutton _("Load Game") action ShowMenu("load") style "menu_choice_button"
+
+        textbutton _("Preferences") action ShowMenu("preferences") style "menu_choice_button"
+        textbutton _("Main Menu") action MainMenu() style "menu_choice_button"
+        #textbutton _("Help") action Help() style "menu_choice_button"
+        textbutton _("Back") action Return() style "menu_choice_button"
+        textbutton _("Quit") action Quit() style "menu_choice_button"
 
 init -2:
 
@@ -264,6 +279,9 @@ screen file_picker():
 
     frame:
         style "file_picker_frame"
+        xfill True
+        yfill True
+        xmaximum 570
 
         has vbox
 
@@ -271,22 +289,24 @@ screen file_picker():
         # page of files.
         hbox:
             style_group "file_picker_nav"
+            xfill True
 
-            textbutton _("Previous"):
-                action FilePagePrevious()
+            #textbutton _("Previous") style "menu_choice_button2":
+                #action FilePagePrevious()
 
-            textbutton _("Auto"):
+            textbutton _("Auto") style "menu_choice_button2":
                 action FilePage("auto")
 
-            textbutton _("Quick"):
+            textbutton _("Quick") style "menu_choice_button2":
                 action FilePage("quick")
 
-            for i in range(1, 9):
-                textbutton str(i):
+
+            for i in range(1, 3):
+                textbutton str(i) style "menu_choice_button2":
                     action FilePage(i)
 
-            textbutton _("Next"):
-                action FilePageNext()
+            #textbutton _("Next") style "menu_choice_button2":
+                #action FilePageNext()
 
         $ columns = 2
         $ rows = 5
@@ -295,13 +315,14 @@ screen file_picker():
         grid columns rows:
             transpose True
             xfill True
+            #yfill True
             style_group "file_picker"
 
             # Display ten file slots, numbered 1 - 10.
             for i in range(1, columns * rows + 1):
 
                 # Each file slot is a button.
-                button:
+                button style "menu_choice_button2":
                     action FileAction(i)
                     xfill True
 
@@ -351,15 +372,23 @@ init -2:
 
 screen preferences():
 
+
     tag menu
+    
+    
 
     # Include the navigation.
     use navigation
-
+    
+    
+    #add "pics/bgmenu.png" at Position(xpos=0, ypos=0)
+   
+        
     # Put the navigation columns in a three-wide grid.
     grid 3 1:
         style_group "prefs"
         xfill True
+        
 
         # The left column.
         vbox:
@@ -368,78 +397,53 @@ screen preferences():
                 has vbox
 
                 label _("Display")
-                textbutton _("Window") action Preference("display", "window")
-                textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                textbutton _("Window") action Preference("display", "window") style "menu_choice_button"
+                textbutton _("Fullscreen") action Preference("display", "fullscreen") style "menu_choice_button"
+
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #label _("Transitions")
+                #textbutton _("All") action Preference("transitions", "all")
+                #textbutton _("None") action Preference("transitions", "none")
+
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #label _("Text Speed")
+                #bar value Preference("text speed")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Transitions")
-                textbutton _("All") action Preference("transitions", "all")
-                textbutton _("None") action Preference("transitions", "none")
-
-            frame:
-                style_group "pref"
-                has vbox
-
-                label _("Text Speed")
-                bar value Preference("text speed")
-
-            frame:
-                style_group "pref"
-                has vbox
-
-                textbutton _("Joystick...") action Preference("joystick")
+                textbutton _("Joystick...") action Preference("joystick") style "menu_choice_button"
+                
+            
+          
 
 
         vbox:
-            frame:
-                style_group "pref"
-                has vbox
-
-                label _("Skip")
-                textbutton _("Seen Messages") action Preference("skip", "seen")
-                textbutton _("All Messages") action Preference("skip", "all")
-
-            frame:
-                style_group "pref"
-                has vbox
-
-                textbutton _("Begin Skipping") action Skip()
-
-            frame:
-                style_group "pref"
-                has vbox
-
-                label _("After Choices")
-                textbutton _("Stop Skipping") action Preference("after choices", "stop")
-                textbutton _("Keep Skipping") action Preference("after choices", "skip")
-
-            frame:
-                style_group "pref"
-                has vbox
-
-                label _("Auto-Forward Time")
-                bar value Preference("auto-forward time")
-
-                if config.has_voice:
-                    textbutton _("Wait for Voice") action Preference("wait for voice", "toggle")
-
-        vbox:
+        
             frame:
                 style_group "pref"
                 has vbox
 
                 label _("Music Volume")
-                bar value Preference("music volume")
-
+                bar value Preference("music volume"):
+                    xpos 0.8
+                    
+            
             frame:
                 style_group "pref"
                 has vbox
 
                 label _("Sound Volume")
-                bar value Preference("sound volume")
+                bar value Preference("sound volume"):
+                    xpos 0.8
+                
 
                 if config.sample_sound:
                     textbutton _("Test"):
@@ -459,6 +463,43 @@ screen preferences():
                         textbutton _("Test"):
                             action Play("voice", config.sample_voice)
                             style "soundtest_button"
+        
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #label _("Skip")
+                #textbutton _("Seen Messages") action Preference("skip", "seen") #style "menu_choice_button"
+                #textbutton _("All Messages") action Preference("skip", "all") #style "menu_choice_button"
+
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #textbutton _("Begin Skipping") action Skip() #style "menu_choice_button"
+
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #label _("After Choices")
+                #textbutton _("Stop Skipping") action Preference("after choices", "stop") #style "menu_choice_button"
+               # textbutton _("Keep Skipping") action Preference("after choices", "skip") #style "menu_choice_button"
+
+            #frame:
+                #style_group "pref"
+                #has vbox
+
+                #label _("Auto-Forward Time")
+                #bar value Preference("auto-forward time")
+
+                #if config.has_voice:
+                    #textbutton _("Wait for Voice") action Preference("wait for voice", "toggle")
+
+        vbox:
+            null
+            
+            
 
 init -2:
     style pref_frame:
@@ -490,17 +531,20 @@ init -2:
 screen yesno_prompt(message, yes_action, no_action):
 
     modal True
+    
+    
 
     window:
         style "gm_root"
+        add "pics/bgmenu2.png" at Position(xpos=0, ypos=0)
 
     frame:
         style_group "yesno"
 
         xfill True
         xmargin .05
-        ypos .1
-        yanchor 0
+        ypos 0.5
+        yanchor 0.5
         ypadding .05
 
         has vbox:
@@ -515,8 +559,8 @@ screen yesno_prompt(message, yes_action, no_action):
             xalign 0.5
             spacing 100
 
-            textbutton _("Yes") action yes_action
-            textbutton _("No") action no_action
+            textbutton _("Yes") action yes_action style "menu_choice_button"
+            textbutton _("No") action no_action style "menu_choice_button"
 
     # Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -544,14 +588,14 @@ screen quick_menu():
         xalign 1.0
         yalign 1.0
 
-        textbutton _("Back") action Rollback()
-        textbutton _("Save") action ShowMenu('save')
-        textbutton _("Q.Save") action QuickSave()
-        textbutton _("Q.Load") action QuickLoad()
-        textbutton _("Skip") action Skip()
-        textbutton _("F.Skip") action Skip(fast=True, confirm=True)
-        textbutton _("Auto") action Preference("auto-forward", "toggle")
-        textbutton _("Prefs") action ShowMenu('preferences')
+        #textbutton _("Back") action Rollback()
+        #textbutton _("Save") action ShowMenu('save')
+        #textbutton _("Q.Save") action QuickSave()
+        #textbutton _("Q.Load") action QuickLoad()
+        #textbutton _("Skip") action Skip()
+        #textbutton _("F.Skip") action Skip(fast=True, confirm=True)
+        #textbutton _("Auto") action Preference("auto-forward", "toggle")
+        #textbutton _("Prefs") action ShowMenu('preferences')
 
 init -2:
     style quick_button:

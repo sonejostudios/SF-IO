@@ -75,6 +75,53 @@
        y1="601.67047"
        x2="1160.8383"
        y2="490.79712" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3474"
+       id="linearGradient5446"
+       gradientUnits="userSpaceOnUse"
+       x1="1159.8101"
+       y1="601.67047"
+       x2="1160.8383"
+       y2="490.79712" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="614.25482"
+       height="397.9935"
+       patternTransform="translate(6114.2573,-405.3634)"
+       id="pattern4184-5">
+      <image
+         width="614.25482"
+         height="397.9935"
+         xlink:href="file:///home/vinz/RenPIGames/Rooms/game/sources/stars1.png"
+         id="image4181-4"
+         x="0"
+         y="0" />
+    </pattern>
+    <pattern
+       patternTransform="matrix(1.3023911,0,0,1.5075622,361.06054,-1192.3892)"
+       id="pattern6951-7"
+       xlink:href="#pattern4905-2"
+       inkscape:collect="always" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern4184-59"
+       id="pattern4905-2"
+       patternTransform="matrix(1.3023911,0,0,1.5075622,5905.0097,-7.3699268)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="614.25482"
+       height="397.9935"
+       patternTransform="translate(6114.2573,-405.3634)"
+       id="pattern4184-59">
+      <image
+         width="614.25482"
+         height="397.9935"
+         xlink:href="file:///home/vinz/RenPIGames/Rooms/game/sources/stars1.png"
+         id="image4181-2"
+         x="0"
+         y="0" />
+    </pattern>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -83,9 +130,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.3078788"
-     inkscape:cx="150.48475"
-     inkscape:cy="751.63377"
+     inkscape:zoom="0.6157576"
+     inkscape:cx="-724.45563"
+     inkscape:cy="170.38341"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -155,7 +202,7 @@
        id="guide3515" />
     <sodipodi:guide
        orientation="0,1"
-       position="3848,210"
+       position="-1187.3965,-179.14299"
        id="guide3544" />
     <sodipodi:guide
        orientation="0,1"
@@ -15564,16 +15611,37 @@
          x="7171.4316"
          y="-8062.2134"
          style="font-size:51.24523163px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:50%;writing-mode:lr-tb;text-anchor:middle;font-family:Game Over;-inkscape-font-specification:Game Over">COMPUTERS</tspan></text>
+    <rect
+       style="fill:url(#pattern6951-7);stroke:none"
+       width="800"
+       height="600"
+       x="361.06067"
+       y="-1192.3892"
+       id="rect4187-7"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/cockpit.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="scale(-1,-1)" />
+    <rect
+       style="opacity:0.34955755;fill:#112119;fill-opacity:1;stroke:none"
+       id="rect5409"
+       width="800"
+       height="480"
+       x="-1161.0607"
+       y="592.38922"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/bgmenu.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="arc"
-       style="fill:#112119;fill-opacity:1;stroke:none"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-opacity:1"
        id="path5524"
        sodipodi:cx="-175.39369"
        sodipodi:cy="498.57285"
        sodipodi:rx="43.848423"
        sodipodi:ry="43.848423"
        d="m -131.54527,498.57285 a 43.848423,43.848423 0 1 1 -87.69685,0 43.848423,43.848423 0 1 1 87.69685,0 z"
-       transform="matrix(1.7375033,0.17595995,-0.17595995,1.7375033,124.92621,-125.30518)"
+       transform="matrix(1.7375033,0.17595995,-0.17595995,1.7375033,-368.5847,-3.02048)"
        inkscape:export-filename="/home/vinz/RenPIGames/Rooms/android-icon2.png"
        inkscape:export-xdpi="150.42999"
        inkscape:export-ydpi="150.42999" />
@@ -15582,7 +15650,7 @@
        inkscape:export-xdpi="150.42999"
        inkscape:export-filename="/home/vinz/RenPIGames/Rooms/android-icon2.png"
        id="g5516"
-       transform="matrix(0.69162554,-0.72225628,0.72225628,0.69162554,-880.95619,526.49297)">
+       transform="matrix(0.69162554,-0.72225628,0.72225628,0.69162554,-1374.4671,648.7777)">
       <path
          inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
          inkscape:export-ydpi="90"
@@ -15624,20 +15692,82 @@
          inkscape:export-ydpi="90" />
     </g>
     <text
-       transform="scale(0.97257305,1.0282004)"
-       sodipodi:linespacing="50%"
-       id="text4675-2"
-       y="801.48962"
-       x="-377.58524"
-       style="font-size:11.60974026px;font-style:normal;font-weight:normal;line-height:50%;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"
-       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/android-icon2.png"
-       inkscape:export-xdpi="150.42999"
-       inkscape:export-ydpi="150.42999"><tspan
-         id="tspan4693-2"
-         style="font-size:51.24523163px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
-         y="801.48962"
-         x="-377.58524"
-         sodipodi:role="line">LOADING UNIVERSE...</tspan></text>
+       style="font-size:18.41110039px;font-style:normal;font-weight:normal;line-height:50%;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1164.5905"
+       y="623.71436"
+       id="text4687-7"
+       sodipodi:linespacing="50%"
+       transform="scale(0.97257305,1.0282004)"><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="623.71436"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7078">SF-IO</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="649.33435"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7076" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="674.95435"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7088">AN </tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="700.57434"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7082">OLD-SCOOL</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="726.19434"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7092">SCIENCE-FICTION</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="751.81433"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7094">ADVENTURE</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="777.43439"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7084">RPG</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="803.05438"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7086">GAME</tspan><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="828.67438"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7036" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="854.29437"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7038" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="879.91437"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7032" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="905.53436"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7028" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="931.15436"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7020" /><tspan
+         sodipodi:role="line"
+         x="-1164.5905"
+         y="956.77435"
+         style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
+         id="tspan7018" /></text>
   </g>
 </svg>
