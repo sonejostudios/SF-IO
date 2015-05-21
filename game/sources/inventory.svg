@@ -21,6 +21,11 @@
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern6951-7"
+       id="pattern7102"
+       patternTransform="matrix(1.3023911,0,0,1.5075622,387.39637,-1831.5052)" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient3474">
@@ -130,9 +135,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6157576"
-     inkscape:cx="-724.45563"
-     inkscape:cy="170.38341"
+     inkscape:zoom="0.3078788"
+     inkscape:cx="-574.74926"
+     inkscape:cy="337.79156"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -15769,5 +15774,26 @@
          y="956.77435"
          style="font-size:51.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
          id="tspan7018" /></text>
+    <rect
+       transform="scale(-1,-1)"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/cockpit.png"
+       id="rect7098"
+       y="-1831.5051"
+       x="387.39651"
+       height="600"
+       width="800"
+       style="fill:url(#pattern7102);stroke:none" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/bgmenu2.png"
+       y="1231.5052"
+       x="-1187.3965"
+       height="480"
+       width="800"
+       id="rect7100"
+       style="opacity:0.34955755;fill:#112119;fill-opacity:1;stroke:none" />
   </g>
 </svg>

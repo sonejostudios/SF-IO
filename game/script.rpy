@@ -574,7 +574,7 @@ label spaceship:
         
     if barmanquest == 0:
         m "Maybe I should go to Planet XY now..."
-        m "Oh nice, the spaceship destination is already set to Planey XY!"
+        m "Oh nice, the spaceship destination is already set to Planet XY!"
         m "I just need to go to the Cockpit and start travelling to XY."
         m "Let's go!"
     
