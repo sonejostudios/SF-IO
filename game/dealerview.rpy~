@@ -1,0 +1,91 @@
+#dealerview
+label dealerview:
+    if spaceshipdir == 1:
+        show ship spaceship2u as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.3
+            ypos 1.5
+            easein 4 ypos 0.5
+
+
+    if spaceshipdir == 2:
+        show ship spaceship2 as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos -0.5
+            ypos 0.2
+            easein 4 xpos 0.5
+
+        
+    if spaceshipdir == 3:
+        show ship spaceship2d as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.3
+            ypos -0.5
+            easein 4 ypos 0.5
+
+        
+    if spaceshipdir == 4:
+        show ship spaceship2l as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 1.5
+            ypos 0.2
+            easein 4 xpos 0.5
+
+    pause 4    
+    d "Are you sure you want to deal with me?"
+    menu:
+        "yes!":
+            $ spaceshippos = 0
+            jump start
+        "no, thanks":
+            $ coox = 280
+            $ cooy = 120
+            $ spaceshippos = 0
+            pass   
+
+    
+    if spaceshipdir == 1:
+        show ship spaceship2u as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.3
+            ypos 0.5
+            ease 4 ypos -1.5
+
+
+    if spaceshipdir == 2:
+        show ship spaceship2 as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.2
+            ease 4 xpos 1.5
+
+
+        
+    if spaceshipdir == 3:
+        show ship spaceship2d as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.3
+            ypos 0.5
+            ease 4 ypos 1.5
+
+
+        
+    if spaceshipdir == 4:
+        show ship spaceship2l as dealership:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.5
+            ypos 0.2
+            ease 4 xpos -0.5
+    pause 4
+    hide ship
+    hide dealership
+    return
+
