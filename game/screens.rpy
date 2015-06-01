@@ -585,7 +585,7 @@ screen quick_menu():
     hbox:
         style_group "quick"
 
-        xalign 1.0
+        xalign 0.0
         yalign 1.0
 
         textbutton _("Back") action Rollback()

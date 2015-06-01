@@ -265,7 +265,7 @@ label distancemap:
         "Show Coordinates Data Bank":
             "prison: x320 y370 \nxy: x293 y331 \nsun: x300 y300 \naldabran: x184 y253 \nmeteoroid: x210 y375 \nbetria: x402 y242 \nmatar: x256 y200 \npolaris: x180 y470 \niss: x341 y143"
             menu:
-                "Copy Coordinates Data Bank to Terminal":
+                "Copy Coordinates Data Bank and Distance Map to Terminal":
                     $ coorcopy = 1
                     "Coordinates copied!"
                     "To access them, juste type locate planets in a terminal."

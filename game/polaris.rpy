@@ -62,7 +62,6 @@ label polaris:
             jump polaris
             
         "go out":
-            $ io_pol = False
             hide ionetsender
             jump spaceport
     

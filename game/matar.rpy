@@ -77,38 +77,28 @@ label matarshop:
             #$ cash += 100
             #pass
         
-        "mine tool" if cash >= 30:
-            if inv_digtool == False:
-                $ cash -= 30
-                $ inv_digtool = True
-                with flash
-                "You got a mine tool!"
-                pass
-            else:
-               m "I have one already."
-               pass
+        "mine tool" if cash >= 30 and inv_digtool == False:
+            $ cash -= 30
+            $ inv_digtool = True
+            with flash
+            "You got a mine tool!"
+            pass
+
             
-        "original matar stone"if cash >= 50:
-            if inv_mstone == False:
-                $ cash -= 50
-                $ inv_mstone = True
-                with flash
-                "You got an original matar stone!"
-                pass
-            else:
-               m "I have one already."
-               pass
+        "original matar stone"if cash >= 50 and inv_mstone == False:
+            $ cash -= 50
+            $ inv_mstone = True
+            with flash
+            "You got an original matar stone!"
+            pass
         
-        "navigation system"if cash >= 200:
-            if inv_navi == False:
-                $ cash -= 200
-                $ inv_navi = True
-                with flash
-                "You got a NaviBack navigation system!"
-                pass
-            else:
-               m "I have one already."
-               pass
+        "navigation system"if cash >= 200 and inv_navi == False:
+            $ cash -= 200
+            $ inv_navi = True
+            with flash
+            "You got a NaviBack navigation system!"
+            pass
+
             
         "go out":
             show posanim at Position(xpos = 170, ypos=330, xanchor=0.5, yanchor=0.5)

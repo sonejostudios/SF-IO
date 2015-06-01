@@ -37,6 +37,7 @@ label bfields:
     # train station
     if desertx == 5 and deserty == 0:
         show bf station at Position(xpos = 300, ypos=120, xanchor=0.5, yanchor=0.5) behind bg
+        m "At some places they are still some vegetables left... Maybe I could collect them?"
     # rails without train station    
     if desertx != 5 and deserty == 0:
         show bf rails at Position(xpos = 300, ypos=120, xanchor=0.5, yanchor=0.5) behind bg
@@ -140,10 +141,20 @@ label bfields:
                 call robotback
                 $ frobots.remove("r4")
                 jump bfieldsmenu
+                
+    
+    
+    
+    # Food collect
+    if ffood == 1 and robotquest != 1:
+        m "There are some vegetables left on the field!"
+        jump bfieldsmenu
+        
             
             
     
     jump bfieldsmenu
+
 
 
 label bfieldsmenu:    
@@ -345,7 +356,7 @@ label bfieldshouse:
             
         "look under the control machines" if cash < 10:
             m "Oh there is 10c!"
-            m "I will need that money if I want to buy a train ticket to travel back to Main Station. I take it."
+            m "I will need that money if I want to buy a train ticket to travel back. I take it."
             $ cash += 10
             with flash
             "You got 10c!"

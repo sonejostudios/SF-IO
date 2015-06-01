@@ -5,9 +5,10 @@ screen clock:
     timer 60.0 repeat True action [SetVariable("sec", 0),SetVariable("min", int(min) + 1)]
     timer 1.0 repeat True action [SetVariable("sec", int(sec) +1)]
     
-    #$ runtime = renpy.get_game_runtime()
+    $ runtime = int(renpy.get_game_runtime())
     
     text "[hour]:[min]:[sec]" size 16 at Position(xpos = 0.98, ypos= 0.03, xanchor = 1.0)
+    #text "[runtime]" size 16 at Position(xpos = 0.98, ypos= 0.03, xanchor = 1.0)
     
     text "[cash] c" size 16 at Position(xpos = 0.98, ypos= 0.065, xanchor = 1.0)
 
@@ -39,6 +40,8 @@ screen inventory:
         add "pics/inv_blakekey.png" at Position(xpos=450, ypos=0)
     if inv_seamap == True:
         add "pics/inv_seamap.png" at Position(xpos=500, ypos=0)
+    if rebel == True:
+        add "pics/inv_rebel.png" at Position(xpos=550, ypos=0)
         
         
         

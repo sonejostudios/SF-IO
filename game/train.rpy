@@ -95,10 +95,19 @@ label trainstationmenu:
             
         
         "buy a ticket" if cash >= 10 and inv_ticket == False and firstticket == 2:
-            traintickets "Where do you want to go? For the next strain station it's 10c please."
+            traintickets "Where do you want to go? It's only 10c."
             
             if trainstation == 0:
                 menu:
+                    "to Mountains Station":
+                        $ cash -= 20
+                        $ trainfrom = 1
+                        $ ticketdir = 1
+                        $ inv_ticket = True
+                        $ ticketdest = 2
+                        with flash
+                        "You got a train ticket to Mountains Station!"
+                        
                     "to Fields Station":
                         $ cash -= 10
                         $ trainfrom = 1
@@ -107,6 +116,7 @@ label trainstationmenu:
                         $ ticketdest = 1
                         with flash
                         "You got a train ticket to Fields Station!"
+                    
                         
                     "to Coast Station":
                         $ cash -= 10
@@ -141,6 +151,15 @@ label trainstationmenu:
                         with flash
                         "You got a train ticket to Main Station!"
                         
+                    "to Coast Station":
+                        $ cash -= 10
+                        $ trainfrom = 2
+                        $ ticketdir = 2
+                        $ inv_ticket = True
+                        $ ticketdest = 3
+                        with flash
+                        "You got a train ticket to Coast Station!"
+                        
                     "back":
                         pass
                 jump trainstationmenu
@@ -155,12 +174,49 @@ label trainstationmenu:
                         $ ticketdest = 1
                         with flash
                         "You got a train ticket to Fields Station!"
+                        
+                    "to Main Station":
+                        $ cash -= 10
+                        $ trainfrom = 2
+                        $ ticketdir = 2
+                        $ inv_ticket = True
+                        $ ticketdest = 0
+                        with flash
+                        "You got a train ticket to Main Station!"
+                    
+                    "to Coast Station":
+                        $ cash -= 10
+                        $ trainfrom = 2
+                        $ ticketdir = 2
+                        $ inv_ticket = True
+                        $ ticketdest = 3
+                        with flash
+                        "You got a train ticket to Coast Station!"
+                        
                     "back":
                         pass
                 jump trainstationmenu
                 
             if trainstation == 3:
                 menu:
+                    "to Mountains Station":
+                        $ cash -= 10
+                        $ trainfrom = 1
+                        $ ticketdir = 1
+                        $ inv_ticket = True
+                        $ ticketdest = 2
+                        with flash
+                        "You got a train ticket to Mountains Station!"
+                        
+                    "to Fields Station":
+                        $ cash -= 10
+                        $ trainfrom = 1
+                        $ ticketdir = 1
+                        $ inv_ticket = True
+                        $ ticketdest = 1
+                        with flash
+                        "You got a train ticket to Fields Station!"
+                        
                     "to Main Station":
                         $ cash -= 10
                         $ trainfrom = 1
@@ -169,6 +225,10 @@ label trainstationmenu:
                         $ ticketdest = 0
                         with flash
                         "You got a train ticket to Main Station!"
+                    
+
+
+                        
                     "back":
                         pass
                 jump trainstationmenu
@@ -268,12 +328,27 @@ label btrain:
         if trainguythere == True:
             trainguy "Pssst..."    
             menu:
-                "yes":
-                    trainguy "My friend from Xy told me you are coming."
+                "yes" if rebel == False:
+                    trainguy "Hello."
+                    trainguy "Are you the guy the governement was looking for?"
+                    m "I don't know..."
+                    trainguy "Yes the guy they put you in prison last week?"
+                    m "Can't remember. That sounds interesting... Go on."
+                    trainguy "Oh I don't know so much. But I know you are a good guy."                
                     trainguy "I will tell you something..."
                     trainguy "But it's not safe here. Follow me."
                     $ trainw = 7
                     pass
+                    
+                "I'm now part of the Rebel Alliance" if rebel == True:
+                    trainguy "Welcome!"
+                    trainguy "I hope we will kick out this corrupt governement soon."
+                    m "Yes, me too!"
+                    trainguy "Follow me."
+                    $ trainw = 7
+                    pass
+                    
+                
                 "sorry I don't want to talk":
                     $ trainw = 4
                     pass
@@ -299,12 +374,11 @@ label btrain:
             
         
         if rebel == True:
-            trainguy "Welcome back."
+            trainguy "Welcome back. Here it is better to talk."
         
         if rebel == False:
             trainguy "Are you looking for a serious job?"    
             m "yes"
-            trainguy "My friend from Xy told me I can trust you."
             trainguy "We are the Rebel Alliance, we are a secret underground movement against the corrupt governement."
             trainguy "I'm sure you've heard about IO-net Network already."
             trainguy "We were the people behind the IO-net and the new free energy."

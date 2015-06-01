@@ -65,7 +65,7 @@ label mmine:
             jump mmine
             
         
-        "use the dynamite" if inv_dynamite == True:
+        "use the dynamite" if inv_dynamite == True and mineexploded == False:
             $ inv_dynamite = False
             show text "{size=40}3{/size}" at Position(xpos= 268, ypos=305)
             pause 1

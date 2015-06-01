@@ -183,9 +183,9 @@ label bgstory:
             barguy "Have you heard about the IO-net?"
             barguy "If not, go to the special room and talk to the guy in he corner."
             barguy "Anyway, I trust you now and I'm sure you could help us."
-            barguy "Please go to Betria and talk to my friend. He will wait for you in the train!"
+            barguy "Please go to Betria and talk to my friend. You can meet him in the train in the Wagon 3."
             
-            $ trainguythere = True
+            #$ trainguythere = True
             
             barguy "He will tell you what you can do to help us."
             barguy "See you soon. Bye!"
@@ -206,7 +206,11 @@ label xyspecialroom:
             jump xyspecialroom
             
         "talk to the old mine worker":
-            oldminer "I'm an old mine worker... I worked in the mine on the Meteoroid 539 but they closed the mine..."
+            oldminer "I'm an old mine worker... "
+            oldminer "I worked with the Barman, he was our dynamite expert. But now he finally figures out his dream job with the Bar. He seems to be really happy now."
+            oldminer "Anyway."
+            oldminer "..."
+            oldminer "We worked in the mine on the Meteoroid 539 but they closed the mine..."
             oldminer "I heard they found a secret base there..."
             oldminer "I don't know where is the entrance of this secret base, but maybe with some dynamite..hehe..."
             oldminer "Whatever."
@@ -229,22 +233,22 @@ label xyspecialroom:
 #MYSTERIOUS GUY
 
 label xymystguy:
-    mystguy "Buy me a drink and I'd talk to you."
+    mystguy "I need a drink."
     menu:
-        "okay" if cash >= 1:
+        "okay":
             m "Barman! A drink please!"
             "The barman is coming."
             barman "What kind of drink would you like?"
             menu:
-                "a normal drink":
+                "two normal drinks":
                     barman "Just a minute..."
                     "The barman is going out the Special Room."
-                    "The barman comes back with the drink."
-                    barman "It costs 1 c."
-                    m "Okay."
-                    $ cash -= 1
+                    "The barman comes back with the drinks."
+                    barman "It costs 2 c."
+                    mystguy "Wait, I'll pay."
+                    m "Thanks."
+                    mystguy "Cheers!"
                     with flash
-                    mystguy "Thanks!"
                     mystguy "I will tell you a real dramatic story."
                     mystguy "..."
                     mystguy "IO-net was a project to create a free network for everybody do share ideas and knowledge. It worked quite good until a group of scientists which was close to figure out a new source of free energy started to share information about it."
@@ -257,7 +261,7 @@ label xymystguy:
                     
                     jump xyspecialroom
                     
-                "a plasma XXL special drink":
+                "two plasma XXL special drinks":
                     barman "Mhhh I don't know if I still have some... wait a minute, I'll have a look to our storage outside the bar."
                     $ xybarmanaway = True
                     "The barman is going out."
@@ -287,9 +291,15 @@ label xykitchen:
 
     show bg xykitchen
     
-    m "Here is the kitchen... haha! there are dynamite packs on the floor! Interesting..."
+    m "Here is the kitchen... haha! there are dynamite packs on the floor! Interesting... There is also a paper with some stuff written on it."
     
     menu:
+        "read paper":
+            m "The paper is old and it is difficult read it!"
+            "...Rebel Alliance... special wares... Space Dealer... x280 y120..."
+            m "Aha, interesting! Maybe I should have a look."
+            jump xykitchen
+            
         "take dynamite":
             if inv_dynamite == False:
                 $ inv_dynamite = True

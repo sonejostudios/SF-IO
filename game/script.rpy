@@ -148,6 +148,7 @@ image bg betria2 = "pics/betria2.png"
 image bg betria3 = "pics/betria3.png"
 image bg betria4 = "pics/betria4.png"
 image bg betriabar = "pics/betriabar.png"
+image bg betriabar2 = "pics/betriabard.png"
 image bg betriafields = "pics/betriafields.png"
 image bg bfieldshouse = "pics/betriafhouse.png"
 image bg betriamount1 = "pics/betriamount.png"
@@ -266,7 +267,7 @@ define oldminer = Character('Old Mine Worker', color="#8dd35f")
 define engineer = Character('Engineer', color="#8dd35f")
 define mystguy = Character('Mysterious Guy', color="#8dd35f")
 define traintickets = Character('Ticket Seller', color="#8dd35f")
-define trainguy = Character('Trainguy', color="#8dd35f")
+define trainguy = Character('Train Guy', color="#8dd35f")
 define issmatar = Character('Matar Mines Worker', color="#8dd35f")
 define issbetria = Character('Betria Colony Worker', color="#8dd35f")
 define bfhguy = Character('Field Engineer', color="#8dd35f")
@@ -333,6 +334,19 @@ init:
     
     $ spaceshipdir = 2
     $ spaceshipflightview = False
+    
+    
+# visited planets
+    $ v_prison = True
+    $ v_xy = True
+    $ v_sun = False
+    $ v_aldabran = False
+    $ v_meteoroid = False
+    $ v_dealer = False
+    $ v_betria = False
+    $ v_matar = False
+    $ v_polaris = False
+    $ v_iss = False
 
 #init position ship prison  
     $ coox = "320"
@@ -344,7 +358,7 @@ init:
         
 # terminal order
     $ term1 = "help"
-    $ log = ["prison"]
+    $ log = ["prison", "xy"]
     
 #time    
     $ sec = 0
@@ -396,7 +410,7 @@ init:
     $ ticketdir = 1
     $ ticketdest = 0
     $ trainstation = 0
-    $ trainguythere = False # if guy in train is visible. initial value: False 
+    $ trainguythere = True # if guy in train is visible. initial value: True
     
     $ fieldstoggle = False #toogle field graphic
     
@@ -859,51 +873,62 @@ label hyperspace:
     if coox == "320" and cooy == "370":
         $ spaceshippos = 1
         $ log.append("prison")
+        $ v_prison = True
     
     #planet xy
     if coox == "293" and cooy == "331":
         $ spaceshippos = 2
         $ log.append("xy")
+        $ v_xy = True
     
     #sun
     if coox == "300" and cooy == "300":
         $ spaceshippos = 3  
         $ log.append("sun")
+        $ v_sun = True
         
     #aldaban
     if coox == "184" and cooy == "253":
         $ spaceshippos = 4
         $ log.append("aldabran")
+        $ v_aldabran = True
     
     #meteoroid
     if coox == "210" and cooy == "375":
         $ spaceshippos = 5
         $ log.append("meteoroid")
+        $ v_meteoroid = True
+        
         
     #dealer
     if coox == "280" and cooy == "120":
         $ spaceshippos = 6
         $ log.append("dealer")
+        $ v_dealer = True
     
     #betria
     if coox == "402" and cooy == "242":
         $ spaceshippos = 7
-        $ log.append("betria")   
+        $ log.append("betria")
+        $ v_betria = True
         
     #matar
     if coox == "256" and cooy == "200":
         $ spaceshippos = 8
         $ log.append("matar")
+        $ v_matar = True
         
     #polaris
     if coox == "180" and cooy == "470":
         $ spaceshippos = 9
-        $ log.append("polaris")   
+        $ log.append("polaris")
+        $ v_polaris = True
         
     #iss
     if coox == "341" and cooy == "143":
         $ spaceshippos = 10
-        $ log.append("iss")   
+        $ log.append("iss")
+        $ v_iss = True
         
         
     #"log = [log], spaceshippos [spaceshippos]"
@@ -1463,26 +1488,7 @@ label spaceport:
 
                 
 
-# FINAL SCENE WON           
-label win:
-    hide bg
-    hide screen clock
-    scene bgcolor
-    with Dissolve(3.0)
-    
-    show starssmall d2u behind ship
-    show starsmid d2u behind ship
-    show starsbig d2u behind ship
-    with Dissolve(3.0)
-    
-    show text "CONGRATULATIONS,\nYOU WON THE GAME!\n\nThank you for playing.\n You played [hour] : [min] minutes and [sec] secondes!" at truecenter
-    with Dissolve(3.0)
-    
-    menu:
-        "Quit":
-            return
-        "I'm not done!":
-            jump spaceship
+
 
             
 

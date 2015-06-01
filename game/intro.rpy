@@ -1,5 +1,5 @@
 
-
+# Intro
 label intro:
    
     show starssmall d2u behind ship
@@ -16,6 +16,32 @@ label intro:
     
     return
     
+
+
+# FINAL SCENE WON           
+label win:
+    hide bg
+    hide screen clock
+    scene bgcolor
+    with Dissolve(3.0)
+    
+    show starssmall d2u behind ship
+    show starsmid d2u behind ship
+    show starsbig d2u behind ship
+    with Dissolve(3.0)
+    
+    show text "CONGRATULATIONS,\nYOU WON THE GAME!\n\nThank you for playing.\n You played [hour] hours, [min] minutes and [sec] secondes!" at truecenter
+    with Dissolve(3.0)
+    
+    menu:
+        "Quit":
+            jump credits
+        "I'm not done!":
+            jump spaceship
+
+
+
+
     
 
 # Credits      

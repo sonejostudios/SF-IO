@@ -28,7 +28,7 @@ label superdev:
     #$ spaceshippos = 9 #polaris
     #$ spaceshippos = 10 #iss
     
-    $ log = ["prison","xy","sun","aldabran","meteoroid","dealer","betria","matar","polaris","iss","betria","matar","polaris","iss","betria","matar","polaris","iss","betria"]
+    #$ log = ["prison","xy","sun","aldabran","meteoroid","dealer","betria","matar","polaris","iss","betria","matar","polaris","iss","betria","matar","polaris","iss","betria"]
     
     $ issmatarquest = 2
 
@@ -63,6 +63,20 @@ label superdev:
     $ betrialake = 2 # water level of betria lake. init = 0
     
     $ sunrace = 0 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race done.
+    
+    
+    
+    # visited planets
+    #$ v_prison = True
+    #$ v_xy = True
+    #$ v_sun = True
+    #$ v_aldabran = True
+    #$ v_meteoroid = True
+    #$ v_dealer = True
+    #$ v_betria = True
+    #$ v_matar = True
+    #$ v_polaris = True
+    #$ v_iss = True
     
     
     return

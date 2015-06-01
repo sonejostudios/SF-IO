@@ -137,11 +137,83 @@ label betria4: #warehouse place
 #BETRIA COLONY BAR 
 label betriabar: #bar
 
-    show bg betriabar
+    show bg betriabar at topleft
+    
+    if bardrink == 4:
+        show bg betriabar2 as drunk:
+            xpos 0
+            ypos 0
+            alpha 0.0
+            linear 1 alpha 1.0
+            linear 1 alpha 0.0
+            repeat
+        
+        with flash
+        
+        "The old cap'tain starts speaking to you."
+        capitain "Good drinks?"
+        m "Yeees!!"
+        capitain "Oh a like drinking."
+        capitain "Have you heard about the space ship crash on Aldabran last week?"
+        m "No..."
+        capitain "Yes it was last week... It was a scientific space ship. It was in orbit around Aldabran and crashed there suddently. They said it was in the area in the south east of the desert."
+        capitain " I'll show you."
+        "The cap'tain gets a map of Aldabran."
+        capitain "Look. It was there."
+        "The cap'tain shows you a point on the map. \nIt is in the square at x9, y7. "
+        capitain "If you want to go there start from the center of the map, go 4 time to the east and 2 time to the south."
+        m "Interesting!"
+        capitain "The governement said this is a very dangerous zone. Nobody is allowed to go there."
+        m "Strange..."
+        capitain "Yes it's strange because Aldabran is a peaceful planet."
+        capitain "Anyway."
+        m "I'll have a look!"
+        capitain "Yes, a hero!"
+        capitain "But get some fresh air before you start hahahha."
+        capitain "Good luck!"
+    
+    
     
     "There a group of people at the tables and an old guy at the bar. He looks like he was a cap'tain. At the end of the room at a table there is a guy counting stones."
     
     menu:
+        "talk to the barman":
+            barman "Welcome."
+            barman "Do you like a drink? It's only 1 c."
+            menu:
+                "yes, please!" if cash > 0 and bardrink < 3:
+                    barman "Here."
+                    $ cash -= 1
+                    $ bardrink += 1
+                    with flash
+                    m "Yes that was good."
+                    m "Thanks!"
+                    barman "You are welcome."
+                    barman "Your drink balance is [bardrink]."
+                    if bardrink == 1:
+                        m "Thanks! Very tasty."
+                        barman "If you want another drink, let me know."
+                    if bardrink == 2:
+                        m "Thaaanks! Very very tasty you drinks, chef!"
+                        barman "If you want another drink, let me know."
+                    if bardrink == 3:
+                        m "Thaaaaaaaanks! That's amaziing!"
+                        barman "It was the last drink now. By law, sorry... "
+                        barman "If you want more, just go out to have some fresh air and come back."
+                        m "Please one more!"
+                        barman "Hmmm.... Okay... but don't tell anybody..."
+                        m "Yipiiiiiiii!"
+                        $ bardrink = 4
+                        
+                        
+                    
+                    jump betriabar
+                    
+                    
+                "no, thanks":
+                    barman "Okay, bye!"
+                    jump betriabar
+        
         "talk to the people at the tables":
             m "They don't want to talk to me..."
             menu:
@@ -156,20 +228,21 @@ label betriabar: #bar
         
         "talk to the old cap'tain again"if sunrace == 3:
             show posanim at Position(xpos = 425, ypos=250, xanchor=0.5, yanchor=0.5)
-            capitain "Well done man. Good luck with the map."
+            capitain "Well done man. Good luck with the password key."
             capitain "Bye!"
             jump betriabar
             
         "talk to the old cap'tain about the race you won" if sunrace == 2:
             show posanim at Position(xpos = 425, ypos=250, xanchor=0.5, yanchor=0.5)
-            m "Hey Cap'tain. I won the race! What about the map you talked about?"
+            m "Hey Cap'tain. I won the race! What about the sailor secret you talked about?"
             capitain "Yes it's true, you won our race. Well done!"
             capitain "I'm so happy I had a lot of fun. Thank you!"
-            capitain "Here as I told you I' tell you an old betria sailor secret."
+            capitain "Here as I told you I'll tell you an old betria sailor secret."
             capitain "Near the Betria Coast there are some islands. There is a secret base with a door protected by a password key."
-            capitain "I figure it out long time ago."
+            capitain "I figured it out long time ago."
             capitain "The password key is: 2277"
             $ sunrace = 3
+            capitain "Bye!"
             
             jump betriabar
             
@@ -225,6 +298,7 @@ label betriabar: #bar
                     "You got 100c!"
                     stonesguy "Thank you!"
                     m "Bye!"
+                    
                     jump betriabar
                 "No":
                     jump betriabar
@@ -234,6 +308,8 @@ label betriabar: #bar
             
             
         "go out":
+            $ bardrink = 0
+            hide drunk
             show posanim at Position(xpos = 289, ypos=315, xanchor=0.5, yanchor=0.5)
             jump betria2
             
@@ -302,7 +378,7 @@ label betriamount2: #village
     "There are some people around the village."
     
     menu:
-        "talk to the construction guy":
+        "talk to the construction guy" if mineexploded == True:
             m "Hi!"
             menu:
                 "Here is some dynamite" if inv_dynamite == True:

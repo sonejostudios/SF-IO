@@ -72,7 +72,7 @@ label stationshop:
             xpos -200
             easein 1 xpos 300
         pause 1
-        "Ship [stationshipnr] \nModel: SF-3\nPrice: 1000c"
+        "Ship [stationshipnr] \nModel: SF-3\nPrice: 4000c"
 
 
 
@@ -92,8 +92,8 @@ label stationshop:
             "Congratulations, you've got a new Space Ship!"
             jump spaceport
             
-        "buy SF-3" if stationshipnr == 3 and cash >= 1000 and spaceshipnr != 3:
-            $ cash -= 1000
+        "buy SF-3" if stationshipnr == 3 and cash >= 4000 and spaceshipnr != 3:
+            $ cash -= 4000
             $ spaceshipnr = 3
             with flash
             "Congratulations, you've got a new Space Ship!"
@@ -273,7 +273,7 @@ label issexpo:
                 issbetria "Sure! I's only 50c special offer for the Betria Fields!"
                 issbetria "Do you want to buy it?"
                 menu:
-                    "yes please!":
+                    "yes please!" if cash >= 50:
                         $ cash -= 50
                         $ inv_ticket = True
                         $ ticketdir = 1

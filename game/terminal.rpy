@@ -123,6 +123,21 @@ label terminal:
     if term1 == "locate planets" and coorcopy >= 1:
     
         show text "{size=16}PLANETS LIST\nCommands: [term1]\n\nDATA FOUND\nprison: x320 y370 \nxy: x293 y331 \nsun: x300 y300 \naldabran: x184 y253 \nmeteoroid: x210 y375 \nbetria: x402 y242 \nmatar: x256 y200 \npolaris: x180 y470 \niss: x341 y143{/size}" at Position(xpos = 298, ypos=160, xanchor=0.5, yanchor=0.0)
+        
+        menu:
+            "show distance map":
+                hide text
+                hide bg
+                hide ship
+                show distance at truecenter
+                menu:
+                    "back":
+                        hide distance
+                        jump terminal
+            
+            "back":
+                $ term1 = ""
+                jump terminal
 
     
     
@@ -143,7 +158,7 @@ label terminal:
         
         call ioupdate
         
-        show text "{size=16}WELCOME TO THE IO-NETWORK!\nCommand: [term1]\n\nCONNECTED NODES: [io_nodes]\n\nmeteoroid node: [io_meteoroid]\npolaris node: [io_pol]\n\nNEEDED NODES: [io_maxnodes]{/size}" at Position(xpos = 298, ypos=160, xanchor=0.5, yanchor=0.0, xmaximum = 500)
+        show text "{size=16}WELCOME TO THE IO-NETWORK!\nCommand: [term1]\n\nCONNECTED NODES: [io_nodes]\n\nmeteoroid node: [io_meteoroid]\npolaris node: [io_pol]\nbetria lake node: [io_blake]\nbetria islands node: [io_bislands]\naldabran node: [io_alswreck]\n\nNEEDED NODES: [io_maxnodes]{/size}" at Position(xpos = 298, ypos=160, xanchor=0.5, yanchor=0.0, xmaximum = 500)
         
         if io_nodes == io_maxnodes:
             "It's seems all needed nodes for a basic network are running and connected!"
@@ -220,23 +235,23 @@ label log:
         "Planets":
             menu:
                 
-                "xy" if "xy" in log:
+                "xy" if v_xy == True:
                     $ term1 = "locate xy"
                     jump terminal
                     
-                "aldabran" if "aldabran" in log:
+                "aldabran" if v_aldabran == True:
                     $ term1 = "locate aldabran"
                     jump terminal
                     
-                "betria" if "betria" in log:
+                "betria" if v_betria == True:
                     $ term1 = "locate betria"
                     jump terminal
                     
-                "matar" if "matar" in log:
+                "matar" if v_matar == True:
                     $ term1 = "locate matar"
                     jump terminal
                 
-                "polaris" if "polaris" in log:
+                "polaris" if v_polaris == True:
                     $ term1 = "locate polaris"
                     jump terminal
                     
@@ -245,23 +260,23 @@ label log:
         
         "Other":
             menu:
-                "sun" if "sun" in log:
+                "sun" if v_sun == True:
                     $ term1 = "locate sun"
                     jump terminal
                     
-                "meteoroid" if "meteoroid" in log:
+                "meteoroid" if v_meteoroid == True:
                     $ term1 = "locate meteoroid"
                     jump terminal
         
-                "industrial space station" if "iss" in log:
+                "industrial space station" if v_iss == True:
                     $ term1 = "locate iss"
                     jump terminal
                     
-                "prison" if "prison" in log:
+                "prison" if v_prison == True:
                     $ term1 = "locate prison"
                     jump terminal
                 
-                "dealer" if "dealer" in log:
+                "dealer" if v_dealer == True:
                     $ term1 = "locate dealer"
                     jump terminal
                     
