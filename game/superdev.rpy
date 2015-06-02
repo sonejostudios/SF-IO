@@ -1,5 +1,7 @@
 # SUPER DEV MODE
 label superdev:
+
+    $ cash = 100
     
     # inventory
     $ inv_lcable = True

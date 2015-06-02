@@ -117,28 +117,28 @@ label bfields:
     if desertx == 0 and deserty == 1 and "r1" in frobots and robotquest == 1:
         menu:
             "send Robot 1 to field engineer":
-                call robotback from _call_robotback
+                call robotback
                 $ frobots.remove("r1")
                 jump bfieldsmenu
     #robot2            
     if desertx == 6 and deserty == 2 and "r2" in frobots and robotquest == 1:
         menu:
             "send Robot 2 to field engineer":
-                call robotback from _call_robotback_1
+                call robotback
                 $ frobots.remove("r2")
                 jump bfieldsmenu
     #robot3            
     if desertx == 5 and deserty == 5 and "r3" in frobots and robotquest == 1 :
         menu:
             "send Robot 3 to field engineer":
-                call robotback from _call_robotback_2
+                call robotback
                 $ frobots.remove("r3")
                 jump bfieldsmenu
     #robot4
     if desertx == 9 and deserty == 9 and "r4" in frobots and robotquest == 1:
         menu:
             "send Robot 4 to field engineer":
-                call robotback from _call_robotback_3
+                call robotback
                 $ frobots.remove("r4")
                 jump bfieldsmenu
                 

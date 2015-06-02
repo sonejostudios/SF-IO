@@ -75,7 +75,7 @@ label ioinstall:
 
 label ioinfo:
     
-    call ioupdate from _call_ioupdate
+    call ioupdate
      
     "Welcome to IO-net!\n\nNode Status: Connected\nNodes in Network: [io_nodes]\n\nPlease enter ionet in a Terminal for more information."
     

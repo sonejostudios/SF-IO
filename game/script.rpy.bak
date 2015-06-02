@@ -458,11 +458,11 @@ init:
 label start:
     show bgcolor behind text
         
-    call intro from _call_intro
+    call intro
     
     
     if superdev == True:
-        call superdev from _call_superdev
+        call superdev
         
     if superdev == False:
         jump playername

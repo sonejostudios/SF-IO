@@ -156,7 +156,7 @@ label terminal:
     if term1 == "ionet":
         hide text
         
-        call ioupdate from _call_ioupdate_1
+        call ioupdate
         
         show text "{size=16}WELCOME TO THE IO-NETWORK!\nCommand: [term1]\n\nCONNECTED NODES: [io_nodes]\n\nmeteoroid node: [io_meteoroid]\npolaris node: [io_pol]\nbetria lake node: [io_blake]\nbetria islands node: [io_bislands]\naldabran node: [io_alswreck]\n\nNEEDED NODES: [io_maxnodes]{/size}" at Position(xpos = 298, ypos=160, xanchor=0.5, yanchor=0.0, xmaximum = 500)
         

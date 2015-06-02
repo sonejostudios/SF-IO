@@ -41,11 +41,11 @@ label polaris:
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_pol == False:
-            call ioinstall from _call_ioinstall_4
+            call ioinstall
 
         
         "IO-net info"if io_pol == True:
-            call ioinfo from _call_ioinfo_4
+            call ioinfo
             
         "look at the Hologram":
             hide ionetsender

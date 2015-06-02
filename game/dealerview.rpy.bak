@@ -39,7 +39,7 @@ label dealerview:
     d "Are you sure you want to deal with me?"
     menu:
         "I'm from the Rebel Alliance!" if rebel == True and inv_ionet == False:
-            call iogive from _call_iogive
+            call iogive
             $ coox = 280
             $ cooy = 120
             pass
@@ -50,7 +50,7 @@ label dealerview:
             else: 
                 d "Well, have a look!"
             
-            call dwarehouse from _call_dwarehouse
+            call dwarehouse
             
             $ coox = 280
             $ cooy = 120

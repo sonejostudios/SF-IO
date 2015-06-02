@@ -257,11 +257,11 @@ label alswreck:
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_alswreck == False:
-            call ioinstall from _call_ioinstall_1
+            call ioinstall
 
         
         "IO-net info" if io_alswreck == True:
-            call ioinfo from _call_ioinfo_1
+            call ioinfo
         
         "go out":
             hide ionetsender

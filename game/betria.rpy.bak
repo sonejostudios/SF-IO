@@ -538,11 +538,11 @@ label bsbase:
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_blake == False:
-            call ioinstall from _call_ioinstall_2
+            call ioinstall
 
         
         "IO-net info" if io_blake == True:
-            call ioinfo from _call_ioinfo_2
+            call ioinfo
         
         "go out":
             hide ionetsender
@@ -783,11 +783,11 @@ label bislandsbase:
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_bislands == False:
-            call ioinstall from _call_ioinstall_3
+            call ioinstall
 
         
         "IO-net info" if io_bislands == True:
-            call ioinfo from _call_ioinfo_3
+            call ioinfo
         
         "go out":
             hide ionetsender

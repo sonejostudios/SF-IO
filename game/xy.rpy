@@ -207,10 +207,10 @@ label xyspecialroom:
             
         "talk to the old mine worker":
             oldminer "I'm an old mine worker... "
-            oldminer "I worked with the Barman, he was our dynamite expert. But now he finally figures out his dream job with the Bar. He seems to be really happy now."
+            oldminer "I worked with the Barman, he was our dynamite expert. But now he finally figured out his dream job with the Bar. He seems to be really happy now."
             oldminer "Anyway."
             oldminer "..."
-            oldminer "We worked in the mine on the Meteoroid 539 but they closed the mine..."
+            oldminer "We worked in the mine on the Meteoroid 539 but they closed it..."
             oldminer "I heard they found a secret base there..."
             oldminer "I don't know where is the entrance of this secret base, but maybe with some dynamite..hehe..."
             oldminer "Whatever."
@@ -294,7 +294,7 @@ label xykitchen:
     m "Here is the kitchen... haha! there are dynamite packs on the floor! Interesting... There is also a paper with some stuff written on it."
     
     menu:
-        "read paper":
+        "read the paper":
             m "The paper is old and it is difficult read it!"
             "...Rebel Alliance... special wares... Space Dealer... x280 y120..."
             m "Aha, interesting! Maybe I should have a look."

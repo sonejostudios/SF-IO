@@ -108,11 +108,11 @@ label msbase:
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_meteoroid == False:
-            call ioinstall from _call_ioinstall
+            call ioinstall
 
         
         "IO-net info"if io_meteoroid == True:
-            call ioinfo from _call_ioinfo
+            call ioinfo
         
         "go out":
             hide ionetsender
