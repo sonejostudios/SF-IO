@@ -757,7 +757,7 @@ label betriaislands:
             "Please enter the password key:"
             menu:
                 "2277" if sunrace == 3:
-                    show posanim at Position(xpos = 140 , ypos=265, xanchor=0.5, yanchor=0.5)
+                    
                     jump bislandsbase
                 "I don't know...":
                     jump betriaislands
@@ -767,6 +767,8 @@ label betriaislands:
             $ onislands = False
             $ desertx = 10
             $ deserty = 3
+            show posanim:
+                xpos 300 ypos 285
             jump bseastart
             
     
@@ -775,6 +777,7 @@ label betriaislands:
     
 label bislandsbase:
     show bg bislandsbase at topleft
+    show posanim at Position(xpos = 140 , ypos=265, xanchor=0.5, yanchor=0.5)
     
     #show ionet sender
     if io_bislands == True:

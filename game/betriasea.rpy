@@ -8,9 +8,12 @@ label bseastart:
     
     show bg betriasea at topleft
     
-    show boat at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5) behind posanim
+    show boat behind posanim:
+        xanchor 0.5 yanchor 0.5
+        xpos 300 ypos 285
     
-    show posanim at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5)
+    show posanim:
+        xpos 300 ypos 285
     
     jump bsea
     
@@ -93,7 +96,7 @@ label bseamenu:
         "enter into the secret cave" if desertx == 0 and deserty == 10:
             jump betriacave
             
-        "enter the islands" if desertx == 10 and deserty == 3:
+        "go to the islands" if desertx == 10 and deserty == 3:
             show posanim at Position(xpos =210, ypos=300, xanchor=0.5, yanchor=0.5)
             jump betriaislands
             
@@ -104,7 +107,8 @@ label bseamenu:
             menu:
                 "exit":
                     hide seamap
-                    show posanim at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5)
+                    show posanim:
+                        xpos 300 ypos 285
                     pass
  
         "go north" if deserty >= 1:

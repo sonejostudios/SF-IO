@@ -499,7 +499,7 @@ label start:
 
 label playername:
     python:
-        playername = renpy.input("Please enter you name:")
+        playername = renpy.input("Please enter your name:")
         playername = playername.strip()
         if not playername:
             playername = "Me"

@@ -14,7 +14,7 @@ label superdev:
     $ inv_ionet = True
     $ inv_mstone = True
     $ inv_blakekey = True
-    $ inv_seamap = False
+    $ inv_seamap = True
     
     
     $ spaceshipnr = 2
@@ -64,7 +64,7 @@ label superdev:
     
     $ betrialake = 2 # water level of betria lake. init = 0
     
-    $ sunrace = 0 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race done.
+    $ sunrace = 3 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race won and island pass key activated.
     
     
     

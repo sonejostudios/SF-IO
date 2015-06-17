@@ -268,7 +268,7 @@ init -1 python hide:
     ## stored. (It needs to be set early, before any other init code
     ## is run, so the persistent information can be found by the init code.)
 python early:
-    config.save_directory = "Rooms-1427403329"
+    config.save_directory = "SF-IO-1427403329"
 
 init -1 python hide:
     #########################################
@@ -303,6 +303,8 @@ init -1 python hide:
     #use hardware video decoding?
     #config.hw_video = True
     
+    config.joystick = False
+    
     
     
     
@@ -316,12 +318,12 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Rooms-1.0"
+    build.directory_name = "SF-IO-1.0"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
     ## users can click 'mygame.exe' to start the game.
-    build.executable_name = "Rooms"
+    build.executable_name = "SF-IO"
 
     ## If True, Ren'Py will include update information into packages. This
     ## allows the updater to run.

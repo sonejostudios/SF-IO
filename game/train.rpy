@@ -444,7 +444,7 @@ label btrain:
             $ trainw = 3
             $ trainstation = ticketdest
             pause 1.5
-            m "I thing we are coming soon..."
+            m "I think we are coming soon..."
             hide railsl
             hide train
             

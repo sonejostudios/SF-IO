@@ -218,6 +218,7 @@ label copynav:
             pause 2
             
             if backto == "spaceship" or backto == "cockpit":
+                hide text
                 jump cockpit
             #if backto == "cockpit":
                 #jump cockpit

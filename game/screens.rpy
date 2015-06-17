@@ -415,54 +415,54 @@ screen preferences():
                 #label _("Text Speed")
                 #bar value Preference("text speed")
 
-            frame:
-                style_group "pref"
-                has vbox
+            #frame:
+                #style_group "pref"
+                #has vbox
 
-                textbutton _("Joystick...") action Preference("joystick") style "menu_choice_button"
+                #textbutton _("Joystick...") action Preference("joystick") style "menu_choice_button"
                 
             
           
 
 
         vbox:
-        
-            frame:
-                style_group "pref"
-                has vbox
+            null
+            #frame:
+                #style_group "pref"
+                #has vbox
 
-                label _("Music Volume")
-                bar value Preference("music volume"):
-                    xpos 0.8
+                #label _("Music Volume")
+                #bar value Preference("music volume"):
+                    #xpos 0.8
                     
             
-            frame:
-                style_group "pref"
-                has vbox
+            #frame:
+                #style_group "pref"
+                #has vbox
 
-                label _("Sound Volume")
-                bar value Preference("sound volume"):
-                    xpos 0.8
+                #label _("Sound Volume")
+                #bar value Preference("sound volume"):
+                    #xpos 0.8
                 
 
-                if config.sample_sound:
-                    textbutton _("Test"):
-                        action Play("sound", config.sample_sound)
-                        style "soundtest_button"
+                #if config.sample_sound:
+                    #textbutton _("Test"):
+                        #action Play("sound", config.sample_sound)
+                        #style "soundtest_button"
 
-            if config.has_voice:
-                frame:
-                    style_group "pref"
-                    has vbox
+            #if config.has_voice:
+                #frame:
+                    #style_group "pref"
+                    #has vbox
 
-                    label _("Voice Volume")
-                    bar value Preference("voice volume")
+                    #label _("Voice Volume")
+                    #bar value Preference("voice volume")
 
-                    textbutton _("Voice Sustain") action Preference("voice sustain", "toggle")
-                    if config.sample_voice:
-                        textbutton _("Test"):
-                            action Play("voice", config.sample_voice)
-                            style "soundtest_button"
+                    #textbutton _("Voice Sustain") action Preference("voice sustain", "toggle")
+                    #if config.sample_voice:
+                        #textbutton _("Test"):
+                            #action Play("voice", config.sample_voice)
+                            #style "soundtest_button"
         
             #frame:
                 #style_group "pref"
