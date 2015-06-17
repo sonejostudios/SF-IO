@@ -1,6 +1,8 @@
 # SF-IO
 An Old-School Science-Fiction Adventure RPG Game.
 
+https://www.youtube.com/watch?v=Q-blCjt4byc
+
 This is an amazing space adventure with some role-playing elements. You can earn money, buy space ships, objects and trade with wares.  This time, you need to save the world and reconnect a decentralized network around the solar system!
 
 Highlights:
