@@ -7,7 +7,10 @@ label bfieldsstart:
     
     show bg betriafields at topleft
     
-    show posanim at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5)
+    show posanim:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 300 ypos 285
     
     jump bfields
     

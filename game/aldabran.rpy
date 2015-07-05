@@ -10,7 +10,10 @@ label aldabran:
     
     show bg aldabran at topleft
     
-    show posanim at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5)
+    show posanim:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 300 ypos 285
     
     jump aldabrandesert
     
@@ -265,7 +268,7 @@ label alswreck:
         
         "go out":
             hide ionetsender
-            show posanim at Position(xpos = 243 , ypos=303, xanchor=0.5, yanchor=0.5)
+            #show posanim at Position(xpos = 243 , ypos=303, xanchor=0.5, yanchor=0.5)
             
             $ desertx = 9
             $ deserty = 7
