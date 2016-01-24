@@ -19,6 +19,7 @@ Highlights:
 
 This software is licensed under the GPL v2.
 
+GET IT ON GOOGLE PLAY: https://play.google.com/store/apps/details?id=net.sonejo.sfio
 
 
 Created by Vincent Rateau at Sonejo Studios
