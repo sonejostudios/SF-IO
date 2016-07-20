@@ -1,7 +1,7 @@
 # SUPER DEV MODE
 label superdev:
 
-    $ cash = 100
+    $ cash = 10000
     
     # inventory
     $ inv_lcable = True
@@ -30,9 +30,9 @@ label superdev:
     #$ spaceshippos = 9 #polaris
     #$ spaceshippos = 10 #iss
     
-    #$ log = ["prison","xy","sun","aldabran","meteoroid","dealer","betria","matar","polaris","iss","betria","matar","polaris","iss","betria","matar","polaris","iss","betria"]
+    $ log = ["prison","xy","sun","aldabran","meteoroid","dealer","betria","matar","polaris","iss","betria","matar","polaris","iss","betria","matar","polaris","iss","betria"]
     
-    $ issmatarquest = 2
+
 
     #matar first train ticket betria
     $ ticketdir = 1
@@ -48,7 +48,7 @@ label superdev:
     
     $ coorcopy = 2 #if planet coodinates copied to terminal or not. 0=not done. 1= copied but not said to xy guy. 2=completely done
     
-    $ mineexploded = True
+    $ mineexploded = False
     
     $ matarlanding = True
      
@@ -58,27 +58,37 @@ label superdev:
     
     $ rebel = True #if true, player joined the rebel alliance. init: False
     
-    $ frobots = [] 
+    #$ frobots = [] 
     
     $ robotquest = 2 #if robot quest activated. init = 0. activated = 1. done = 2
     
-    $ betrialake = 2 # water level of betria lake. init = 0
+    $ betrialake = 0 # water level of betria lake. init = 0
     
-    $ sunrace = 3 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race won and island pass key activated.
+    $ sunrace = 1 #if the captain is at the sun or not. init 0. 1= captain at sun 2= race won and island pass key activated.
+    
+    $ issmatarquest = 1 # iss matar quest (matar stone). 0=not active, 1=quest active, 2=quest done
     
     
     
     # visited planets
-    #$ v_prison = True
-    #$ v_xy = True
-    #$ v_sun = True
-    #$ v_aldabran = True
-    #$ v_meteoroid = True
-    #$ v_dealer = True
-    #$ v_betria = True
-    #$ v_matar = True
-    #$ v_polaris = True
-    #$ v_iss = True
+    $ v_prison = True
+    $ v_xy = True
+    $ v_sun = True
+    $ v_aldabran = True
+    $ v_meteoroid = True
+    $ v_dealer = True
+    $ v_betria = True
+    $ v_matar = True
+    $ v_polaris = True
+    $ v_iss = True
     
+     
+#IO-net
+    # nodes
+    $ io_meteoroid = 1
+    $ io_pol = 1
+    $ io_blake = 1
+    $ io_alswreck = 1
+    $ io_bislands = 1
     
     return

@@ -12,11 +12,19 @@ label bfieldsstart:
         yanchor 0.5
         xpos 300 ypos 285
     
+
+    
     jump bfields
     
     
         
 label bfields:
+    
+    $ musicplaying = renpy.music.get_playing(channel='music')
+    if musicplaying != "snd/nature.ogg":
+        play music "snd/nature.ogg" loop fadein 0.5
+    
+    #jump bfields
     
     show posanim:
         xanchor 0.5
@@ -122,6 +130,7 @@ label bfields:
             "send Robot 1 to field engineer":
                 call robotback from _call_robotback
                 $ frobots.remove("r1")
+                play sound "snd/connected.ogg"
                 jump bfieldsmenu
     #robot2            
     if desertx == 6 and deserty == 2 and "r2" in frobots and robotquest == 1:
@@ -129,6 +138,7 @@ label bfields:
             "send Robot 2 to field engineer":
                 call robotback from _call_robotback_1
                 $ frobots.remove("r2")
+                play sound "snd/connected.ogg"
                 jump bfieldsmenu
     #robot3            
     if desertx == 5 and deserty == 5 and "r3" in frobots and robotquest == 1 :
@@ -136,6 +146,7 @@ label bfields:
             "send Robot 3 to field engineer":
                 call robotback from _call_robotback_2
                 $ frobots.remove("r3")
+                play sound "snd/connected.ogg"
                 jump bfieldsmenu
     #robot4
     if desertx == 9 and deserty == 9 and "r4" in frobots and robotquest == 1:
@@ -143,6 +154,7 @@ label bfields:
             "send Robot 4 to field engineer":
                 call robotback from _call_robotback_3
                 $ frobots.remove("r4")
+                play sound "snd/connected.ogg"
                 jump bfieldsmenu
                 
     
@@ -191,7 +203,10 @@ label bfieldsmenu:
             
             
         "collect vegetables" if ffood == 1 and robotquest != 1:
+            play sound "snd/dig.ogg"
+            pause 1.0
             $ food += 1
+            play sound "snd/collect.ogg"
             with flash
             $ ffood = renpy.random.randint(1, 5)
             "You got 1kg of food!\n\nYour food balance is [food] kg."
@@ -215,11 +230,13 @@ label bfieldsmenu:
         "go into the fields house" if desertx == 0 and deserty == 0:
             hide bfhouse
             show posanim at Position(xpos = 450, ypos=285, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump bfieldshouse
         
         "go to train station" if desertx == 5 and deserty == 0:
             $ trainfrom = 0
             show posanim at Position(xpos = 210, ypos=385, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             hide bf
             hide bfhide2
             hide fieldsj
@@ -282,6 +299,8 @@ label bfieldsmenu:
 label bfieldshouse:
     show bg bfieldshouse
     
+    #play music "snd/spaceship-station.ogg" loop fadein 0.5
+    
     "There is not that much, only a field engineer working at some control machines."
     
     menu:
@@ -299,6 +318,7 @@ label bfieldshouse:
                         bfhguy "Nice! I see they are on their way back to me."
                         bfhguy "Here are 250c for you job. Thank you!"
                         $ cash += 250
+                        play sound "snd/collect.ogg"
                         with flash
                         $ robotquest = 2
                         "You got 250c!"
@@ -337,6 +357,7 @@ label bfieldshouse:
             bfhguy "Could you please go to the lake in the mountains and activate the pump? Maybe that will help."
             bfhguy "Here is the key of the control cabin."
             $ inv_blakekey = True
+            play sound "snd/collect.ogg"
             with flash
             "You got the lake control cabin key!"
             bfhguy "Good luck!"
@@ -346,6 +367,7 @@ label bfieldshouse:
             bfhguy "Thank you for everything!"
             bfhguy "That's for you for the help."
             $ cash += 100
+            play sound "snd/collect.ogg"
             with flash
             $ betrialake = 3
             "You got 100c!"
@@ -361,6 +383,7 @@ label bfieldshouse:
             m "Oh there is 10c!"
             m "I will need that money if I want to buy a train ticket to travel back. I take it."
             $ cash += 10
+            play sound "snd/collect.ogg"
             with flash
             "You got 10c!"
             pass
@@ -370,6 +393,7 @@ label bfieldshouse:
         "go out":
             $ desertx = 0
             $ deserty = 0
+            play sound "snd/door-open.ogg"
             jump bfieldsstart
     
     jump bfieldshouse

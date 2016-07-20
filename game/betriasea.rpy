@@ -75,10 +75,13 @@ label bsea:
         hide bs
         
 
-
-
     #hide text
     #show text "x[desertx], y[deserty]" at left
+    
+    
+    $ musicplaying = renpy.music.get_playing(channel='sound')
+    if musicplaying != "snd/boat.ogg":
+        play sound "snd/boat.ogg" loop fadein 0.5
 
 
     jump bseamenu
@@ -88,6 +91,7 @@ label bseamenu:
     
     menu:
         "go out the boat" if desertx == 0 and deserty == 5:
+            stop sound fadeout 1
             hide boat
             hide bs
             show posanim at Position(xpos = 170, ypos=340, xanchor=0.5, yanchor=0.5)
@@ -104,11 +108,17 @@ label bseamenu:
             hide screen inventory
             show seamap behind posanim
             show posanim at Position(xpos = (desertx*65)+60, ypos=(deserty*40)+40, xanchor=0.5, yanchor=0.5)
+
+            play sound "snd/scan.ogg" 
+            with flash
+            
             menu:
                 "exit":
+
                     hide seamap
                     show posanim:
                         xpos 300 ypos 285
+                
                     pass
  
         "go north" if deserty >= 1:

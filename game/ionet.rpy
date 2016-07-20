@@ -7,70 +7,75 @@ label ioupdate:
 
 
 label ioinstall:
-            show text "Copying." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 0.5
-            hide text
-            pause 0.5
-            show text "Copying.." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 0.5
-            hide text
-            pause 0.5
-            show text "Copying..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 0.5
-            hide text
-            pause 0.5
-            show text "Copying done." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 1
-            hide text
-            with flash
-            
-            # set meteoroid node
-            if spaceshippos == 5: 
-                $ io_meteoroid = True
-                show ionetsender at Position(xpos = 135 , ypos=377, xanchor=0.5, yanchor=0.5)
-            
-            # set polaris node    
-            if spaceshippos == 9:
-                $ io_pol = True
-                show ionetsender at Position(xpos = 70 , ypos=377, xanchor=0.5, yanchor=0.5)
-            
-            # set betria lake node    
-            if spaceshippos == 7 and onislands == False:
-                $ io_blake = True
-                show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
-                
-                
-            # set betria island node    
-            if spaceshippos == 7 and onislands == True:
-                $ io_bislands = True
-                show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
-                
+    play sound "snd/modem.ogg"
+    
+    show text (_("Copying.")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 0.5
+    hide text
+    pause 0.5
+    show text (_("Copying..")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 0.5
+    hide text
+    pause 0.5
+    show text (_("Copying...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 0.5
+    hide text
+    pause 0.5
+    show text (_("Copying done.")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 1
+    hide text
+    play audio "snd/collect.ogg"
+    with flash
+    
+    # set meteoroid node
+    if spaceshippos == 5: 
+        $ io_meteoroid = 1
+        show ionetsender at Position(xpos = 135 , ypos=377, xanchor=0.5, yanchor=0.5)
+    
+    # set polaris node    
+    if spaceshippos == 9:
+        $ io_pol = 1
+        show ionetsender at Position(xpos = 70 , ypos=377, xanchor=0.5, yanchor=0.5)
+    
+    # set betria lake node    
+    if spaceshippos == 7 and onislands == False:
+        $ io_blake = 1
+        show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
+        
+        
+    # set betria island node    
+    if spaceshippos == 7 and onislands == True:
+        $ io_bislands = 1
+        show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
+        
 
-            # set aldabran node    
-            if spaceshippos == 4:
-                $ io_alswreck = True
-                show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
-                
+    # set aldabran node    
+    if spaceshippos == 4:
+        $ io_alswreck = 1
+        show ionetsender at Position(xpos = 137 , ypos=377, xanchor=0.5, yanchor=0.5)
+        
 
-            
-            
-            show text "Installation..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 2
-            show text "Connecting to\nnetwork..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 2
-            show text "Sending request\nfor Node ID..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 2
-            show text "Create Node..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 2
-            show text "Connecting..." at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
-            pause 2
-            hide text
-            with flash
-            
-            "Connected!\nIO-net node is ready. Enjoy!"
-            
-            #this goes straigt to ioinfo
-            
+    
+    
+    show text (_("Installation...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 2
+    show text (_("Connecting to\nnetwork...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 2
+    show text (_("Sending request\nfor Node ID...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 2
+    show text (_("Create Node...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 2
+    show text (_("Connecting...")) at  Position(xpos = 300 , ypos=300, xanchor=0.5, yanchor=0.5)
+    pause 2
+    hide text
+    
+    play sound "snd/connected.ogg"
+    with flash
+    
+    "Connected!\nIO-net node is ready. Enjoy!"
+    
+    #this goes straigt to ioinfo
+    
 
 
 label ioinfo:

@@ -8,6 +8,7 @@ label xy:
     
     show screen inventory
     
+    
     show bg xyentrance
     #show posanim at Position(xpos = 300, ypos=275, xanchor=0.5, yanchor=0.5):
     
@@ -16,17 +17,22 @@ label xy:
         "use the Terminal":
             $ term1 = "help"
             $ backto = "xy"
+            play sound "snd/beep.ogg"
             jump terminal
         
         "go to the Bar":
             show posanim at Position(xpos = 297, ypos=380, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/bar.ogg" loop fadein 1.0
             jump xybar
         
         "go to the Warehouse":
+            play sound "snd/door-open.ogg"
             jump xywarehouse
         
         "go to the Lift":
             show posanim at Position(xpos = 0.23, ypos=0.62, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-locked.ogg"
             m "It's out of order."
             jump xy
 
@@ -38,6 +44,7 @@ label xy:
         #    jump xy
             
         "go out":
+            play sound "snd/door-open.ogg"
             jump spaceport
 
 
@@ -45,17 +52,21 @@ label xy:
 label xybar:
     show bg xybar
     
+    
     if xybarmanaway == False:
         "There is the barman, a weird guy at the bar and some people sitting at the tables."
     
     if xybarmanaway == True:
         "The barman is away."
+        
     
     
     menu:
     
         "go to the room behind the bar" if xybarmanaway == True:
             show posanim at Position(xpos = 400, ypos=280, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/bar-deep.ogg" loop fadein 1.0
             jump xykitchen
         
       
@@ -76,19 +87,25 @@ label xybar:
                     jump xybar
           
         "go to the wc":
+            play sound "snd/door-locked.ogg"
             m "It's out of order."
             jump xybar
         "go to the Special Room":
             
             if xybarroom == True:
                 $ xybarmanaway = False
+                play sound "snd/door-open.ogg"
+                play music "snd/bar-deep.ogg" loop fadein 1.0
                 jump xyspecialroom
             else:
+                play sound "snd/door-locked.ogg"
                 barman "You are not allowed to enter there!"
                 jump xybar
         "go out":
             $ xybarmanaway = False
-            show posanim at Position(xpos = 140, ypos=290, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 140, ypos=290, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/base.ogg" loop fadein 1.0
             jump xy
 
 
@@ -110,6 +127,8 @@ label xybarman:
                 menu:
                     "yes, tell me":
                         barman "Okay. Go and bring me 1 kg of food. Maybe at the Warehouse in the front of the Bar, if not, just have a look at the Prison Warehouse, sometimes they are cheaper. It's at x320, y370 (or just locate prison with a Terminal). Here are 31c for you."
+                        
+                        play sound "snd/collect.ogg"
                         $ cash += 31
                         with flash
                         "You've got 31c!"
@@ -122,6 +141,7 @@ label xybarman:
                         jump xybar
             
             if cash >= 0:
+                play sound "snd/collect.ogg"
                 $ cash -= 1
                 with flash
                 m "Nice one, thanks!"
@@ -140,11 +160,13 @@ label xybarguy:
     menu:
         "I copied the hologram data already." if coorcopy == 1:
             barguy "Ah really?"
-            m "Yes, you can access it easily with terminal under the command locate planets."
+            m "Yes, you can access it easily with terminal under the command map."
             barguy "Very good. Just wait a minute I'll have a look. "
             "The weird guy is going out the bar."
             "The weird guy comes back."
             barguy "Well done! Here is a little gift for you."
+            
+            play sound "snd/collect.ogg"
             
             $ cash += 200
             with flash
@@ -157,6 +179,7 @@ label xybarguy:
             
         
         "yes, sure!" if cash >= 1 and barmanquest != 1:
+            play sound "snd/collect.ogg"
             $ cash -= 1
             with flash
             barguy "Thanks!"
@@ -225,6 +248,8 @@ label xyspecialroom:
             
         "go out":
             show posanim at Position(xpos = 380, ypos=280, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/bar.ogg" loop fadein 1.0
             jump xybar
     
 
@@ -248,6 +273,7 @@ label xymystguy:
                     mystguy "Wait, I'll pay."
                     m "Thanks."
                     mystguy "Cheers!"
+                    play sound "snd/collect.ogg"
                     with flash
                     mystguy "I will tell you a real dramatic story."
                     mystguy "..."
@@ -275,6 +301,7 @@ label xymystguy:
                         
                         "go out":
                             show posanim at Position(xpos = 380, ypos=280, xanchor=0.5, yanchor=0.5)
+                            play music "snd/bar.ogg" loop fadein 1.0
                             jump xybar
                 
                 "nothing, thanks":
@@ -302,6 +329,7 @@ label xykitchen:
             
         "take dynamite":
             if inv_dynamite == False:
+                play sound "snd/collect.ogg"
                 $ inv_dynamite = True
                 with flash
                 "You got dynamite!"
@@ -312,6 +340,8 @@ label xykitchen:
             
         "go out":
             show posanim at Position(xpos = 0.12, ypos=330, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/bar.ogg" loop fadein 1.0
             jump xybar
 
 
@@ -323,7 +353,7 @@ label xywarehouse:
     hide posanim
     show bg xywh behind lcable, lbulb, ssuit, text
 
-    show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
     
     menu:
         "buy":
@@ -332,37 +362,43 @@ label xywarehouse:
             jump xywarehousesell
         "go out":
             hide text
-            show posanim at Position(xpos = 458, ypos=260, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 458, ypos=260, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump xy
             
             
             
             
 label xywarehousebuy:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
            
             menu:
                 "buy rocks" if cash >= 13:
+                    play sound "snd/collect.ogg"
                     $ cash -= 13 
                     $ rocks += 1
                     jump xywarehousebuy
             
                 "buy steel" if cash >= 50:
+                    play sound "snd/collect.ogg"
                     $ cash -= 50 
                     $ steel += 1
                     jump xywarehousebuy
         
                 "buy alu" if cash >= 60:
+                    play sound "snd/collect.ogg"
                     $ cash -= 60 
                     $ alu += 1
                     jump xywarehousebuy
         
                 "buy textile" if cash >= 40:
+                    play sound "snd/collect.ogg"
                     $ cash -= 40 
                     $ textile += 1
                     jump xywarehousebuy
         
-                "buy food" if cash >= 32 :  
+                "buy food" if cash >= 32:
+                    play sound "snd/collect.ogg"
                     $ cash -= 32 
                     $ food += 1
                     jump xywarehousebuy
@@ -371,30 +407,35 @@ label xywarehousebuy:
                     jump xywarehouse
                 
 label xywarehousesell:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
    
             menu:
                 "sell rocks" if rocks >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 10 
                     $ rocks -= 1
                     jump xywarehousesell
             
                 "sell steel" if steel >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 40 
                     $ steel -= 1
                     jump xywarehousesell
         
                 "sell alu" if alu >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 50 
                     $ alu -= 1
                     jump xywarehousesell
         
                 "sell textile" if textile >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 30 
                     $ textile -= 1
                     jump xywarehousesell
         
-                "sell food" if food >= 1 :  
+                "sell food" if food >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 32 
                     $ food -= 1
                     jump xywarehousesell

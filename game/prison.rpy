@@ -3,7 +3,9 @@ label prisoncell:
     show screen clock
     
     show bg prisoncellpic behind text at topleft
-    with Dissolve(1.0)
+    if sta_prisondoor == False:
+        with Dissolve(1.0)
+        
     
     show posanim at Position(xpos = 230, ypos=270, xanchor=0.5, yanchor=0.5):
     
@@ -26,11 +28,13 @@ label prisoncell:
             
         "go out of the cell" if sta_prisondoor == True:
             show posanim at Position(xpos = 300, ypos=350, xanchor=0.5, yanchor=0.5):
+            play sound "snd/door-open.ogg"
             jump prisoncorridor
         
 #PRISON DOOR        
 label prisondoor:
     if sta_prisondoor == False:
+        play sound "snd/door-locked.ogg"
         m "The door is locked."
         jump prisoncell
     
@@ -56,7 +60,10 @@ label prisoncellaround:
                         menu:
                             "use the cable with the socket":
                                 $ sta_prisondoor = True
+                                #with hpunch   #shake fx
+                                play sound "snd/bzz.ogg"
                                 with flash
+                                
                                 "BZZZZZ! You just made a short circuit! The door opens."
                                 jump prisoncell
                             "back":
@@ -74,6 +81,7 @@ label prisoncellaround:
                     "take the lamp apart":
                         $ inv_lcable = True
                         $ inv_lbulb = True
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got an electric cable and a bulb!"
 
@@ -94,18 +102,23 @@ label prisoncorridor:
     m "This is the prison corridor. There 4 doors for the cells and a lift door."
     menu:
         "go to the lift":
-            show posanim at Position(xpos = 80, ypos=370, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 80, ypos=370, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump prisonlift
         "go to cell nr. 01":
+            play sound "snd/door-locked.ogg"
             m "This door is closed."
             jump prisoncorridor
         "go to cell nr. 02":
+            play sound "snd/door-locked.ogg"
             m "This door is closed."
             jump prisoncorridor
         "go to cell nr. 03":
+            play sound "snd/door-locked.ogg"
             m "This door is closed."
             jump prisoncorridor
         "go to cell nr. 04":
+            play sound "snd/door-open.ogg"
             jump prisoncell
         
 
@@ -117,34 +130,52 @@ label prisonlift:
     hide ship3
     
     show bg prisonliftpic behind text
+    
 
     menu: 
         "03":
             m "I don't think they want to know that I'm escaping right now!"
             jump prisonlift
         "02":
-            show posanim:
-                linear 2 ypos 210 
-            pause 2.5
+            if prison_lift is not 2:
+                play sound "snd/lift.ogg"
+                show posanim:
+                    linear 2 ypos 210 
+                pause 2.5
+            $ prison_lift = 2
             show posanim at Position(xpos = 300, ypos=370, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump prisonflats
         "01":
-            show posanim:
-                linear 2 ypos 260 
-            pause 2.5
+            if prison_lift is not 1:
+                play sound "snd/lift.ogg"
+                show posanim:
+                    linear 2 ypos 260 
+                pause 2.5
+            $ prison_lift = 1
             hide posanim
+            play sound "snd/door-open.ogg"
             jump warehouse
         "00":
-            show posanim:
-                linear 2 ypos 315
-            pause 2.5
+            if prison_lift is not 0:
+                play sound "snd/lift.ogg"
+                show posanim:
+                    linear 2 ypos 315
+                pause 2.5
+            $ prison_lift = 0            
             show posanim at Position(xpos = 295, ypos=360, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            stop music fadeout 1.0
             jump spaceport
         "-01":
-            show posanim:
-                linear 2 ypos 370 
-            pause 2.5
+            if prison_lift is not -1:
+                play sound "snd/lift.ogg"
+                show posanim:
+                    linear 2 ypos 370 
+                pause 2.5
+            $ prison_lift = -1
             show posanim at Position(xpos = 300, ypos=200, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump prisoncorridor
         
 
@@ -159,13 +190,16 @@ label prisonflats:
         "go to one flat":
             menu:
                 "go to flat 01":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
 
                 "go to flat 02":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
                 "go to flat 03":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
                 "back":
@@ -174,14 +208,17 @@ label prisonflats:
         "go to one door":
             menu:
                 "go to the door left":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
             
                 "go to the door up":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
             
                 "go to the door right":
+                    play sound "snd/door-locked.ogg"
                     m "The door is closed."
                     jump prisonflats
                 "back":
@@ -193,6 +230,7 @@ label prisonflats:
                 menu:
                     "take a space suit":
                         $ inv_ssuit = True
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a space suit!"
                         jump prisonflats
@@ -204,4 +242,5 @@ label prisonflats:
                     
         "go out":
             show posanim at Position(xpos = 80, ypos=210, xanchor=0.5, yanchor=0.5):
+            play sound "snd/door-open.ogg"
             jump prisonlift

@@ -15,13 +15,18 @@ label iss:
             #jump iss
             
         "go to the Spaceport":
+            play sound "snd/door-open.ogg"
             jump spaceport
         "go to the Spaceship Factory":
+            play sound "snd/door-open.ogg"
+            play audio "snd/scan.ogg"
             $ stationshipnr = 1
             jump stationshop
         "go to the Warehouse":
+            play sound "snd/door-open.ogg"
             jump isswarehouse
         "go down":
+            play sound "snd/door-open.ogg"
             jump issexpo
             
 
@@ -46,7 +51,7 @@ label stationshop:
         jump stationshop
 
 
-    show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
        
 
     #ship 1
@@ -81,6 +86,7 @@ label stationshop:
         "buy SD-02" if stationshipnr == 1 and cash >= 400 and spaceshipnr != 1:
             $ cash -= 400
             $ spaceshipnr = 1
+            play sound "snd/collect.ogg"
             with flash
             "Congratulations, you've got a new Space Ship!"
             jump spaceport
@@ -88,6 +94,7 @@ label stationshop:
         "buy IO-1" if stationshipnr == 2 and cash >= 500 and spaceshipnr != 2:
             $ cash -= 500
             $ spaceshipnr = 2
+            play sound "snd/collect.ogg"
             with flash
             "Congratulations, you've got a new Space Ship!"
             jump spaceport
@@ -95,6 +102,7 @@ label stationshop:
         "buy SF-3" if stationshipnr == 3 and cash >= 4000 and spaceshipnr != 3:
             $ cash -= 4000
             $ spaceshipnr = 3
+            play sound "snd/collect.ogg"
             with flash
             "Congratulations, you've got a new Space Ship!"
             jump spaceport
@@ -105,12 +113,15 @@ label stationshop:
             show ship behind bg:
                 xpos 300
                 easeout 1 xpos 750
+            #play sound "snd/beep.ogg"
             pause 1
+            play sound "snd/scan.ogg"
             $ stationshipnr += 1
             jump stationshop
         
         
         "go out":
+            play sound "snd/door-open.ogg"
             jump iss
             
             
@@ -123,7 +134,7 @@ label isswarehouse:
     hide posanim
     show bg isswh behind text
 
-    show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
     
     menu:
         "buy":
@@ -133,36 +144,42 @@ label isswarehouse:
         "go out":
             hide text
             #show posanim at Position(xpos = 80, ypos=260, xanchor=0.5, yanchor=0.5):
+            play sound "snd/door-open.ogg"
             jump iss
             
             
             
             
 label isswarehousebuy:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
            
             menu:
                 "buy rocks" if cash >= 20:
+                    play sound "snd/collect.ogg"
                     $ cash -= 20 
                     $ rocks += 1
                     jump isswarehousebuy
             
                 "buy steel" if cash >= 70:
+                    play sound "snd/collect.ogg"
                     $ cash -= 70 
                     $ steel += 1
                     jump isswarehousebuy
         
                 "buy alu" if cash >= 80:
+                    play sound "snd/collect.ogg"
                     $ cash -= 80 
                     $ alu += 1
                     jump isswarehousebuy
         
                 "buy textile" if cash >= 40:
+                    play sound "snd/collect.ogg"
                     $ cash -= 40 
                     $ textile += 1
                     jump isswarehousebuy
         
-                "buy food" if cash >= 35 :  
+                "buy food" if cash >= 35 :
+                    play sound "snd/collect.ogg"
                     $ cash -= 35 
                     $ food += 1
                     jump isswarehousebuy
@@ -171,30 +188,35 @@ label isswarehousebuy:
                     jump isswarehouse
                 
 label isswarehousesell:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
    
             menu:
                 "sell rocks" if rocks >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 13 
                     $ rocks -= 1
                     jump isswarehousesell
             
                 "sell steel" if steel >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 60 
                     $ steel -= 1
                     jump isswarehousesell
         
                 "sell alu" if alu >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 70 
                     $ alu -= 1
                     jump isswarehousesell
         
                 "sell textile" if textile >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 30 
                     $ textile -= 1
                     jump isswarehousesell
         
-                "sell food" if food >= 1 :  
+                "sell food" if food >= 1 :
+                    play sound "snd/collect.ogg"
                     $ cash += 35 
                     $ food -= 1
                     jump isswarehousesell
@@ -225,6 +247,7 @@ label issexpo:
                     issmatar "Thank you very much."
                     issmatar "Here is your money for the job. Thank you!"
                     $ issmatarquest = 2
+                    play sound "snd/collect.ogg"
                     $ cash += 150
                     with flash
                     "You got 150c !"
@@ -262,7 +285,7 @@ label issexpo:
         "look at the Betria Colony office" if firstticket == 0:
             m "There is nobody."
             m "But a huge poster about the Betria Colony!"
-            "BETRIA and its Colony\n\nDo you want to have nice holydays?\nCome to the Betria Planet!\nYou will discover many amazing things! The Colony, the Fields, the Mountains, the Sea, the Train, and many more!\nTo come to us just find the fastest way to x402 y242, or just locate betria in the Terminal!\nIf you need a ticket to travel around betria, just ask us.\nSee you soon on Betria!"
+            "BETRIA and its Colony\n\nDo you want to have nice holidays?\nCome to the Betria Planet!\nYou will discover many amazing things! The Colony, the Fields, the Mountains, the Sea, the Train, and many more!\nTo come to us just find the fastest way to x402 y242, or just locate betria in the Terminal!\nIf you need a ticket to travel around betria, just ask us.\nSee you soon on Betria!"
             pass
 
             
@@ -279,6 +302,7 @@ label issexpo:
                         $ ticketdir = 1
                         $ ticketdest = 1
                         $ firstticket = 2
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Betria's Fields!"
                         pass
@@ -291,6 +315,7 @@ label issexpo:
                 pass
         
         "go out":
+            play sound "snd/door-open.ogg"
             jump iss
     
     jump issexpo

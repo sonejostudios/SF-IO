@@ -217,6 +217,8 @@ label solarsystem:
         repeat
 
 
+    play sound "snd/scan.ogg"
+    with flash
 
 
 
@@ -224,12 +226,15 @@ label hologrammenu:
     
     menu:
         "Distances Map":
-            jump distancemap
+            #jump distancemap
+            call distancemap from _call_distancemap
             
         
         "back":
-            show posanim at Position(xpos = 360, ypos=230, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 360, ypos=230, xanchor=0.5, yanchor=0.5)
+            #play sound "snd/beep.ogg"
             jump polaris
+
 
 
 label distancemap:
@@ -257,18 +262,26 @@ label distancemap:
     hide starsmid
     hide starsbig
     
+
+    
     image distance = "pics/circles.png"
     
     show distance at truecenter
     
+    play sound "snd/scan.ogg"
+    with flash
+    
     menu:
-        "Show Coordinates Data Bank":
+        "Show Coordinates Data Bank" if coorcopy == 0:
             "prison: x320 y370 \nxy: x293 y331 \nsun: x300 y300 \naldabran: x184 y253 \nmeteoroid: x210 y375 \nbetria: x402 y242 \nmatar: x256 y200 \npolaris: x180 y470 \niss: x341 y143"
             menu:
                 "Copy Coordinates Data Bank and Distance Map to Terminal":
                     $ coorcopy = 1
+                    play sound "snd/connected.ogg"
                     "Coordinates copied!"
-                    "To access them, juste type locate planets in a terminal."
+                    "To access them, juste type map in a terminal."
+                    show posanim at Position(xpos = 360, ypos=230, xanchor=0.5, yanchor=0.5):
+                    jump polaris
                 "back":
                     pass
             jump distancemap
@@ -276,6 +289,7 @@ label distancemap:
         "back":
             hide distance
             jump solarsystem
+
     
     
     

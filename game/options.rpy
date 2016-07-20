@@ -7,14 +7,21 @@
 ## commented-out code, and you may want to uncomment them when
 ## appropriate.
 
-init -1 python hide:
 
+init -1 python:
+    #sound enable or disable
+    playsounds = True
+
+
+init -1 python hide:
+    
     ## Should we enable the use of developer tools? This should be
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
 
+    #config.developer = False
     config.developer = False
-    #config.developer = True
+    
 
     ## These control the width and height of the screen.
 
@@ -34,7 +41,7 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "SF-IO"
-    config.version = "0.1"
+    config.version = "0.2"
 
     #########################################
     # Themes
@@ -167,33 +174,42 @@ init -1 python hide:
 
     ## Set this to False if the game does not have any sound effects.
 
-    config.has_sound = True
+    if playsounds == False:
+        config.has_sound = False
+    else:
+        config.has_sound = True
 
     ## Set this to False if the game does not have any music.
 
-    config.has_music = True
+    if playsounds == False:
+        config.has_music = False
+    else:
+        config.has_sound = True
 
     ## Set this to True if the game has voicing.
-
-    config.has_voice = False
+    
+    if playsounds == False:
+        config.has_voice = False
+    else:
+        config.has_sound = True
 
     ## Sounds that are used when button and imagemaps are clicked.
 
-    # style.button.activate_sound = "click.wav"
-    # style.imagemap.activate_sound = "click.wav"
+    #style.button.activate_sound = "snd/beep.ogg"
+    #style.imagemap.activate_sound = "snd/collect.ogg"
 
     ## Sounds that are used when entering and exiting the game menu.
 
-    # config.enter_sound = "click.wav"
-    # config.exit_sound = "click.wav"
+    #config.enter_sound = "snd/beep.ogg"
+    #config.exit_sound = "snd/beep.ogg"
 
     ## A sample sound that can be played to check the sound volume.
 
-    # config.sample_sound = "click.wav"
+    #config.sample_sound = "snd/collect.ogg"
 
     ## Music that is played while the user is at the main menu.
 
-    # config.main_menu_music = "main_menu_theme.ogg"
+    config.main_menu_music = "snd/spaceport-met.ogg"
 
 
     #########################################
@@ -318,7 +334,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "SF-IO-1.0"
+    build.directory_name = "SF-IO-builds"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,

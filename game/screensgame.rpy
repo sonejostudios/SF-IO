@@ -7,10 +7,26 @@ screen clock:
     
     $ runtime = int(renpy.get_game_runtime())
     
-    text "[hour]:[min]:[sec]" size 16 at Position(xpos = 0.98, ypos= 0.03, xanchor = 1.0)
+    text "[hour]:[min]:[sec]" size 16 at Position(xpos = 0.92, ypos= 0.02, xanchor = 1.0)
     #text "[runtime]" size 16 at Position(xpos = 0.98, ypos= 0.03, xanchor = 1.0)
     
-    text "[cash] c" size 16 at Position(xpos = 0.98, ypos= 0.065, xanchor = 1.0)
+    text (_("[cash] c")) size 16 at Position(xpos = 0.92, ypos= 0.06, xanchor = 1.0)
+    
+    
+    frame:
+        style "menu"
+        xpos 795
+        ypos 005
+        xanchor 1.0
+        button:
+            action ShowMenu("save")
+            style "menu_choice_button3"
+
+            text "-" style "menu_choice"
+            #idle "pics/menuicon.png"
+
+            
+        #textbutton _("X") action ShowMenu("preferences") style "menu_choice_button3"
 
 
 

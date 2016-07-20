@@ -35,6 +35,8 @@ label dealerview:
             ypos 0.2
             easein 4 xpos 0.5
 
+    play music "snd/spaceship-hum.ogg" loop fadein 4.0
+
     pause 4    
     d "Are you sure you want to deal with me?"
     menu:
@@ -58,9 +60,15 @@ label dealerview:
             pass
             
         "no, thanks":
+
             $ coox = 280
             $ cooy = 120
             $ spaceshippos = 0
+            
+            stop music fadeout 1.0
+            pause 1
+            play music "snd/spaceship.ogg" loop fadein 1.0
+            
             pass   
 
     
@@ -110,11 +118,17 @@ label iogive:
     d "I know you were coming. Finally you are here!"
     d "Here, I give you a copy of the IO-net software."
     
+    play sound "snd/collect.ogg"
+    
     $ inv_ionet = True
     with flash
     "You got the IO-net software!"
     
     d "Good luck with your job!"
+    
+    stop music fadeout 1.0
+    pause 1
+    play music "snd/spaceship.ogg" loop fadein 1.0
 
 
     return
@@ -128,7 +142,7 @@ label dwarehouse:
     hide posanim
     show bg dealerwh behind text at topleft
 
-    show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
     
     menu:
         "buy":
@@ -138,6 +152,10 @@ label dwarehouse:
         "go out":
             hide text
             hide bg
+            
+            stop music fadeout 1.0
+            pause 1
+            play music "snd/spaceship.ogg" loop fadein 1.0
 
             return
             
@@ -145,30 +163,35 @@ label dwarehouse:
             
             
 label dwarehousebuy:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
            
             menu:
                 "buy rocks" if cash >= 15:
+                    play sound "snd/collect.ogg"
                     $ cash -= 15 
                     $ rocks += 1
                     jump dwarehousebuy
             
                 "buy steel" if cash >= 35:
+                    play sound "snd/collect.ogg"
                     $ cash -= 35 
                     $ steel += 1
                     jump dwarehousebuy
         
                 "buy alu" if cash >= 45:
+                    play sound "snd/collect.ogg"
                     $ cash -= 45 
                     $ alu += 1
                     jump dwarehousebuy
         
                 "buy textile" if cash >= 25:
+                    play sound "snd/collect.ogg"
                     $ cash -= 25
                     $ textile += 1
                     jump dwarehousebuy
         
-                "buy food" if cash >= 30 :  
+                "buy food" if cash >= 30 :
+                    play sound "snd/collect.ogg"
                     $ cash -= 30 
                     $ food += 1
                     jump dwarehousebuy
@@ -177,30 +200,35 @@ label dwarehousebuy:
                     jump dwarehouse
                 
 label dwarehousesell:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
    
             menu:
                 "sell rocks" if rocks >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 10 
                     $ rocks -= 1
                     jump dwarehousesell
             
                 "sell steel" if steel >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 25 
                     $ steel -= 1
                     jump dwarehousesell
         
                 "sell alu" if alu >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 35 
                     $ alu -= 1
                     jump dwarehousesell
         
                 "sell textile" if textile >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 15 
                     $ textile -= 1
                     jump dwarehousesell
         
-                "sell food" if food >= 1 :  
+                "sell food" if food >= 1 :
+                    play sound "snd/collect.ogg"
                     $ cash += 25 
                     $ food -= 1
                     jump dwarehousesell

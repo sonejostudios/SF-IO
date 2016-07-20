@@ -14,12 +14,15 @@ label matar:
             #jump matar
             
         "go to the mine shop":
+            play sound "snd/door-open.ogg"
             jump matarshop
             
         "go to the warehouse":
+            play sound "snd/door-open.ogg"
             jump mwarehouse
             
         "go to the lift":
+            play sound "snd/door-locked.ogg"
             m "It's closed."
             
         "look behind the mine shop":
@@ -27,6 +30,7 @@ label matar:
             jump matarwaste
             
         "go out":
+            play sound "snd/door-open.ogg"
             jump spaceport
     jump matar
 
@@ -34,11 +38,14 @@ label matarwaste:
     m "This is the waste of the mine shop."
     menu:
         "search into the waste":
+            play sound "snd/search.ogg"
+            pause 1.5
             if inv_digtool == False:
                 m "Hoo there is a mine tool for digging!"
                 menu:
                     "take the tool":
                         $ inv_digtool = True
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a mine tool!"
                         jump matar
@@ -46,11 +53,12 @@ label matarwaste:
                     "back":
                         jump matar
                         
-            if issmatarquest == 1:
+            if issmatarquest == 1 and inv_mstone == False:
                 m "Hoo there is a nice stone there. It looks like an original matar stone... ?"
                 menu:
                     "take the stone":
                         $ inv_mstone = True
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got an original matar stone!"
                         jump matar
@@ -80,6 +88,7 @@ label matarshop:
         "mine tool" if cash >= 30 and inv_digtool == False:
             $ cash -= 30
             $ inv_digtool = True
+            play sound "snd/collect.ogg"
             with flash
             "You got a mine tool!"
             pass
@@ -88,6 +97,7 @@ label matarshop:
         "original matar stone"if cash >= 50 and inv_mstone == False:
             $ cash -= 50
             $ inv_mstone = True
+            play sound "snd/collect.ogg"
             with flash
             "You got an original matar stone!"
             pass
@@ -95,6 +105,7 @@ label matarshop:
         "navigation system"if cash >= 200 and inv_navi == False:
             $ cash -= 200
             $ inv_navi = True
+            play sound "snd/collect.ogg"
             with flash
             "You got a NaviBack navigation system!"
             pass
@@ -102,6 +113,7 @@ label matarshop:
             
         "go out":
             show posanim at Position(xpos = 170, ypos=330, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump matar
     
     jump matarshop
@@ -116,7 +128,7 @@ label mwarehouse:
     hide posanim
     show bg matarwh behind text
 
-    show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
     
     menu:
         "buy":
@@ -125,37 +137,43 @@ label mwarehouse:
             jump mwarehousesell
         "go out":
             hide text
-            show posanim at Position(xpos = 465, ypos=330, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 465, ypos=330, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump matar
             
             
             
             
 label mwarehousebuy:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
            
             menu:
                 "buy rocks" if cash >= 10:
+                    play sound "snd/collect.ogg"
                     $ cash -= 10 
                     $ rocks += 1
                     jump mwarehousebuy
             
                 "buy steel" if cash >= 30:
+                    play sound "snd/collect.ogg"
                     $ cash -= 30 
                     $ steel += 1
                     jump mwarehousebuy
         
                 "buy alu" if cash >= 40:
+                    play sound "snd/collect.ogg"
                     $ cash -= 40 
                     $ alu += 1
                     jump mwarehousebuy
         
                 "buy textile" if cash >= 40:
+                    play sound "snd/collect.ogg"
                     $ cash -= 40 
                     $ textile += 1
                     jump mwarehousebuy
         
-                "buy food" if cash >= 45 :  
+                "buy food" if cash >= 45:
+                    play sound "snd/collect.ogg" 
                     $ cash -= 45 
                     $ food += 1
                     jump mwarehousebuy
@@ -164,30 +182,35 @@ label mwarehousebuy:
                     jump mwarehouse
                 
 label mwarehousesell:
-            show text "{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}" at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
+            show text (_("{size=16}Cash = [cash] c \n\nRocks = [rocks] kg  ~  Steel = [steel] kg  ~  Aluminium = [alu] kg \n Textile = [textile] kg  ~  Food = [food] kg{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=400, yanchor=0.5)
    
             menu:
                 "sell rocks" if rocks >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 10 
                     $ rocks -= 1
                     jump mwarehousesell
             
                 "sell steel" if steel >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 30 
                     $ steel -= 1
                     jump mwarehousesell
         
                 "sell alu" if alu >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 40 
                     $ alu -= 1
                     jump mwarehousesell
         
                 "sell textile" if textile >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 30 
                     $ textile -= 1
                     jump mwarehousesell
         
-                "sell food" if food >= 1 :  
+                "sell food" if food >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 40 
                     $ food -= 1
                     jump mwarehousesell

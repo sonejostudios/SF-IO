@@ -48,8 +48,10 @@ label polaris:
             call ioinfo from _call_ioinfo_4
             
         "look at the Hologram":
+            #play sound "snd/scan.ogg"
             hide ionetsender
             jump solarsystem
+
 
         "use the Terminal":
             $ term1 = "help"

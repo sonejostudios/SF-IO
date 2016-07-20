@@ -14,7 +14,7 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="inventory.svg"
    inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/inventory.png"
    inkscape:export-xdpi="90"
@@ -143,9 +143,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6157576"
-     inkscape:cx="2140.0926"
-     inkscape:cy="-6434.2052"
+     inkscape:zoom="1.7416255"
+     inkscape:cx="1596.3487"
+     inkscape:cy="-1248.7665"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -16025,6 +16025,34 @@
            y="7499.7964"
            style="font-size:51.24523163px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:50%;writing-mode:lr-tb;text-anchor:start;font-family:Game Over;-inkscape-font-specification:Game Over"
            id="tspan6275">WC</tspan></text>
+    </g>
+    <g
+       id="g6240"
+       transform="matrix(0.70291644,0,0,0.86388168,365.40016,306.49649)"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SF-IO/game/pics/menuicon.png"
+       inkscape:export-xdpi="89.989998"
+       inkscape:export-ydpi="89.989998">
+      <rect
+         y="2420.3372"
+         x="1578.267"
+         height="3.1579695"
+         width="26.147707"
+         id="rect5466"
+         style="fill:#8dd35f;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#8dd35f;fill-opacity:1;stroke:none"
+         id="rect6236"
+         width="26.147707"
+         height="3.1579695"
+         x="1578.267"
+         y="2429.8828" />
+      <rect
+         y="2439.4285"
+         x="1578.267"
+         height="3.1579695"
+         width="26.147707"
+         id="rect6238"
+         style="fill:#8dd35f;fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>

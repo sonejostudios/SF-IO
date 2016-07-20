@@ -112,6 +112,12 @@ init -2:
         xminimum 90
         yminimum 70
         ymaximum 70
+        
+    style menu_choice_button3 is button:
+        xminimum 50
+        xmaximum 50
+        yminimum 40
+        ymaximum 40
 
 
 ##############################################################################
@@ -421,34 +427,47 @@ screen preferences():
 
                 #textbutton _("Joystick...") action Preference("joystick") style "menu_choice_button"
                 
-            
+            if playsounds == True:
+                frame:
+                    style_group "pref"
+                    has vbox
+    
+                    label _("Ambience Volume")
+                    bar value Preference("music volume"):
+                        xpos 0.8
+                        
+                
+                frame:
+                    style_group "pref"
+                    has vbox
+    
+                    label _("Sound Volume")
+                    bar value Preference("sound volume"):
+                        xpos 0.8
+                    
+    
+                    if config.sample_sound:
+                        #null
+                        textbutton _("Test"):
+                            action Play("sound", config.sample_sound)
+                            style "soundtest_button"
+                            #style "menu_choice_button"
+                            xanchor 1.0
+                            xpos 0.8
           
 
 
         vbox:
-            null
-            #frame:
-                #style_group "pref"
-                #has vbox
+            #null
+            frame:
+                style_group "pref"
+                has vbox
 
-                #label _("Music Volume")
-                #bar value Preference("music volume"):
-                    #xpos 0.8
-                    
+                label _("Language")
+                textbutton "English" action Language(None) style "menu_choice_button"
+                textbutton "Esperanto" action Language("esperanto") style "menu_choice_button"
+
             
-            #frame:
-                #style_group "pref"
-                #has vbox
-
-                #label _("Sound Volume")
-                #bar value Preference("sound volume"):
-                    #xpos 0.8
-                
-
-                #if config.sample_sound:
-                    #textbutton _("Test"):
-                        #action Play("sound", config.sample_sound)
-                        #style "soundtest_button"
 
             #if config.has_voice:
                 #frame:
@@ -520,6 +539,7 @@ init -2:
 
     style soundtest_button:
         xalign 1.0
+        yminimum 70
 
 
 ##############################################################################

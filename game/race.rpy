@@ -64,7 +64,10 @@ label racestart:
         if spaceshipnr == 3:
             show ship spaceship3l at truecenter
             
+    
+    stop music fadeout 1.0
     capitain "Are you ready?"
+    play music "snd/spaceship-hum.ogg" loop fadein 1.0
     
     menu:
         #"get ship 1":
@@ -78,17 +81,22 @@ label racestart:
             #jump racestart
             
         "Let's go!":
+            play sound "snd/race.ogg" 
+            
             show text "{size=50}3{/size}" at Position(xpos = 0.5, ypos=0.9, xanchor=0.5, yanchor=0.5)
             pause 1
             show text "{size=50}2{/size}" at Position(xpos = 0.5, ypos=0.9, xanchor=0.5, yanchor=0.5)
             pause 1
             show text "{size=50}1{/size}" at Position(xpos = 0.5, ypos=0.9, xanchor=0.5, yanchor=0.5)
             pause 1
-            show text "{size=50}GO!{/size}" at Position(xpos = 0.5, ypos=0.9, xanchor=0.5, yanchor=0.5)
+            show text (_("{size=50}GO!{/size}")) at Position(xpos = 0.5, ypos=0.9, xanchor=0.5, yanchor=0.5)
             jump race
         
         "No sorry...":
+            stop music fadeout 1
             capitain "Haha I knew that..."
+
+            play music "snd/spaceship.ogg" loop fadein 1
             hide capship
             jump orbitview
             
@@ -101,6 +109,9 @@ label race:
     hide posanim
     hide targetpos
     hide bg
+    
+
+    play sound "snd/hyperspace.ogg"
     
 
 
@@ -232,19 +243,24 @@ label race:
 
     
     pause 5
+    play sound "snd/scan.ogg"
+    play music "snd/spaceship.ogg" loop fadein 0.5
     
     with flash
     
     if spaceshipnr == 1:
-        capitain "Hahaha you loosed the race! I knew that!"
+        play sound "snd/beep.ogg" 
+        capitain "Hahaha you lost the race! I knew that!"
         pass
         
     if spaceshipnr == 2:
+        play sound "snd/beep.ogg" 
         capitain "Hahaha you lost the race! I knew that!"
         pass
         
     if spaceshipnr == 3:
         $ sunrace = 2
+        play sound "snd/connected.ogg" 
         capitain "You won man! Well done. Let's meet again in Betria at the Colony Bar."
         m "Okay, see you!"
         pass

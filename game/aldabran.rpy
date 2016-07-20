@@ -178,6 +178,7 @@ label aldabrandesert:
             jump takeoff
         
         "use navigation system" if inv_navi == True and navi_on == False:
+            play sound "snd/collect.ogg"
             $ navi_on = True
             pass
         
@@ -187,7 +188,7 @@ label aldabrandesert:
             hide naviarrow
             jump alswreck
         
-        "go north"if deserty >= 0:
+        "go north" if deserty >= 0:
             if navi_on == False:
                 m "I won't go into the desert without using a proper navigation system!"
             else:
@@ -215,7 +216,7 @@ label aldabrandesert:
                     xpos 540
                 pass
             
-        "go east"if desertx <= 10:
+        "go east" if desertx <= 10:
             if navi_on == False:
                 m "I won't go into the desert without using a proper navigation system!"
             else:

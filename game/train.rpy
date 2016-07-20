@@ -21,6 +21,7 @@ label btrainstation:
     if trainstation == 3:
         show bg btrainstation3
     
+    play music "snd/base.ogg" loop fadein 0.5
     
     
     #show text "trainstation [trainstation], ticketdest [ticketdest]"
@@ -38,6 +39,7 @@ label btrainstation:
             xpos 1500
             easein 4 xpos 295
         pause 4
+        play sound "snd/door-open.ogg"
         show posanim at Position(xpos = 180, ypos=290, xanchor=0.5, yanchor=0.5)
         
     if trainfrom == 2:
@@ -49,6 +51,7 @@ label btrainstation:
             xpos -1000
             easein 4 xpos 295
         pause 4
+        play sound "snd/door-open.ogg"
         show posanim at Position(xpos = 180, ypos=290, xanchor=0.5, yanchor=0.5)
         
     jump trainstationmenu
@@ -60,6 +63,8 @@ label trainstationmenu:
     menu:
         "take the train" :
             if inv_ticket == True:
+                play music "snd/train.ogg" loop fadein 4
+                play sound "snd/door-open.ogg"
                 if ticketdir == 1: 
                     $ trainfrom = 1
                     hide posanim
@@ -76,6 +81,7 @@ label trainstationmenu:
                     pause 4
                     jump btrain
             else:
+                play sound "snd/door-locked.ogg"
                 m "The train's door won't open without a valid ticket."
                 jump trainstationmenu
                 
@@ -105,6 +111,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 2
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Mountains Station!"
                         
@@ -114,6 +121,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 1
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Fields Station!"
                     
@@ -124,6 +132,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 3
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Coast Station!"
                         
@@ -139,6 +148,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 2
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Mountains Station!"
                         
@@ -148,6 +158,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 0
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Main Station!"
                         
@@ -157,6 +168,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 3
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Coast Station!"
                         
@@ -172,6 +184,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 1
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Fields Station!"
                         
@@ -181,6 +194,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 0
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Main Station!"
                     
@@ -190,6 +204,7 @@ label trainstationmenu:
                         $ ticketdir = 2
                         $ inv_ticket = True
                         $ ticketdest = 3
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Coast Station!"
                         
@@ -205,6 +220,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 2
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Mountains Station!"
                         
@@ -214,6 +230,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 1
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Fields Station!"
                         
@@ -223,6 +240,7 @@ label trainstationmenu:
                         $ ticketdir = 1
                         $ inv_ticket = True
                         $ ticketdest = 0
+                        play sound "snd/collect.ogg"
                         with flash
                         "You got a train ticket to Main Station!"
                     
@@ -236,6 +254,8 @@ label trainstationmenu:
             jump trainstationmenu
         
         "go out":
+            
+            play sound "snd/door-open.ogg"
             
             if trainstation == 0:
                 $ trainfrom = 0
@@ -332,11 +352,12 @@ label btrain:
                     trainguy "Hello."
                     trainguy "Are you the guy the governement was looking for?"
                     m "I don't know..."
-                    trainguy "Yes the guy they put you in prison last week?"
+                    trainguy "Yes the guy they put in prison last week?"
                     m "Can't remember. That sounds interesting... Go on."
                     trainguy "Oh I don't know so much. But I know you are a good guy."                
                     trainguy "I will tell you something..."
                     trainguy "But it's not safe here. Follow me."
+                    play sound "snd/door-open.ogg"
                     $ trainw = 7
                     pass
                     
@@ -345,6 +366,7 @@ label btrain:
                     trainguy "I hope we will kick out this corrupt governement soon."
                     m "Yes, me too!"
                     trainguy "Follow me."
+                    play sound "snd/door-open.ogg"
                     $ trainw = 7
                     pass
                     
@@ -390,6 +412,7 @@ label btrain:
             menu:
                 "yes":
                     $ rebel = True
+                    play sound "snd/connected.ogg"
                     with flash
                     "You joined the Rebel Alliance!"
                     trainguy "So I'll tell you your job in this case."
@@ -428,23 +451,32 @@ label btrain:
     menu:
         "go left" if trainw != 0:
             if trainw == 1:
+                play sound "snd/door-locked.ogg"
                 m "It's closed."
             else:
+                play sound "snd/door-open.ogg"
                 $ trainw -= 1
             jump btrain
         
         "go right" if trainw != 7:
             if trainw == 6:
+                play sound "snd/door-locked.ogg"
                 m "It's closed."
             else:
+                play sound "snd/door-open.ogg"
                 $ trainw += 1
             jump btrain
         
         "wait":
             $ trainw = 3
             $ trainstation = ticketdest
+            
+            play sound "snd/train.ogg" fadein 1.5
+            stop music fadeout 1.5
             pause 1.5
             m "I think we are coming soon..."
+            stop sound fadeout 4
+            
             hide railsl
             hide train
             

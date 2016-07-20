@@ -260,23 +260,23 @@ image ionetsender = Animation("pics/ionetsenderc.png", 0.5,
 
 # Declare characters used by this game.
 define m = Character('[playername]', color="#8dd35f")
-define d = Character('Space Dealer', color="#8dd35f")
-define barman = Character('Barman', color="#8dd35f")
-define barguy = Character('Weird Guy', color="#8dd35f")
-define oldminer = Character('Old Mine Worker', color="#8dd35f")
-define engineer = Character('Engineer', color="#8dd35f")
-define mystguy = Character('Mysterious Guy', color="#8dd35f")
-define traintickets = Character('Ticket Seller', color="#8dd35f")
-define trainguy = Character('Train Guy', color="#8dd35f")
-define issmatar = Character('Matar Mines Worker', color="#8dd35f")
-define issbetria = Character('Betria Colony Worker', color="#8dd35f")
-define bfhguy = Character('Field Engineer', color="#8dd35f")
-define matarshop = Character('Shop Worker', color="#8dd35f")
-define capitain = Character('Old Capitain', color="#8dd35f")
-define mountguy = Character('Mountains Worker', color="#8dd35f")
-define consguy = Character('Construcion Worker', color="#8dd35f")
-define tableguy = Character('Table Guy', color="#8dd35f")
-define stonesguy = Character('Stones Guy', color="#8dd35f")
+define d = Character(_('Space Dealer'), color="#8dd35f")
+define barman = Character(_('Barman'), color="#8dd35f")
+define barguy = Character(_('Weird Guy'), color="#8dd35f")
+define oldminer = Character(_('Old Mine Worker'), color="#8dd35f")
+define engineer = Character(_('Engineer'), color="#8dd35f")
+define mystguy = Character(_('Mysterious Guy'), color="#8dd35f")
+define traintickets = Character(_('Ticket Seller'), color="#8dd35f")
+define trainguy = Character(_('Train Guy'), color="#8dd35f")
+define issmatar = Character(_('Matar Mines Worker'), color="#8dd35f")
+define issbetria = Character(_('Betria Colony Worker'), color="#8dd35f")
+define bfhguy = Character(_('Field Engineer'), color="#8dd35f")
+define matarshop = Character(_('Shop Worker'), color="#8dd35f")
+define capitain = Character(_('Old Capitain'), color="#8dd35f")
+define mountguy = Character(_('Mountains Worker'), color="#8dd35f")
+define consguy = Character(_('Construcion Worker'), color="#8dd35f")
+define tableguy = Character(_('Table Guy'), color="#8dd35f")
+define stonesguy = Character(_('Stones Guy'), color="#8dd35f")
 
 
 
@@ -287,6 +287,9 @@ init:
     
     #super developper mode (get all quests done etc -> setup in superdev.rpy)
     $ superdev = False
+    
+    
+
     
 
 #Inventory
@@ -310,11 +313,14 @@ init:
 
 #transition    
     $ flash = Fade(.10,0,.75,color="fff")
+    
+#sounds
+    $ musicplaying = None
 
 
 
 #hpxpcash        
-    $ cash = 0 
+    $ cash = 0
     
 #player name
     $ playername = "Me"
@@ -381,6 +387,7 @@ init:
 
 #prison values
     $ sta_prisondoor = False # if prison door open or not. init: False
+    $ prison_lift = -1 #the level the player is/goes
     
     
 #xy values
@@ -394,6 +401,8 @@ init:
 # meteoroid value
     $ minerandom = 1
     $ mineexploded = False
+    
+    $ mine_lift = 0
     
 # matar values
     $ matarlanding = False # init False. if player got visit number from iss or not
@@ -443,14 +452,11 @@ init:
     $ io_maxnodes = 5 # number of node you need to reach to win the game
     
     # nodes
-    $ io_meteoroid = False
-    $ io_pol = False
-    $ io_blake = False
-    $ io_alswreck = False
-    $ io_bislands = False
-
-
-
+    $ io_meteoroid = 0
+    $ io_pol = 0
+    $ io_blake = 0
+    $ io_alswreck = 0
+    $ io_bislands = 0
 
 
 
@@ -460,46 +466,21 @@ label start:
         
     call intro from _call_intro
     
+    show screen inventory
+    show screen clock
     
     if superdev == True:
         call superdev from _call_superdev
-        
+        jump spaceship
+            
     if superdev == False:
         jump playername
-    
-    
-    menu:
-        "start game":
-            hide starssmall
-            hide starsmid
-            hide starsbig
-            hide title  
-            with Dissolve(1.0)
-            jump playername
-            
-
-        #"get 50 cash":
-        #    $ cash += 50
-        #    "your cash :  [cash]"
-        #    jump start
-            
-
-            
-        "go the the space ship":
-            hide title
-            with Dissolve(1.0)
-            
-            jump spaceship
-            
-        
-        "exit":
-           return
 
     
 
 label playername:
     python:
-        playername = renpy.input("Please enter your name:")
+        playername = renpy.input(_("Please enter your name:"))
         playername = playername.strip()
         if not playername:
             playername = "Me"
@@ -507,7 +488,7 @@ label playername:
     hide starssmall
     hide starsmid
     hide starsbig
-    hide title  
+    hide title
     with Dissolve(1.0)
     jump prisoncell
     
@@ -519,10 +500,11 @@ label spaceship:
     hide bg prisontlareapic
     hide sunpic
     hide posanim
+    hide title  
 
     hide targetpos
     
-    
+    #play sound "snd/beep.ogg"
     
     show screen clock
     
@@ -601,32 +583,41 @@ label spaceshipmenu:
         "Spaceship":
             menu:
                 "Cockpit":
+                    play sound "snd/beep.ogg"
                     jump cockpit
                 "Orbital View" if spaceshippos != 0:
                     jump orbitview
         
                 "Wares and Inventory":
+                    play sound "snd/beep.ogg"
                     jump wares
                 
                 "Space Ship Cameras":
+                    play sound "snd/beep.ogg"
                     menu:
                         "Set to Top Camera":
                             $ spaceshipdir = 1
+                            play sound "snd/collect.ogg"
                             jump spaceship
                         "Set to Bottom Camera":
                             $ spaceshipdir = 3
+                            play sound "snd/collect.ogg"
                             jump spaceship
                         "Set to Left Camera":
                             $ spaceshipdir = 4
+                            play sound "snd/collect.ogg"
                             jump spaceship
                         "Set to Right Camera":
                             $ spaceshipdir = 2
+                            play sound "snd/collect.ogg"
                             jump spaceship
                     
                 
                 "Terminal":
                     $ backto = "spaceship"
                     $ term1 = "help"
+                    play sound "snd/beep.ogg"
+
                     jump terminal
                     
                 "close":
@@ -647,6 +638,7 @@ label cockpit:
     hide posanim
     show bg cockpit behind targetpos at topleft
     
+    
     transform target_transform:
         xanchor 0.5
         yanchor 0.5
@@ -659,33 +651,33 @@ label cockpit:
     show posanim at Position(pos = (int(coox), int(cooy)), xanchor=0.5, yanchor=0.5):    
     
     if spaceshippos == 0:
-        show text "{size=16}Position: x[coox], y[cooy]\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy]\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
     
     if spaceshippos == 1:
-         show text "{size=16}Position: x[coox], y[cooy] (Prison)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+         show text (_("{size=16}Position: x[coox], y[cooy] (Prison)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
     if spaceshippos == 2:
-        show text "{size=16}Position: x[coox], y[cooy] (Planet XY)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Planet XY)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
     
     if spaceshippos == 3:
-        show text "{size=16}Position: x[coox], y[cooy] (Sun 333)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Sun 333)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
 
     if spaceshippos == 4:
-        show text "{size=16}Position: x[coox], y[cooy] (Aldabran)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Aldabran)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
 
     if spaceshippos == 5:
-        show text "{size=16}Position: x[coox], y[cooy] (Meteoroid 539)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Meteoroid 539)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
     
     if spaceshippos == 7:
-        show text "{size=16}Position: x[coox], y[cooy] (Betria)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Betria)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
 
     if spaceshippos == 8:
-        show text "{size=16}Position: x[coox], y[cooy] (Matar)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Matar)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
    
     if spaceshippos == 9:
-        show text "{size=16}Position: x[coox], y[cooy] (Polaris)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Polaris)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
 
     if spaceshippos == 10:
-        show text "{size=16}Position: x[coox], y[cooy] (Industrial Space Station)\nDestination: x[toox], y[tooy]{/size}" at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
+        show text (_("{size=16}Position: x[coox], y[cooy] (Industrial Space Station)\nDestination: x[toox], y[tooy]{/size}")) at Position(xpos = 300, xanchor=0.5, ypos=50, yanchor=0.0)
 
     
     
@@ -743,18 +735,21 @@ label cockpit:
 #coordinates
 label coordinates:
     #define coox = Character("[coox]")
+    
+    play sound "snd/beep.ogg"
 
     python:
-        toox = renpy.input("Enter X coordinate:", allow= "0123456789",  length= 3 )
+        toox = renpy.input(_("Enter X coordinate:"), allow= "0123456789",  length= 3 )
         toox = toox.strip()
         
 
         if not toox:
             toox = coox
-            
+    
+    play sound "snd/beep.ogg"        
     
     python:
-        tooy = renpy.input("Enter Y coordinate:", allow= "0123456789",  length= 3)
+        tooy = renpy.input(_("Enter Y coordinate:"), allow= "0123456789",  length= 3)
         tooy = tooy.strip()
 
         if not tooy:
@@ -774,8 +769,7 @@ label wares:
     
     show screen inventory
     
-    
-    show text "{size=16}Cash = [cash] c \n ~ \n Rocks = [rocks] kg \n Steel = [steel] kg \n Alu = [alu] kg \n Textile = [textile] kg \n Food = [food] kg{/size}" at Position(xpos = 298, ypos=230, xanchor=0.5, yanchor=0.5)
+    show text (_("{size=16}Cash = [cash] c \n ~ \n Rocks = [rocks] kg \n Steel = [steel] kg \n Alu = [alu] kg \n Textile = [textile] kg \n Food = [food] kg{/size}")) at Position(xpos = 298, ypos=230, xanchor=0.5, yanchor=0.5)
     menu:
         "back":
             hide screen inventory
@@ -791,7 +785,7 @@ label hyperspace:
     hide targetpos
     hide bg
     
-
+    play audio "snd/hyperspace.ogg"
 
     #Directions stars and spaceship
     if spaceshipdir == 1:
@@ -856,7 +850,6 @@ label hyperspace:
         if spaceshipnr == 3:
             show ship spaceship3l at truecenter
             with flash
-
 
 
     
@@ -965,6 +958,7 @@ label landing:
     hide planet3pic
     hide stationpic
     
+    play sound "snd/takeoff.ogg"
         
     show starssmall d2u behind ship
     show starsmid d2u behind ship
@@ -1010,7 +1004,9 @@ label takeoff:
     #hide spaceshiplanding1
     
     hide screen inventory
-
+    
+    play music "snd/spaceship.ogg" loop fadein 1
+    play sound "snd/takeoff.ogg"
         
     show starssmall u2d behind ship
     show starsmid u2d behind ship
@@ -1069,6 +1065,9 @@ label orbitview:
     hide planet3pic
     hide stationpic
     
+    play sound "snd/scan.ogg"
+
+    
     #position if lost in space
     if spaceshippos == 0:
         jump spaceship      
@@ -1087,7 +1086,7 @@ label orbitview:
     if spaceshippos == 1:
         show prisonpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1101,7 +1100,7 @@ label orbitview:
     if spaceshippos == 2:
         show planetpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1115,7 +1114,7 @@ label orbitview:
     if spaceshippos == 3:
         show sunpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1133,7 +1132,7 @@ label orbitview:
     if spaceshippos == 4:
         show aldabranpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1147,7 +1146,7 @@ label orbitview:
     if spaceshippos == 5:
         show meteoroidpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1162,7 +1161,7 @@ label orbitview:
     if spaceshippos == 7:
         show planetpic behind starsbig at truecenter
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1178,7 +1177,7 @@ label orbitview:
         show aldabranpic behind starsbig at truecenter:
             rotate 90
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1193,7 +1192,7 @@ label orbitview:
         show planet3pic behind starsbig at truecenter:
             rotate 20
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1209,7 +1208,7 @@ label orbitview:
         show stationpic behind starsbig at truecenter:
             rotate 20
         
-        show text "Scanning..." at Position(xalign = 0.5, yalign=0.7)
+        show text (_("Scanning...")) at Position(xalign = 0.5, yalign=0.7)
         pause 0.5
         hide text
         
@@ -1233,10 +1232,14 @@ label orbitmenu:
             jump racestart
         
         "Scan again":
+            play sound "snd/scan.ogg"
             jump orbitview
                 
         "Ask for Landing Autorisation" if spaceshippos != 3:
+            play sound "snd/modem.ogg"
+            pause 1
             if spaceshippos == 9 or spaceshippos == 5 or spaceshippos == 4: # polaris, meteoroid, aldabran
+                stop sound fadeout 1
                 "No response..."
                 menu:
                     "Try Landing":
@@ -1244,25 +1247,28 @@ label orbitmenu:
                     "back":
                         jump orbitmenu
             if spaceshippos == 8:
+                play sound "snd/beep.ogg"
                 "Identify yourself with you visitor number please."
                 menu:
                     "M1234" if matarlanding == True:
-                        "This is a valid visitor number. Welcome to Matar Mines!"
-                        "Landing Autorisation granted."
+                        play sound "snd/connected.ogg"
+                        "This is a valid visitor number. Welcome to Matar Mines! \nLanding Autorisation granted."
                         menu:
                             "Start Landing":
                                 jump landing
                             "back":
                                 jump orbitmenu
                     "Tralalilalu?":
-                        "This is not a valid visitor number, sorry."
-                        "Landing Autorisation denied."
+                        play sound "snd/beep.ogg"
+                        "This is not a valid visitor number, sorry. \nLanding Autorisation denied."
                         jump orbitmenu
                     "I don't know...":
+                        play sound "snd/beep.ogg"
                         "Landing Autorisation denied."
                         jump orbitmenu
             
             else:
+                play sound "snd/connected.ogg"
                 "Landing Autorisation granted."
                 menu:
                     "Start Landing":
@@ -1307,12 +1313,15 @@ label spaceport:
     show screen inventory
 
     
+    
     # port nr / spaceship position
     # at prison
     if spaceshippos == 1:
         show bg spaceport2 behind text at topleft
         show posanim at Position(xpos = 295, ypos=280, xanchor=0.5, yanchor=0.5):
-        show text "PRISON\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("PRISON\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        play music "snd/spaceport.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled at Position(xpos = 435, ypos=192, xanchor=0.5, yanchor=0.5):
@@ -1326,6 +1335,8 @@ label spaceport:
             m "Haaaaaa..... I can't breath here I need a space suit!!"
             hide ship1 fscaled
             show posanim at Position(xpos = 80, ypos=315, xanchor=0.5, yanchor=0.5):
+            play sound "snd/door-open.ogg"
+            play music "snd/spaceship-amb.ogg" loop fadein 1
             jump prisonlift
 
             
@@ -1335,7 +1346,11 @@ label spaceport:
     if spaceshippos == 2:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text "PLANET XY\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("PLANET XY\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        $ musicplaying = renpy.music.get_playing(channel='music')
+        if musicplaying != "snd/base.ogg":
+            play music "snd/base.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled2 at Position(xpos = 295, ypos=235, xanchor=0.5, yanchor=0.5):
@@ -1347,6 +1362,7 @@ label spaceport:
             
     # at aldabran
     if spaceshippos == 4:
+        play music "snd/wind.ogg" loop fadein 0.5
         $ desertx = 5
         $ deserty = 5
         jump aldabran
@@ -1367,7 +1383,9 @@ label spaceport:
     if spaceshippos == 5:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text "METEOROID\n539\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("METEOROID\n539\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        play music "snd/spaceport-met.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled2 at Position(xpos = 295, ypos=235, xanchor=0.5, yanchor=0.5):
@@ -1381,7 +1399,11 @@ label spaceport:
     if spaceshippos == 7:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text "BETRIA\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("BETRIA\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        $ musicplaying = renpy.music.get_playing(channel='music')
+        if musicplaying != "snd/nature.ogg":
+            play music "snd/nature.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled2 at Position(xpos = 295, ypos=235, xanchor=0.5, yanchor=0.5):
@@ -1395,7 +1417,12 @@ label spaceport:
     if spaceshippos == 8:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text "MATAR\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("MATAR\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+
+        $ musicplaying = renpy.music.get_playing(channel='music')
+        if musicplaying != "snd/industry.ogg":
+            play music "snd/industry.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled2 at Position(xpos = 295, ypos=235, xanchor=0.5, yanchor=0.5):
@@ -1410,7 +1437,9 @@ label spaceport:
     if spaceshippos == 9:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text "POLARIS\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("POLARIS\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        play music "snd/wind.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             jump takeoff
@@ -1425,7 +1454,9 @@ label spaceport:
     if spaceshippos == 10:
         show bg spaceport2 behind text at topleft
         show posanim at Position(xpos = 295, ypos=280, xanchor=0.5, yanchor=0.5):
-        show text "ISS\nSPACEPORT" at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("ISS\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        
+        play music "snd/spaceport.ogg" loop fadein 0.5
         
         if spaceshipnr == 1:
             show ship1 fscaled at Position(xpos = 154, ypos=324, xanchor=0.5, yanchor=0.5):
@@ -1445,15 +1476,21 @@ label spaceport:
             hide ship2
             hide ship3
             hide posanim
+            
+            stop music fadeout 1.0
             jump takeoff
+            
         
         "Enter into the Prison" if spaceshippos == 1:
             show posanim at Position(xpos = 80, ypos=315, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/spaceship-amb.ogg" loop fadein 1.0
             hide ship1
             jump prisonlift
             
         "Enter into the Space Base of Planet XY" if spaceshippos == 2:
             show posanim at Position(xpos = 410, ypos=175, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump xy
         
         #"Enter into the Desert of Aldabran" if spaceshippos == 4:
@@ -1461,18 +1498,28 @@ label spaceport:
             
         "Enter into the Mine of Meteoroid 539" if spaceshippos == 5:
             show posanim at Position(xpos = 80, ypos=170, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/cave.ogg" loop fadein 1.0
             jump meteoroidlift
             
         "Enter into the Betria Colony" if spaceshippos == 7:
             show posanim at Position(xpos = 348, ypos=360, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+
             jump betria
             
-        "Enter into the Mine Sation of Matar" if spaceshippos == 8:
+        "Enter into the Mine Station of Matar" if spaceshippos == 8:
             show posanim at Position(xpos = 305, ypos=170, xanchor=0.5, yanchor=0.5)
+            #play music "snd/industry.ogg" loop fadein 1.0
+            play sound "snd/door-open.ogg"
+
             jump matar
             
         "Enter into the Research Station of Polaris" if spaceshippos == 9:
             show posanim at Position(xpos = 225, ypos=175, xanchor=0.5, yanchor=0.5)
+            play music "snd/polarbase.ogg" loop fadein 1.0
+            play sound "snd/door-open.ogg"
+
             jump polaris
             
         "Enter into the Industrial Space Station" if spaceshippos == 10:
@@ -1481,6 +1528,10 @@ label spaceport:
             hide ship2
             hide ship3
             hide text
+            
+            play music "snd/spaceship-station.ogg" loop fadein 1.0
+            play sound "snd/door-open.ogg"
+
             jump iss
 
 

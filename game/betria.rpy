@@ -21,13 +21,22 @@ label betria:
             show ship3 fscaled at Position(xpos = 347, ypos=225, xanchor=0.5, yanchor=0.5):
             
     
+    $ musicplaying = renpy.music.get_playing(channel='music')
+    if musicplaying != "snd/nature.ogg":
+        play music "snd/nature.ogg" loop fadein 0.5
+    
     menu:
         "go to the spaceport":
+            play sound "snd/door-open.ogg"
             jump spaceport
         
         "go to the train station":
             $ trainfrom = 0
             show posanim at Position(xpos = 210, ypos=385, xanchor=0.5, yanchor=0.5)
+            
+            #play music "snd/base.ogg" loop fadein 0.5
+            play sound "snd/door-open.ogg"
+            
             jump btrainstation
             
         #"get 100c":
@@ -84,6 +93,8 @@ label betria2: #bar place
             
         "go to the bar":
             show posanim at Position(xpos = 295, ypos=185, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
+            play music "snd/bar.ogg"
             jump betriabar
 
             
@@ -95,6 +106,7 @@ label betria2b:
     
     menu:
         "enter into the building":
+            play sound "snd/door-locked.ogg"
             m "It's closed."
             jump betria2b
         "go back":
@@ -129,6 +141,7 @@ label betria4: #warehouse place
             show posanim at Position(xpos = 65, ypos=320, xanchor=0.5, yanchor=0.5)
             jump betria2
         "go to the warehouse":
+            play sound "snd/door-open.ogg"
             jump bwarehouse
             
 
@@ -148,6 +161,8 @@ label betriabar: #bar
             linear 1 alpha 0.0
             repeat
         
+        play music "snd/bar-deep.ogg"
+        play sound "snd/collect.ogg"
         with flash
         
         "The old cap'tain starts speaking to you."
@@ -175,7 +190,7 @@ label betriabar: #bar
     
     
     
-    "There a group of people at the tables and an old guy at the bar. He looks like he was a cap'tain. At the end of the room at a table there is a guy counting stones."
+    "There is a group of people at the tables and an old guy at the bar. He looks like he was a cap'tain. At the end of the room at a table there is a guy counting stones."
     
     menu:
         "talk to the barman":
@@ -186,6 +201,7 @@ label betriabar: #bar
                     barman "Here. That one of my special drinks. Enjoy!"
                     $ cash -= 1
                     $ bardrink += 1
+                    play sound "snd/collect.ogg"
                     with flash
                     m "Yes that was good."
                     m "Thanks!"
@@ -252,6 +268,7 @@ label betriabar: #bar
             menu:
                 "Okay I'll buy you a drink." if cash >= 1:
                     $ cash -= 1
+                    play sound "snd/collect.ogg"
                     with flash
                     capitain "Thank you!"
                     capitain "My name is Henk. I worked as a captain. I was a lot of time on the sea."
@@ -267,7 +284,7 @@ label betriabar: #bar
                             capitain "If you win, I'll tell you a betria sailor secret."
                             m "Okay..."
                             m "And if I loose?"
-                            capitain "Haha if if you loose? Hmmm good question. I'll think about that. I just want to have fun anyway."
+                            capitain "Haha if you loose? Hmmm good question. I'll think about that. I just want to have fun anyway."
                             $ sunrace = 1
                             capitain "Let's meet at the Sun!"
                             pass
@@ -293,6 +310,7 @@ label betriabar: #bar
                     stonesguy "Here I give you a good price for it. 100c!"
                     $ inv_mstone = False
                     $ cash += 100
+                    play sound "snd/collect.ogg"
                     with flash
                     "You got 100c!"
                     stonesguy "Thank you!"
@@ -310,6 +328,8 @@ label betriabar: #bar
             $ bardrink = 0
             hide drunk
             show posanim at Position(xpos = 289, ypos=315, xanchor=0.5, yanchor=0.5)
+            play music "snd/nature.ogg" loop fadein 0.5
+            play sound "snd/door-open.ogg"
             jump betria2
             
 
@@ -321,6 +341,7 @@ label barattable:
             barman "Yes, sure. It's 1c!"
             "The barman brings you a drink."
             $ cash -= 1
+            play sound "snd/collect.ogg"
             with flash
             m "Thanks!"
             $ bardrink += 1
@@ -358,10 +379,16 @@ label betriamount1: # train station
 
     show bg betriamount1
     
+    $ musicplaying = renpy.music.get_playing(channel='music')
+    
+    if musicplaying != "snd/wind.ogg":
+        play music "snd/wind.ogg" loop fadein 0.2
+    
     menu:
         "go to train station":
             $ trainfrom = 0
             show posanim at Position(xpos = 210, ypos=380, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump btrainstation
         
         "go to the village":
@@ -381,11 +408,12 @@ label betriamount2: #village
             menu:
                 "Here is some dynamite" if inv_dynamite == True:
                     consguy "Oh nice! So I could finish the road tomorrow."
-                    consguy "Here are 150c for the job. Thanks!"
-                    $ cash += 150
+                    consguy "Here are 200c for the job. Thanks!"
+                    $ cash += 200
                     $ inv_dynamite = False
+                    play sound "snd/collect.ogg"
                     with flash
-                    "You got 150c!"
+                    "You got 200c!"
                     jump betriamount2
                     
                 "What are you doing here?":
@@ -403,11 +431,14 @@ label betriamount2: #village
             m "Maybe. Let me see."
             mountguy "I found this old sea map a couple of days ago."
             mountguy " Do you need it?"
+            
+            play sound "snd/scan.ogg"
             show seamap at topleft
-            with dissolve
-            pause 1
+            with flash
+            pause 3
+            play sound "snd/scan.ogg"
             hide seamap
-            with dissolve
+            with flash
             m "Wow, it's very interesting! Yes, maybe I could need it."
             
             mountguy "Okay, I would give it to you for 200c only. Special price!"
@@ -416,6 +447,7 @@ label betriamount2: #village
                 "okay, go for 200c" if cash >= 200:
                      $ inv_seamap = True
                      $ cash -= 200
+                     play sound "snd/collect.ogg"
                      with flash
                      "You got a sea map!"
                      jump betriamount2
@@ -454,6 +486,7 @@ label betriamount3: #"stairs" to lake
     
     menu:
         "take the 10c" if cash < 10:
+            play sound "snd/collect.ogg"
             $ cash += 10
             with flash
             "You got 10c!"
@@ -475,23 +508,27 @@ label betriamountlake: #lake
     if betrialake == 0:
         show betrialake at Position(xpos = 340, ypos=280, xanchor=0.5, yanchor=0.5)
     
-    if betrialake == 1:    
-            show betrialake at Position(xpos = 340, ypos=280, xanchor=0.5, yanchor=0.5):
-                linear 5 zoom 0.3
-            pause 5
-            $ betrialake = 2
-            m "Aha! There is a secret door in the lake..."
-            jump betriamountlake
+    if betrialake == 1:
+        play sound "snd/pump.ogg"
+        show betrialake at Position(xpos = 340, ypos=280, xanchor=0.5, yanchor=0.5):
+            linear 5 zoom 0.3
+        pause 5
+        $ betrialake = 2
+        m "Aha! There is a secret door in the lake..."
+        jump betriamountlake
     
     if betrialake == 2:
-            show betrialake at Position(xpos = 340, ypos=280, xanchor=0.5, yanchor=0.5):
-                zoom 0.3
+        show betrialake at Position(xpos = 340, ypos=280, xanchor=0.5, yanchor=0.5):
+            zoom 0.3
     
     
     menu:
         "open secret door and enter" if betrialake >= 2:
             hide betrialake
             show posanim at Position(xpos = 290 , ypos=175, xanchor=0.5, yanchor=0.5)
+            
+            play music "snd/cave.ogg" loop fadein 0.5
+            play sound "snd/door-open.ogg"
             jump bsbase
             
         
@@ -499,8 +536,10 @@ label betriamountlake: #lake
             if inv_blakekey == True:
                 hide betrialake
                 show posanim at Position(xpos = 295, ypos=230, xanchor=0.5, yanchor=0.5)
+                play sound "snd/door-open.ogg"
                 jump betrialakecontrol
             else:
+                play sound "snd/door-locked.ogg"
                 m "It's closed. There is a plate with some information."
                 "Property of the Fields Company. No entry. For any questions please visit us at the Fields House.\nHow to go there? We are at Column 0 Row 0 in the Fields. Or just go out the Fields Train Station and follow the rails to the west to the Fields House."
             jump betriamountlake
@@ -521,10 +560,12 @@ label betrialakecontrol: #lake control cabin
         "start pumps"if betrialake == 0:
             $ betrialake = 1
             show posanim at Position(xpos = 111, ypos=315, xanchor=0.5, yanchor=0.5)
+            
             jump betriamountlake
         
         "go out":
             show posanim at Position(xpos = 111, ypos=315, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump betriamountlake
             
             
@@ -547,6 +588,7 @@ label bsbase:
         "go out":
             hide ionetsender
             show posanim at Position(xpos = 243 , ypos=303, xanchor=0.5, yanchor=0.5)
+            play music "snd/wind.ogg" loop fadein 0.5
             jump betriamountlake
             
     jump bsbase
@@ -567,7 +609,8 @@ label bwarehouse:
             jump bwarehousesell
         "go out":
             hide text
-            show posanim at Position(xpos = 455, ypos=330, xanchor=0.5, yanchor=0.5):
+            show posanim at Position(xpos = 455, ypos=330, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump betria4
             
             
@@ -578,26 +621,31 @@ label bwarehousebuy:
            
             menu:
                 "buy rocks" if cash >= 20:
+                    play sound "snd/collect.ogg"
                     $ cash -= 20 
                     $ rocks += 1
                     jump bwarehousebuy
             
                 "buy steel" if cash >= 40:
+                    play sound "snd/collect.ogg"
                     $ cash -= 40 
                     $ steel += 1
                     jump bwarehousebuy
         
                 "buy alu" if cash >= 50:
+                    play sound "snd/collect.ogg"
                     $ cash -= 50 
                     $ alu += 1
                     jump bwarehousebuy
         
                 "buy textile" if cash >= 30:
+                    play sound "snd/collect.ogg"
                     $ cash -= 30 
                     $ textile += 1
                     jump bwarehousebuy
         
-                "buy food" if cash >= 15 :  
+                "buy food" if cash >= 15:
+                    play sound "snd/collect.ogg"
                     $ cash -= 15 
                     $ food += 1
                     jump bwarehousebuy
@@ -610,26 +658,31 @@ label bwarehousesell:
    
             menu:
                 "sell rocks" if rocks >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 15 
                     $ rocks -= 1
                     jump bwarehousesell
             
                 "sell steel" if steel >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 30 
                     $ steel -= 1
                     jump bwarehousesell
         
                 "sell alu" if alu >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 40 
                     $ alu -= 1
                     jump bwarehousesell
         
                 "sell textile" if textile >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 20 
                     $ textile -= 1
                     jump bwarehousesell
         
-                "sell food" if food >= 1 :  
+                "sell food" if food >= 1:
+                    play sound "snd/collect.ogg"
                     $ cash += 10 
                     $ food -= 1
                     jump bwarehousesell
@@ -645,14 +698,21 @@ label betriacoast:
 
     show bg betriacoast at topleft
     
+    $ musicplaying = renpy.music.get_playing(channel='music')
+    if musicplaying != "snd/nature.ogg":
+        play music "snd/nature.ogg" loop fadein 0.5
+    
     menu:
         "go to train sation":
             $ trainfrom = 0
             show posanim at Position(xpos = 210, ypos=380, xanchor=0.5, yanchor=0.5)
+            play sound "snd/door-open.ogg"
             jump btrainstation
         
         "go to the beach":
             show posanim at Position(xpos = 65, ypos=287, xanchor=0.5, yanchor=0.5)
+            
+            play music "snd/sea.ogg" loop fadein 0.5
             jump betriacoast1
             
             
@@ -675,6 +735,7 @@ label betriacoast1: # beach
 
     menu:
         "take the 10c" if cash < 10:
+            play sound "snd/collect.ogg"
             $ cash += 10
             with flash
             "You got 10c!"
@@ -705,8 +766,15 @@ label betriacave:
     show posanim at Position(xpos = 435, ypos=290, xanchor=0.5, yanchor=0.5)
     
     
+    #$ musicplaying = renpy.music.get_playing(channel='sound')
+    #if musicplaying != "snd/cave.ogg":
+    #    play sound "snd/cave.ogg" loop fadein 0.5
+    
+
     menu:
         "go out the boat":
+            play sound "snd/cave.ogg" loop fadein 0.5
+            
             show posanim at Position(xpos = 300, ypos=285, xanchor=0.5, yanchor=0.5)
             
             if treasure == False:
@@ -717,7 +785,9 @@ label betriacave:
             menu:
                 "open the box" if treasure == False:
                     show posanim at Position(xpos = 178, ypos=260, xanchor=0.5, yanchor=0.5)
+                    play audio "snd/connected.ogg"
                     m "Oh that's a treasure! I'm rich!!"
+                    play audio "snd/collect.ogg"
                     $ cash +=500
                     with flash
                     $ treasure = True
@@ -741,6 +811,7 @@ label betriacave:
             
     menu:
         "go back to the boat":
+            play sound "snd/boat.ogg" loop fadein 0.5
             jump betriacave
             
             
@@ -751,15 +822,20 @@ label betriaislands:
     
     $ onislands = True
     
+    $ musicplaying = renpy.music.get_playing(channel='sound')
+    if musicplaying == "snd/boat.ogg":
+        stop sound fadeout 1
+    
     menu:
                 
         "enter the barn":
             "Please enter the password key:"
             menu:
                 "2277" if sunrace == 3:
-                    
+                    play sound "snd/door-open.ogg"
                     jump bislandsbase
                 "I don't know...":
+                    play sound "snd/door-locked.ogg"
                     jump betriaislands
 
             
@@ -782,7 +858,8 @@ label bislandsbase:
     #show ionet sender
     if io_bislands == True:
         show ionetsender at Position(xpos = 135 , ypos=377, xanchor=0.5, yanchor=0.5)
-    
+        
+    play music "snd/polarbase.ogg" loop fadein 0.5
     
     menu:
         "copy IO-net on this computer" if inv_ionet == True and io_bislands == False:
@@ -795,6 +872,10 @@ label bislandsbase:
         "go out":
             hide ionetsender
             show posanim at Position(xpos = 340 , ypos=310, xanchor=0.5, yanchor=0.5)
+            
+            play music "snd/sea.ogg" loop fadein 0.5
+            play sound "snd/door-open.ogg"
+            
             jump betriaislands
             
     jump bislandsbase
