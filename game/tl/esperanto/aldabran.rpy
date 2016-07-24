@@ -4,45 +4,45 @@
 translate esperanto aldabrandesert_44502d3e:
 
     # m "I won't go into the desert without using a proper navigation system!"
-    m "Mi ne volas iri al dezerton sen uzi konvenan navigsistemon!"
+    m "Mi ne iru en la dezerton sen uzi taŭgan birilon!"
 
 # /home/vince/aldabran.rpyc:206
 translate esperanto aldabrandesert_44502d3e_1:
 
     # m "I won't go into the desert without using a proper navigation system!"
-    m "Mi ne volas iri al dezerton sen uzi konvenan navigsistemon!"
+    m "Mi ne iru en la dezerton sen uzi taŭgan birilon!"
 
 # /home/vince/aldabran.rpyc:220
 translate esperanto aldabrandesert_44502d3e_2:
 
     # m "I won't go into the desert without using a proper navigation system!"
-    m "Mi ne volas iri al dezerton sen uzi konvenan navigsistemon!"
+    m "Mi ne iru en la dezerton sen uzi taŭgan birilon!"
 
 # /home/vince/aldabran.rpyc:235
 translate esperanto aldabrandesert_44502d3e_3:
 
     # m "I won't go into the desert without using a proper navigation system!"
-    m "Mi ne volas iri al dezerton sen uzi konvenan navigsistemon!"
+    m "Mi ne iru en la dezerton sen uzi taŭgan birilon!"
 
 translate esperanto strings:
 
     # game/aldabran.rpy:166
     old "take off"
-    new "deteriĝi"
+    new "elteriĝi"
 
     # game/aldabran.rpy:166
     old "use navigation system"
-    new "uzu navigsistemon"
+    new "uzi birilon"
 
     # game/aldabran.rpy:166
     old "enter spaceship wreck"
-    new "eniru la kosmoŝiprompiĝo"
+    new "eniri la kosmoŝipan vrakon"
 
     # game/aldabran.rpy:261
     old "copy IO-net on this computer"
-    new "kopiu IO-net en ĉi tiu komputilo"
+    new "alŝuti IO-net-programon ĉe ĉi komputilon"
 
     # game/aldabran.rpy:261
     old "IO-net info"
-    new "IO-net informoj"
+    new "IO-net-informoj"
 

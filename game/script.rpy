@@ -1319,7 +1319,7 @@ label spaceport:
     if spaceshippos == 1:
         show bg spaceport2 behind text at topleft
         show posanim at Position(xpos = 295, ypos=280, xanchor=0.5, yanchor=0.5):
-        show text (_("PRISON\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("PRISON\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         play music "snd/spaceport.ogg" loop fadein 0.5
         
@@ -1346,7 +1346,7 @@ label spaceport:
     if spaceshippos == 2:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text (_("PLANET XY\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("PLANET XY\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         $ musicplaying = renpy.music.get_playing(channel='music')
         if musicplaying != "snd/base.ogg":
@@ -1383,7 +1383,7 @@ label spaceport:
     if spaceshippos == 5:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text (_("METEOROID\n539\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("METEOROID\n539\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         play music "snd/spaceport-met.ogg" loop fadein 0.5
         
@@ -1399,7 +1399,7 @@ label spaceport:
     if spaceshippos == 7:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text (_("BETRIA\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("BETRIA\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         $ musicplaying = renpy.music.get_playing(channel='music')
         if musicplaying != "snd/nature.ogg":
@@ -1417,7 +1417,7 @@ label spaceport:
     if spaceshippos == 8:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text (_("MATAR\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("MATAR\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
 
         $ musicplaying = renpy.music.get_playing(channel='music')
@@ -1437,7 +1437,7 @@ label spaceport:
     if spaceshippos == 9:
         show bg spaceport behind text at topleft
         show posanim at Position(xpos = 295, ypos=380, xanchor=0.5, yanchor=0.5):
-        show text (_("POLARIS\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("POLARIS\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         play music "snd/wind.ogg" loop fadein 0.5
         
@@ -1454,7 +1454,7 @@ label spaceport:
     if spaceshippos == 10:
         show bg spaceport2 behind text at topleft
         show posanim at Position(xpos = 295, ypos=280, xanchor=0.5, yanchor=0.5):
-        show text (_("ISS\nSPACEPORT")) at Position(xpos = 625, ypos=160, xanchor=0.0, yanchor=0.0)
+        show text (_("ISS\nSPACEPORT")) at Position(xpos = 690, ypos=160, xanchor=0.5, yanchor=0.0)
         
         play music "snd/spaceport.ogg" loop fadein 0.5
         

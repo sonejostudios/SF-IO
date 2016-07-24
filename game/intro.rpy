@@ -87,7 +87,12 @@ label credits:
     show text (_("Sonejo Media Studio")) at truecenter
     with Dissolve(1.0)
     pause 2
+    
     show text (_("www.sonejo.net")) at truecenter
+    with Dissolve(1.0)
+    pause 2
+    
+    show text (_("Esperanto Translation by Ŝtonĉjo and Vincent Rateau")) at truecenter
     with Dissolve(1.0)
     pause 2
     

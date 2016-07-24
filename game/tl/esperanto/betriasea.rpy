@@ -1,40 +1,40 @@
-﻿# TODO: Translation updated at 2016-04-16 01:27
+# TODO: Translation updated at 2016-04-16 01:27
 
 translate esperanto strings:
 
     # game/betriasea.rpy:89
     old "go out the boat"
-    new "eliru la boaton"
+    new "eliri la boaton"
 
     # game/betriasea.rpy:89
     old "enter into the secret cave"
-    new "eniru la sekretan kavernon"
+    new "eniri la sekretan kavernon"
 
     # game/betriasea.rpy:89
     old "go to the islands"
-    new "iru sur la insuloj"
+    new "iri al la insuloj"
 
     # game/betriasea.rpy:89
     old "show sea map"
-    new "montru la marmapo"
+    new "montri la marmapon"
 
     # game/betriasea.rpy:89
     old "go north"
-    new "iru norden"
+    new "iri norden"
 
     # game/betriasea.rpy:89
     old "go west"
-    new "iru okcidenten"
+    new "iri okcidenten"
 
     # game/betriasea.rpy:89
     old "go east"
-    new "iru orienten"
+    new "iri orienten"
 
     # game/betriasea.rpy:89
     old "go south"
-    new "iru suden"
+    new "iri suden"
 
     # game/betriasea.rpy:107
     old "exit"
-    new "eliru"
+    new "eliri"
 
