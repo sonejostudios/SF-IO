@@ -1017,11 +1017,11 @@ translate esperanto betriabar_e8d27e4d:
 translate esperanto betriamount2_7ec6838b:
 
     # consguy "Here are 200c for the job. Thanks!"
-    consguy ""
+    consguy "Jen 200 cendoj por la laboro. Dankon!"
 
 # /home/vince/betria.rpyc:416
 translate esperanto betriamount2_f42ea9b7:
 
     # "You got 200c!"
-    ""
+    "Vi akiris 200 cendoj !"
 

@@ -88,7 +88,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:263
     old "dealer"
-    new "dealer"
+    new "dealer'"
 
 # TODO: Translation updated at 2016-04-16 11:28
 

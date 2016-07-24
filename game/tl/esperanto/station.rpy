@@ -196,7 +196,7 @@ translate esperanto strings:
 
     # game/station.rpy:12
     old "go to the Spaceport"
-    new "Irui al Kosmohaveno"
+    new "Iri al Kosmohaveno"
 
     # game/station.rpy:12
     old "go to the Spaceship Factory"
@@ -288,7 +288,7 @@ translate esperanto strings:
 
     # game/station.rpy:216
     old "talk to the Betria Colony people"
-    new "paroli al la personoj de la Betri-aa kolonio"
+    new "paroli al la personoj de la Betria-a kolonio"
 
     # game/station.rpy:220
     old "Here is the original matar stone!"
@@ -324,5 +324,5 @@ translate esperanto strings:
 translate esperanto issexpo_ab359cf5:
 
     # "BETRIA and its Colony\n\nDo you want to have nice holidays?\nCome to the Betria Planet!\nYou will discover many amazing things! The Colony, the Fields, the Mountains, the Sea, the Train, and many more!\nTo come to us just find the fastest way to x402 y242, or just locate betria in the Terminal!\nIf you need a ticket to travel around betria, just ask us.\nSee you soon on Betria!"
-    ""
+    "BETRIA kaj ĝia Kolonio\n\nĈu vi volas havi belajn feriojn?\nVenu al la Betria Planedo!\nVi malkovros multajn mirindajn aferojn! La Kolonio, la Kampoj, la Montoj, la Maro, la Trajno, kaj multaj pli!\nPor venu al ni nur trovas la plej rapida vojo al x402 y242, aŭ simple locate betria en la Terminalo!\nSe vi bezonas bileton por vojaĝi ĉirkaŭ Betria, simple demandu al ni.\nĜis baldaŭ sur Betria!"
 

@@ -226,19 +226,19 @@ translate esperanto strings:
 
     # game/betriafields.rpy:121
     old "send Robot 1 to field engineer"
-    new "sendi Roboto 1 al kampa inĝeniero"
+    new "sendi Roboton 1 al kampa inĝeniero"
 
     # game/betriafields.rpy:128
     old "send Robot 2 to field engineer"
-    new "sendi Roboto 2 al kampa inĝeniero"
+    new "sendi Roboton 2 al kampa inĝeniero"
 
     # game/betriafields.rpy:135
     old "send Robot 3 to field engineer"
-    new "sendi Roboto 3 al kampa inĝeniero"
+    new "sendi Roboton 3 al kampa inĝeniero"
 
     # game/betriafields.rpy:142
     old "send Robot 4 to field engineer"
-    new "sendi Roboto 4 al kampa inĝeniero"
+    new "sendi Roboton 4 al kampa inĝeniero"
 
     # game/betriafields.rpy:167
     old "robots info"
