@@ -15,7 +15,8 @@ Highlights:
     - Talk to people and figure out the amazing story
     - Solve problems and accomplish important missions
 
- 
+
+ +GET IT ON GOOGLE PLAY: https://play.google.com/store/apps/details?id=net.sonejo.sfio
 
 This software is licensed under the GPL v2.
 
