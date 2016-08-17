@@ -57,7 +57,7 @@ translate esperanto orbitmenu_b1117673:
 # /home/vince/script.rpyc:1251
 translate esperanto orbitmenu_2ca19e4c:
 
-    # "Landing Autorisation granted."
+    # "Landing Authorisation granted."
     "Surteriĝa permeso konsentita."
 
 # /home/vince/script.rpyc:1258
@@ -69,19 +69,19 @@ translate esperanto orbitmenu_6dad9157:
 # /home/vince/script.rpyc:1259
 translate esperanto orbitmenu_80cb32d5:
 
-    # "Landing Autorisation denied."
+    # "Landing Authorisation denied."
     "Surteriĝa permeso rifuzita."
 
 # /home/vince/script.rpyc:1262
 translate esperanto orbitmenu_80cb32d5_1:
 
-    # "Landing Autorisation denied."
+    # "Landing Authorisation denied."
     "Surteriĝa Permeso rifuzita."
 
 # /home/vince/script.rpyc:1266
 translate esperanto orbitmenu_2ca19e4c_1:
 
-    # "Landing Autorisation granted."
+    # "Landing Authorisation granted."
     "Surteriĝa Permeso konsentita."
 
 # /home/vince/script.rpyc:1326
@@ -205,7 +205,7 @@ translate esperanto strings:
     new "Skani denove"
 
     # game/script.rpy:1230
-    old "Ask for Landing Autorisation"
+    old "Ask for Landing Authorisation"
     new "Peti pri Surteriĝa Permeso"
 
     # game/script.rpy:1241
@@ -437,13 +437,13 @@ translate esperanto strings:
 # /home/vince/script.rpyc:1255
 translate esperanto orbitmenu_91afe165:
 
-    # "This is a valid visitor number. Welcome to Matar Mines! \nLanding Autorisation granted."
+    # "This is a valid visitor number. Welcome to Matar Mines! \nLanding Authorisation granted."
     "Tiu estas valida vizitanto nombro. Bonvenon al Matar Minoj! \nSurteriĝa permeso konsentita."
 
 # /home/vince/script.rpyc:1263
 translate esperanto orbitmenu_1a66e54d:
 
-    # "This is not a valid visitor number, sorry. \nLanding Autorisation denied."
+    # "This is not a valid visitor number, sorry. \nLanding Authorisation denied."
     "Tiu ne estas valida vizitanto nombro, pardonu. \nSurteriĝa permeso malkonsentita."
 
 translate esperanto strings:

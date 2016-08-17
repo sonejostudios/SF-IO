@@ -1235,7 +1235,7 @@ label orbitmenu:
             play sound "snd/scan.ogg"
             jump orbitview
                 
-        "Ask for Landing Autorisation" if spaceshippos != 3:
+        "Ask for Landing Authorisation" if spaceshippos != 3:
             play sound "snd/modem.ogg"
             pause 1
             if spaceshippos == 9 or spaceshippos == 5 or spaceshippos == 4: # polaris, meteoroid, aldabran
@@ -1252,7 +1252,7 @@ label orbitmenu:
                 menu:
                     "M1234" if matarlanding == True:
                         play sound "snd/connected.ogg"
-                        "This is a valid visitor number. Welcome to Matar Mines! \nLanding Autorisation granted."
+                        "This is a valid visitor number. Welcome to Matar Mines! \nLanding Authorisation granted."
                         menu:
                             "Start Landing":
                                 jump landing
@@ -1260,16 +1260,16 @@ label orbitmenu:
                                 jump orbitmenu
                     "Tralalilalu?":
                         play sound "snd/beep.ogg"
-                        "This is not a valid visitor number, sorry. \nLanding Autorisation denied."
+                        "This is not a valid visitor number, sorry. \nLanding Authorisation denied."
                         jump orbitmenu
                     "I don't know...":
                         play sound "snd/beep.ogg"
-                        "Landing Autorisation denied."
+                        "Landing Authorisation denied."
                         jump orbitmenu
             
             else:
                 play sound "snd/connected.ogg"
-                "Landing Autorisation granted."
+                "Landing Authorisation granted."
                 menu:
                     "Start Landing":
                         jump landing
