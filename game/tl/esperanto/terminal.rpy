@@ -10,7 +10,7 @@ translate esperanto _call_ioupdate_1_ffdec969:
 translate esperanto _call_ioupdate_1_06cb1c04:
 
     # "Do you want to start a basic network and decentralize it? This will share all the data around the network. Do you want to do it?"
-    "Ĉu vi volas krei bazan reton kaj discentraligi ĝin? Ĉiu kunhavigos ĉiujn datumojn tra la reto. Ĉu vi volas fari tion?"
+    "Ĉu vi volas krei bazan reton kaj discentraligi ĝin? Ĉiu kundividos la datumaron tra la reto. Ĉu vi volas fari tion?"
 
 # /home/vince/terminal.rpyc:173
 translate esperanto _call_ioupdate_1_5bd6e1c0:
@@ -22,7 +22,7 @@ translate esperanto _call_ioupdate_1_5bd6e1c0:
 translate esperanto _call_ioupdate_1_28de435d:
 
     # "Enjoy the freedom... ! "
-    "Ĝui la liberecon...!"
+    "Ĝuu la liberecon...!"
 
 translate esperanto strings:
 
@@ -72,7 +72,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:263
     old "sun"
-    new "suno"
+    new "sun'"
 
     # game/terminal.rpy:263
     old "meteoroid"
@@ -110,7 +110,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:40
     old "{size=16}Hello World! \n The terminal gives you the access to your entire system.\nType the commands you need and press Enter.\n\n Here some useful commands to start: \n\nlocate = search for known position in the databank. \n Exemple: locate sun, locate prison, locate xy\n\ncam = set up space ship camera. \n help = show this help file. \n More: log, cheat, sos... {/size}"
-    new "{size=16}Saluton Mondo! \n La terminalo ebligas vin aliri tra la tuta sistemo.\nTajpu la bezonatajn komandojn kaj premu la ĉaretrevenan klavon.\n\n Jen kelkaj utilaj komandoj por komenci - tajpu minuskle kaj\n en la angla (sen finaĵo): \n\n'locate' = serĉi konatan pozicion en la datumbazo. \n Ekzemple: locate sun, locate prison, locate xy\n\ncam = ŝanĝi kosmoŝipan filmilan vidpunkton. \n help = montri ĉi tiun helpotekston. \n Pli: 'log' (=protokolo), cheat (=friponi), sos (=helpo)... {/size}"
+    new "{size=16}Saluton Mondo! \n La terminalo ebligas vin aliri tra la tuta sistemo.\nTajpu la bezonatajn komandojn kaj premu la ĉaretrevenan klavon.\n\n Jen kelkaj utilaj komandoj por komenci - tajpu minuskle kaj\n en la angla (tio estas: sen finaĵo): \n\n'locate' = serĉi konatan pozicion en la datumbazo. \n Ekzemple: locate sun, locate prison, locate xy\n\ncam = ŝanĝi kosmoŝipan filmilan vidpunkton. \n help = montri ĉi helpotekston. \n Pli: 'log' (=protokolo), 'cheat' (=friponi), 'sos' (=helpo)...{/size}"
 
 # TODO: Translation updated at 2016-04-17 22:24
 
@@ -154,7 +154,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:74
     old "{size=16}SET UP SPACE SHIP CAMERA\nCommand: [term1]\n\nUse the command to set up the space ship camera. \nExemples: \ncam top, cam bottom, cam left, cam right.{/size}"
-    new "{size=16}AGORDU LA ŜIPFILMILOJN\nKomandoj: [term1]\n\nUzi la komandon 'cam' por agordi la kosmoŝipajn filmilojn. \nEkzemploj: \ncam top, cam bottom, cam left, cam right.{/size}"
+    new "{size=16}AGORDI LA ŜIPFILMILOJN\nKomandoj: [term1]\n\nUzi la komandon 'cam' por agordi la kosmoŝipajn filmilojn. \nEkzemple: \ncam top, cam bottom, cam left, cam right.{/size}"
 
     # game/terminal.rpy:87
     old "{size=16}Commands: [term1]\n\nDATA FOUND\nType: Space Ship\nName: Prison\nPosition: x320, y370{/size}"
@@ -202,7 +202,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:182
     old "{size=16}WELCOME TO THE IO-NETWORK!\nCommand: [term1]\n\nCONNECTED NODES: [io_nodes]\n\nmeteoroid node: [io_meteoroid]\npolaris node: [io_pol]\nbetria lake node: [io_blake]\nbetria islands node: [io_bislands]\naldabran node: [io_alswreck]\n\nNEEDED NODES: [io_maxnodes]{/size}"
-    new "{size=16}BONVENON AL LA IO-RETO!\nKomando: [term1]\n\nKONEKTITAJ NODOJ: [io_nodes]\n\nmeteoroid-nodo: [io_meteoroid]\npolaris-nodo: [io_pol]\nbetria-a lago-nodo: [io_blake]\nbetria-aj insuloj-nodo: [io_bislands]\naldabran-nodo: [io_alswreck]\n\nBEZONITAJ NODOJ: [io_maxnodes]{/size}"
+    new "{size=16}BONVENON AL LA IO-RETO!\nKomando: [term1]\n\nKONEKTITAJ NODOJ: [io_nodes]\n\nmeteoroid-nodo: [io_meteoroid]\npolaris-nodo: [io_pol]\nbetria-lago-nodo: [io_blake]\nbetria-insul-nodo: [io_bislands]\naldabran-nodo: [io_alswreck]\n\nBEZONITAJ NODOJ: [io_maxnodes]{/size}"
 
     # game/terminal.rpy:212
     old "Type a command:"
@@ -214,7 +214,7 @@ translate esperanto strings:
 
     # game/terminal.rpy:255
     old "{size=16}JOB DONE:\nCoordinates copied to Ship Navigation System!{/size}"
-    new "{size=16}LABORO FARITA:\nKoordinatoj kopitaj al la kospoŝipa birilo!{/size}"
+    new "{size=16}LABORO FARITA:\nKoordinatoj kopiitaj al la kosmoŝipa birilo!{/size}"
 
 # TODO: Translation updated at 2016-04-17 23:58
 

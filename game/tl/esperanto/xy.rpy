@@ -40,7 +40,7 @@ translate esperanto xybar_8a8a4672:
 translate esperanto xybarman_27963fce:
 
     # barman "Hey! If you like a drink, it's only 1 cash."
-    barman "Hej! Se vi ŝatas drinki, kostas nur 1 cendon."
+    barman "Hej! Se vi deziras trinki, kostas nur 1 cendon."
 
 # /home/vince/xy.rpyc:102
 translate esperanto xybarman_45ec9f69:
@@ -58,13 +58,13 @@ translate esperanto xybarman_ff2fc954:
 translate esperanto xybarman_aea95917:
 
     # barman "Oh oh... you don't have money I see? Do you need a small job?"
-    barman "Ho ho... ĉu vidas mi neniun monon? Ĉu vi bezonas etan laboron?"
+    barman "Ho ho... ĉu neniun monon mi vidas? Ĉu vi bezonas etan laboron?"
 
 # /home/vince/xy.rpyc:112
 translate esperanto xybarman_f1f63f7b:
 
     # barman "Okay. Go and bring me 1 kg of food. Maybe at the Warehouse in the front of the Bar, if not, just have a look at the Prison Warehouse, sometimes they are cheaper. It's at x320, y370 (or just locate prison with a Terminal). Here are 31c for you."
-    barman "En ordo. Iru kaj reportu al mi 1 kg-n da manĝaĵo. Eble en la stokejo fronte al la trinkejo, se ne, simple rigardu la stokejon de la malliberejo (prison), kelkfoje ili estas malpli kostaj. Ĝi situas ĉe x320, y370 (aŭ simple 'locate prison' per Terminalo). Jen 31 cendoj por vi."
+    barman "En ordo. Iru kaj reportu al mi 1 kg-n da manĝaĵo. Eble el la stokejo fronte al la trinkejo, se ne, simple rigardu la stokejon de la malliberejo de Prison', kelkfoje ili estas malpli kostaj. Ĝi situas ĉe x320, y370 (aŭ simple 'locate prison' ĉe Terminalo). Jen 31 cendoj por vi."
 
 # /home/vince/xy.rpyc:115
 translate esperanto xybarman_e2fdded4:
@@ -76,7 +76,7 @@ translate esperanto xybarman_e2fdded4:
 translate esperanto xybarman_36f54498:
 
     # barman "Now bring me that food!"
-    barman "Nun alportu al mi la manĝaĵon!"
+    barman "Nun, alportu al mi la manĝaĵon!"
 
 # /home/vince/xy.rpyc:127
 translate esperanto xybarman_6e191789:
@@ -112,7 +112,7 @@ translate esperanto xybarguy_6c3dc6f9:
 translate esperanto xybarguy_404c98c3:
 
     # barguy "Very good. Just wait a minute I'll have a look. "
-    barguy "Bonega. Nu, atendu minuteton, mi rigardu."
+    barguy "Bonege. Nu, atendu minuteton, mi rigardu."
 
 # /home/vince/xy.rpyc:145
 translate esperanto xybarguy_e25568ed:
@@ -160,7 +160,7 @@ translate esperanto xybarguy_f7d4ea60:
 translate esperanto xybarguy_3176065c:
 
     # barguy "I worked as a scientist at the Research Station on Polaris. We had a research program about our solar system."
-    barguy "Mi laboris kiel sciencisto ĉe la Espolara Stacidomo sur Polaris'. Ni faris esplorprogramon pri nia sunsistemo."
+    barguy "Mi laboris kiel sciencisto ĉe la Espolara Stacio sur Polaris'. Ni faris esplorprogramon pri nia sunsistemo."
 
 # /home/vince/xy.rpyc:166
 translate esperanto xybarguy_bdcfac6d:
@@ -172,7 +172,7 @@ translate esperanto xybarguy_bdcfac6d:
 translate esperanto xybarguy_da675c1c:
 
     # barguy "If you want to go there, just type locate polaris in a terminal to get the coordinates."
-    barguy "Se vi volas iri tien, simple tajpu 'locate polaris' en terminalo por ricevi la koordinatojn."
+    barguy "Se vi volas iri tien, simple tajpu 'locate polaris' ĉe terminalo por ricevi la koordinatojn."
 
 # /home/vince/xy.rpyc:168
 translate esperanto xybarguy_0174604e:
@@ -196,7 +196,7 @@ translate esperanto xybarguy_8d563775:
 translate esperanto bgstory_4d5aeb59:
 
     # barguy "I see you are a great person and I trust you know."
-    barguy "Mi vidas ke vi estas bona homo, kaj mi fidas vin nun."
+    barguy "Mi vidas, ke vi estas bona homo, kaj mi fidas vin nun."
 
 # /home/vince/xy.rpyc:183
 translate esperanto bgstory_4b7b3907:
@@ -208,7 +208,7 @@ translate esperanto bgstory_4b7b3907:
 translate esperanto bgstory_2b267b27:
 
     # barguy "If not, go to the special room and talk to the guy in the corner."
-    barguy "Se ne, iru en la specialan ĉambron kaj parolu al la ulo ĉe la angulo."
+    barguy "Se ne, iru en la Specialan Ĉambron kaj parolu al la ulo ĉe la angulo."
 
 # /home/vince/xy.rpyc:185
 translate esperanto bgstory_b6bf3f76:
@@ -220,7 +220,7 @@ translate esperanto bgstory_b6bf3f76:
 translate esperanto bgstory_051d07ae:
 
     # barguy "Please go to Betria and talk to my friend. You can meet him in the train in the Wagon 3."
-    barguy "Bonvolu iri al Betria' kaj paroli al mia amiko. Vi povas renkonti lin en la trajno, vagono 3."
+    barguy "Bonvolu iri al Betria' kaj paroli al mia amiko. Vi povas renkonti lin en la 3-a vagono de la trajno."
 
 # /home/vince/xy.rpyc:190
 translate esperanto bgstory_7726555e:
@@ -244,7 +244,7 @@ translate esperanto xyspecialroom_48950167:
 translate esperanto xyspecialroom_c1369f6f:
 
     # engineer "Do you need a new space ship? Just have a look at the space ship factory on the Industrial Space Station. It is located at x341 y143. Or just locate iss in a Terminal."
-    engineer "Ĉu vi bezonas novan kosmoŝipon? Nur iru al la kosmoŝipa fabriko sur la Industria Superkosmo Stacio (ISS). Ĝi situas ĉe x341 y143. Aŭ simple tajpu 'locate iss' en terminalo."
+    engineer "Ĉu vi bezonas novan kosmoŝipon? Indas iri al la kosmoŝipa fabriko sur la Industria Superkosmo Stacio (ISS). Ĝi situas ĉe x341 y143. Aŭ simple tajpu 'locate iss' ĉe terminalo."
 
 # /home/vince/xy.rpyc:209
 translate esperanto xyspecialroom_52bdcf8b:
@@ -298,7 +298,7 @@ translate esperanto xyspecialroom_10a3a21f:
 translate esperanto xyspecialroom_d362c2ab:
 
     # oldminer "Are you looking for a job?? Go to the abandonned mine on that meteoroid. It is located at x210 y375. Or just locate meteoroid in a Terminal."
-    oldminer "Ĉu vi serĉas laboron?? Iru al la forlasita minejo sur Meteoroid'. Ĝi situas ĉe x210 y375. Aŭ simple tajpu 'locate meteoroid' ĉe la terminalo."
+    oldminer "Ĉu vi serĉas laboron?? Iru al la forlasita minejo sur Meteoroid'. Ĝi situas ĉe x210 y375. Aŭ simple tajpu 'locate meteoroid' ĉe terminalo."
 
 # /home/vince/xy.rpyc:218
 translate esperanto xyspecialroom_9789384d:
@@ -340,13 +340,13 @@ translate esperanto xymystguy_15e58219:
 translate esperanto xymystguy_3e7a3374:
 
     # "The barman is going out the Special Room."
-    "La trinkejisto eliras la Specialan Ĉambron."
+    "La kelnero eliras la Specialan Ĉambron."
 
 # /home/vince/xy.rpyc:246
 translate esperanto xymystguy_b70bae6d:
 
     # "The barman comes back with the drinks."
-    "La trinkejisto revenas kun la trinkaĵoj."
+    "La kelnero revenas kun la trinkaĵoj."
 
 # /home/vince/xy.rpyc:247
 translate esperanto xymystguy_9727060f:
@@ -388,19 +388,19 @@ translate esperanto xymystguy_ac23f087:
 translate esperanto xymystguy_10168c61:
 
     # mystguy "IO-net was a project to create a free network for everybody do share ideas and knowledge. It worked quite good until a group of scientists which was close to figure out a new source of free energy started to share information about it."
-    mystguy "IO-net-reto estis projekto por krei liberan reton cele al kundividi ideojn kaj sciojn. Ĝi funkciis tre bone ĝis grupo de sciencistoj, kiu estis eltrovonta novan fonton de libera energio, komencis kundividi informojn pri ĝi."
+    mystguy "IO-net-reto estis projekto por krei liberan reton cele al kundividi ideojn kaj sciojn. Ĝi funkciis tre bone ĝis grupo de sciencistoj, kiu estis eltrovonta novan liberan energifonton, komencis kundividi informojn pri ĝi."
 
 # /home/vince/xy.rpyc:255
 translate esperanto xymystguy_63731e0d:
 
     # mystguy "As soon as the governement heard about that, they started to be really annoying because they were scary to loose there power. They put all important scientists and freedom activists in prison, they turned off the IO-net and destroyed all the copies of the IO-net sofware."
-    mystguy "Kiam la homoj de la registaro aŭdis pri tio, ili komencis esti tre ĝenitaj, ĉar ili timis perdi sian povon. Ili enkarcerigis ĉiujn gravajn sciencistojn kaj proliberecajn aktivulojn en la malliberejo Prison', ili poste malŝaltis la IO-net-reton kaj detruis ĉiujn kopiojn de la IO-net-programo."
+    mystguy "Kiam la homoj de la registaro aŭdis pri tio, ili komencis esti tre ĝenitaj, ĉar ili timis perdi sian povon. Ili enkarcerigis ĉiujn gravajn sciencistojn kaj porliberecajn aktivulojn en la malliberejo Prison', ili poste malŝaltis la IO-net-reton kaj detruis ĉiujn kopiojn de la IO-net-programo."
 
 # /home/vince/xy.rpyc:256
 translate esperanto xymystguy_6e43b7ea:
 
     # mystguy "They don't want us to be free and they are trying to control everything. I think they want to figure out this new free energy and sell it to us later on."
-    mystguy "Ili ne volas ke ni estu liberaj kaj ili provas regadi ĉion. Mi pensas, ke ili volas eltrovi ĉi novan liberan energifonton kaj por povi vendi ĝin al ni poste."
+    mystguy "Ili ne volas ke ni estu liberaj kaj ili provas regadi ĉion. Mi pensas, ke ili volas eltrovi ĉi novan liberan energifonton por povi vendi energion al ni poste."
 
 # /home/vince/xy.rpyc:257
 translate esperanto xymystguy_29dde798:
@@ -412,7 +412,7 @@ translate esperanto xymystguy_29dde798:
 translate esperanto xymystguy_9804d39e:
 
     # mystguy "If somebody could reactivate all the IO-net computers it would be possible to figure out the new free energy before the governement. So we could stop them and build our own free and open-minded world!"
-    mystguy "Se iu povis aktivigi ĉiujn IO-net-komputilojn, eblus eltrovi la novan liberan energifonton antaŭ la registaro. Tiel, ni povus haltigi ilin kaj konstrui nian propran liberfaran kaj liberpensan mondon!"
+    mystguy "Se iu povus aktivigi ĉiujn IO-net-komputilojn, eblus eltrovi la novan liberan energifonton antaŭ la registaro. Tiel, ni povos haltigi ilin kaj konstrui nian propran liberfaran kaj liberpensan mondon!"
 
 # /home/vince/xy.rpyc:259
 translate esperanto xymystguy_15f77a96:
@@ -430,7 +430,7 @@ translate esperanto xymystguy_0d502091:
 translate esperanto xymystguy_74091b7c:
 
     # barman "Mhhh I don't know if I still have some... wait a minute, I'll have a look to our storage outside the bar."
-    barman "Hm, mi ne scias se mi ankoraŭ havas iujn... atendu momenton, mi rigardu en la stokejo ekster la trinkejo."
+    barman "Hm, mi ne scias ĉu mi ankoraŭ havas iujn... atendu momenton, mi rigardu en la stokejo ekster la trinkejo."
 
 # /home/vince/xy.rpyc:267
 translate esperanto xymystguy_93cd6f5e:
@@ -460,7 +460,7 @@ translate esperanto xymystguy_36a08b4a:
 translate esperanto xymystguy_71a98212:
 
     # m "No, sorry, maybe later..."
-    m "Ne, bedaŭras, eble poste..."
+    m "Ne, bedaŭrinde, eble poste..."
 
 # /home/vince/xy.rpyc:285
 translate esperanto xymystguy_ea70354b:
@@ -478,13 +478,13 @@ translate esperanto xykitchen_dd28ec0d:
 translate esperanto xykitchen_20dafc96:
 
     # m "The paper is old and it is difficult read it!"
-    m "La papero estas maljuna kaj estas malfacile legi ĝin!"
+    m "La papero estas maljuna kaj malfacilas legi ĝin!"
 
 # /home/vince/xy.rpyc:299
 translate esperanto xykitchen_32fc4761:
 
     # "...Rebel Alliance... special wares... Space Dealer... x280 y120..."
-    "... Ribela Alianco... specialaj komercaĵoj... kosma komercanto (dealer)... x280 y120..."
+    "... Ribela Alianco... specialaj komercaĵoj... komercanto Dealer'... x280 y120..."
 
 # /home/vince/xy.rpyc:300
 translate esperanto xykitchen_288c6b19:
@@ -508,15 +508,15 @@ translate esperanto strings:
 
     # game/xy.rpy:14
     old "go to the Bar"
-    new "iri al la trinkejo"
+    new "iri al la Trinkejo"
 
     # game/xy.rpy:14
     old "go to the Lift"
-    new "iri al la lifto"
+    new "iri al la Lifto"
 
     # game/xy.rpy:55
     old "go to the room behind the bar"
-    new "iri en la ĉambron malantaŭ la trinkejo"
+    new "iri en la ĉambron malantaŭ la verŝotablo"
 
     # game/xy.rpy:55
     old "talk to"
@@ -580,7 +580,7 @@ translate esperanto strings:
 
     # game/xy.rpy:203
     old "talk to the old mine worker"
-    new "paroli al la aĝa ministo"
+    new "paroli al la aĝa minlaboristo"
 
     # game/xy.rpy:203
     old "talk to the mysterious guy"
@@ -600,7 +600,7 @@ translate esperanto strings:
 
     # game/xy.rpy:242
     old "nothing, thanks"
-    new "nenio, dankon"
+    new "nenion, dankon"
 
     # game/xy.rpy:296
     old "read the paper"

@@ -15,7 +15,7 @@ translate esperanto distancemap_6f6e6fda:
 # /home/vince/solarsystem.rpyc:271
 translate esperanto distancemap_13160d80:
 
-    # "To access them, juste type locate planets in a terminal."
+    # "To access them, just type locate planets in a terminal."
     "Por vidigi ilin, simple tajpu 'locate planets' ĉe la Terminalo."
 
 translate esperanto strings:
@@ -42,5 +42,5 @@ translate esperanto strings:
 translate esperanto distancemap_5db604d0:
 
     # "To access them, juste type map in a terminal."
-    "Por vidigi ilin, simple tajpu 'map' ĉe terminalo."
+    "Por vidigi ilin, simple tajpu 'map' ĉe la Terminalo."
 

@@ -10,19 +10,19 @@ translate esperanto racestart_7a0ae844:
 translate esperanto racestart_6e5b2500:
 
     # capitain "Haha I knew that..."
-    capitain "Ha ha mi sciis tion..."
+    capitain "Ha ha mi antaŭsciis tion..."
 
 # /home/vince/race.rpyc:239
 translate esperanto race_86ad6293:
 
     # capitain "Hahaha you loosed the race! I knew that!"
-    capitain "Ha ha ha vi malvenkos la vetkuron! Mi sciis tion!"
+    capitain "Ha ha ha, vi malvenkos la vetkuron! Mi antaŭsciis tion!"
 
 # /home/vince/race.rpyc:243
 translate esperanto race_d42e552d:
 
     # capitain "Hahaha you lost the race! I knew that!"
-    capitain "Ha ha ha vi malvenkos la vetkuron! Mi sciis tion!"
+    capitain "Ha ha ha, vi malvenkos la vetkuron! Mi antaŭsciis tion!"
 
 # /home/vince/race.rpyc:248
 translate esperanto race_41c4e0a0:
@@ -44,7 +44,7 @@ translate esperanto strings:
 
     # game/race.rpy:69
     old "No sorry..."
-    new "Ne, dankon ..."
+    new "Ne, dankon..."
 
 # TODO: Translation updated at 2016-04-16 16:59
 
@@ -52,7 +52,7 @@ translate esperanto strings:
 translate esperanto race_d42e552d_1:
 
     # capitain "Hahaha you lost the race! I knew that!"
-    capitain "Ha ha ha vi malvenkos la vetkuron! Mi sciis tion!"
+    capitain "Ha ha ha, vi malvenkos la vetkuron! Mi antaŭsciis tion!"
 
 # TODO: Translation updated at 2016-04-18 01:03
 

@@ -10,13 +10,13 @@ translate esperanto trainstationmenu_960c75a7:
 translate esperanto trainstationmenu_7332866a:
 
     # "Ticket Office closed for Holydays. Please try another ticket reseller like Betria Colony Shop on the Industrial Space Station. Use the phone on the wall to call them."
-    "Bileta Oficejo fermita dum ferioj. Bonvolu provi alian biletrevendiston kiel la Betria-a Kolonia Butiko en la Industria Superkosmo Stacio. Uzu la telefonon ĉe la muro por alvoki ilin."
+    "Bileta Oficejo fermita dum ferioj. Bonvolu provi alian biletrevendiston kiel tiu de la Betria-a Kolonia Butiko en la Industria Superkosmo Stacio. Uzu la telefonon ĉe la muro por alvoki ilin."
 
 # /home/vince/train.rpyc:88
 translate esperanto trainstationmenu_0a77b084:
 
     # issbetria "Yes?"
-    issbetria "Jes?"
+    issbetria "Kion?"
 
 # /home/vince/train.rpyc:89
 translate esperanto trainstationmenu_72778b6b:
@@ -46,7 +46,7 @@ translate esperanto trainstationmenu_e63d578a:
 translate esperanto trainstationmenu_71dd2731:
 
     # "You got a train ticket to Fields Station!"
-    "Vi ricevis trajnbileton al la Kampoj-Stacidomo!"
+    "Vi ricevis trajnbileton al la Kampa Stacidomo!"
 
 # /home/vince/train.rpyc:128
 translate esperanto trainstationmenu_2224422c:
@@ -76,7 +76,7 @@ translate esperanto trainstationmenu_2224422c_1:
 translate esperanto trainstationmenu_71dd2731_1:
 
     # "You got a train ticket to Fields Station!"
-    "Vi ricevis trajnbileton al la Kampoj-Stacidomo!"
+    "Vi ricevis trajnbileton al la Kampa Stacidomo!"
 
 # /home/vince/train.rpyc:185
 translate esperanto trainstationmenu_324f8f5e_1:
@@ -100,7 +100,7 @@ translate esperanto trainstationmenu_e63d578a_2:
 translate esperanto trainstationmenu_71dd2731_2:
 
     # "You got a train ticket to Fields Station!"
-    "Vi ricevis trajnbileton al la Kampoj-Stacidomo!"
+    "Vi ricevis trajnbileton al la Kampa Stacidomo!"
 
 # /home/vince/train.rpyc:227
 translate esperanto trainstationmenu_324f8f5e_2:
@@ -208,19 +208,19 @@ translate esperanto btrain_29780e17:
 translate esperanto btrain_4057e3ed:
 
     # trainguy "We are the Rebel Alliance, we are a secret underground movement against the corrupt governement."
-    trainguy "Ni estas la Ribela Alianco, ni anas sekretan subgrundan movadon kontraŭ la koruptita registaro."
+    trainguy "Ni estas la Ribela Alianco, ni konstituas sekretan subgrundan movadon kontraŭ la koruptita registaro."
 
 # /home/vince/train.rpyc:383
 translate esperanto btrain_c0c7e7f3:
 
     # trainguy "I'm sure you've heard about IO-net Network already."
-    trainguy "Mi certas ke vi jam aŭdis pri la IO-net-reto."
+    trainguy "Mi certas, ke vi jam aŭdis pri la IO-net-reto."
 
 # /home/vince/train.rpyc:384
 translate esperanto btrain_77befa0c:
 
     # trainguy "We were the people behind the IO-net and the new free energy."
-    trainguy "Ni estas la personoj ellaborintaj la IO-net-reton kaj la novan liberan energion."
+    trainguy "Ni estas la personoj ellaborintaj la IO-net-reton kaj la novan liberan energifonton."
 
 # /home/vince/train.rpyc:385
 translate esperanto btrain_d094ca07:
@@ -232,7 +232,7 @@ translate esperanto btrain_d094ca07:
 translate esperanto btrain_b8402831:
 
     # trainguy "Now we want to rebuild it and get access to the new free energy before the governement."
-    trainguy "Nun ni volas rekonstrui ĝin kaj havi aliron al la nova libera energio, antaŭ la registaro."
+    trainguy "Nun, ni volas rekonstrui ĝin kaj havi aliron al la nova libera energifonto, antaŭ la registaro."
 
 # /home/vince/train.rpyc:387
 translate esperanto btrain_03d17af3:
@@ -286,7 +286,7 @@ translate esperanto btrain_37ede742:
 translate esperanto btrain_3ab6ee02:
 
     # trainguy "Go to the space dealer at x280, y120. I will tell him you are coming. He will give you the copy."
-    trainguy "Iru al la kosma komercanto (dealer) je x280, y120. Mi indikos al li ke vi venas. Li transdonos al vi la kopion."
+    trainguy "Iru al la kosma komercanto Dealer' je x280, y120. Mi indikos al li ke vi venas. Li transdonos al vi la kopion."
 
 # /home/vince/train.rpyc:409
 translate esperanto btrain_a9c949b1:
@@ -320,7 +320,7 @@ translate esperanto strings:
 
     # game/train.rpy:60
     old "buy a ticket"
-    new "aĉeti unu bileton"
+    new "aĉeti bileton"
 
     # game/train.rpy:86
     old "use the phone"
@@ -332,7 +332,7 @@ translate esperanto strings:
 
     # game/train.rpy:101
     old "to Fields Station"
-    new "al Kampoj-stacidomo"
+    new "al Kampa stacidomo"
 
     # game/train.rpy:101
     old "to Coast Station"
@@ -348,7 +348,7 @@ translate esperanto strings:
 
     # game/train.rpy:330
     old "I'm now part of the Rebel Alliance"
-    new "Mi nun estas parto de la Ribela Alianco"
+    new "Mi nun estas ano de la Ribela Alianco"
 
     # game/train.rpy:330
     old "sorry I don't want to talk"

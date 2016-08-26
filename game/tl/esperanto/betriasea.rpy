@@ -8,7 +8,7 @@ translate esperanto strings:
 
     # game/betriasea.rpy:89
     old "enter into the secret cave"
-    new "eniri la sekretan kavernon"
+    new "eniri en la sekreta kaverno"
 
     # game/betriasea.rpy:89
     old "go to the islands"

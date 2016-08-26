@@ -16,7 +16,7 @@ translate esperanto betriabar_ce820962:
 translate esperanto betriabar_181f53f0:
 
     # capitain "Good drinks?"
-    capitain "Cû bondrinkoj? "
+    capitain "Ĉu bondrinkoj? "
 
 # /home/vince/betria.rpyc:155
 translate esperanto betriabar_e32313d0:
@@ -70,7 +70,7 @@ translate esperanto betriabar_c12b1a94:
 translate esperanto betriabar_e2f26d71:
 
     # "The cap'tain shows you a point on the map. \nIt is in the square at x9, y7. "
-    "La kapitano montras punkton ĉe la mapo. \nĜi situas en pozicio x9, y7."
+    "La kapitano montras punkton ĉe la mapo. \nĜi situas ĉe pozicio x9, y7."
 
 # /home/vince/betria.rpyc:164
 translate esperanto betriabar_ef75a8fd:
@@ -88,7 +88,7 @@ translate esperanto betriabar_a7555e61:
 translate esperanto betriabar_b671805c:
 
     # capitain "The governement said this is a very dangerous zone. Nobody is allowed to go there."
-    capitain "La registaro diris ke ĉi tiu estas tre danĝera zono. Neniu rajtas tien."
+    capitain "La registaro diris ke ĉi tio estas zono tre danĝera. Neniu rajtas tien."
 
 # /home/vince/betria.rpyc:167
 translate esperanto betriabar_1ecfebeb:
@@ -124,7 +124,7 @@ translate esperanto betriabar_8a705d64:
 translate esperanto betriabar_106dab35:
 
     # capitain "But get some fresh air before you start hahahha."
-    capitain "Sed spiru iom da freŝa aero antaŭ komenci, ha ha ha."
+    capitain "Sed spiru iom da freŝa aero antaŭ ol komenci, ha ha ha."
 
 # /home/vince/betria.rpyc:174
 translate esperanto betriabar_f5f1ad38:
@@ -136,7 +136,7 @@ translate esperanto betriabar_f5f1ad38:
 translate esperanto betriabar_3bf09349:
 
     # "There a group of people at the tables and an old guy at the bar. He looks like he was a cap'tain. At the end of the room at a table there is a guy counting stones."
-    "Estas grupo da personoj ĉe tabloj kaj maljunulo ĉe la trinkejo. Tiu aspektas kvazaŭ eksa kapitano. Ĉe la fundo de la ĉambro, ĉe tablo, estas ulo nombranta ŝtonojn."
+    "Estas grupo de personoj ĉe tabloj kaj maljunulo ĉe la trinkejo. Tiu aspektas kvazaŭ eksa kapitano. Ĉe la fundo de la ĉambro, ĉe tablo, estas ulo nombranta ŝtonojn."
 
 # /home/vince/betria.rpyc:182
 translate esperanto betriabar_c5829cbf:
@@ -160,7 +160,7 @@ translate esperanto betriabar_9224a574:
 translate esperanto betriabar_f7f81725:
 
     # m "Yes that was good."
-    m "Jes ja bongustas."
+    m "Jes ja, bongustas."
 
 # /home/vince/betria.rpyc:191
 translate esperanto betriabar_18399c1f:
@@ -280,7 +280,7 @@ translate esperanto betriabar_e95d53fd:
 translate esperanto betriabar_128ddc1d:
 
     # capitain "Yes it's true, you won our race. Well done!"
-    capitain "Jes estas vera, vi venkis la vetkuron. Gratulojn!"
+    capitain "Jes, estas vera, vi venkis la vetkuron. Gratulojn!"
 
 # /home/vince/betria.rpyc:238
 translate esperanto betriabar_93dc9ab1:
@@ -298,7 +298,7 @@ translate esperanto betriabar_800310fc:
 translate esperanto betriabar_8a0a1191:
 
     # capitain "Near the Betria Coast there are some islands. There is a secret base with a door protected by a password key."
-    capitain "Proksime de la marbordo de Betria' estas insuloj. Tie estas sekreta bazo protektita de pordo ŝlosita de pasvorto."
+    capitain "Proksime de la marbordo de Betria' estas insuloj. Tie estas sekreta bazo protektita de pordo ŝlosita per pasvorto."
 
 # /home/vince/betria.rpyc:241
 translate esperanto betriabar_cbc8bed8:
@@ -376,7 +376,7 @@ translate esperanto betriabar_ff03e18e:
 translate esperanto betriabar_6172976a:
 
     # capitain "Let's meet in orbit of the Sun at x300 y300. And be ready hahaha!! "
-    capitain "Ni renkontiĝu en orbito de la Suno ĉe x300 y300. Kaj estu preta, ha ha ha !!"
+    capitain "Ni renkontiĝu en la orbito de la Suno ĉe x300 y300. Kaj estu preta, ha ha ha !!"
 
 # /home/vince/betria.rpyc:267
 translate esperanto betriabar_e53377a7:
@@ -406,19 +406,19 @@ translate esperanto betriabar_fdaef981:
 translate esperanto betriabar_55ad116b:
 
     # capitain "Let's meet at the Sun!"
-    capitain "Ni renkontiĝu ĉe la Suno!"
+    capitain "Ni renkontiĝu ĉirkaŭ la Suno!"
 
 # /home/vince/betria.rpyc:286
 translate esperanto betriabar_482ba85b:
 
     # stonesguy "I'm a stone collector. I'm just missing an Original Matar Stone. If you bring me one, I'll will give you a good price."
-    stonesguy "Mi estas ŝton-kolektanto. Al mi nur mankas la Originala Ŝtono el Matar'. Se vi alportos iun al mi, mi ricevos de mi bonan prezon."
+    stonesguy "Mi estas ŝton-kolektanto. Al mi nur mankas la Originala Ŝtono el Matar'. Se vi alportos iun al mi, vi ricevos de mi bonan prezon."
 
 # /home/vince/betria.rpyc:287
 translate esperanto betriabar_4ee7c07a:
 
     # stonesguy "Do you have one for me?"
-    stonesguy "Ĉu vi havas unu por mi?"
+    stonesguy "Ĉu vi havas iun por mi?"
 
 # /home/vince/betria.rpyc:291
 translate esperanto betriabar_c41e9a1e:
@@ -436,7 +436,7 @@ translate esperanto betriabar_c8d2bc53:
 translate esperanto betriabar_685de555:
 
     # stonesguy "Here I give you a good price for it. 100c!"
-    stonesguy "Jen vi ricevu bonan prezon por ĝi. 100 cendojn!"
+    stonesguy "Jen, vi ricevu bonan prezon por ĝi. 100 cendojn!"
 
 # /home/vince/betria.rpyc:297
 translate esperanto betriabar_db821b22:
@@ -472,7 +472,7 @@ translate esperanto barattable_d9c421cb:
 translate esperanto barattable_04b8d74b:
 
     # "The barman brings you a drink."
-    "La kelnero alportas al vi drinkaĵon."
+    "La kelnero alportas al vi trinkaĵon."
 
 # /home/vince/betria.rpyc:325
 translate esperanto barattable_18399c1f:
@@ -532,7 +532,7 @@ translate esperanto barattable_251fffd2:
 translate esperanto barattable_7459c972:
 
     # barman "That's the governement, sorry..."
-    barman "Postulas la registaro, pardonu..."
+    barman "Tion postulas la registaro, pardonu..."
 
 # /home/vince/betria.rpyc:339
 translate esperanto barattable_1cb340d7:
@@ -616,7 +616,7 @@ translate esperanto betriamount2_40ce6fa5:
 translate esperanto betriamount2_12ca68d3:
 
     # consguy "I'm working on the road construction site. We want to build a new road to the mountains, the fields and the city."
-    consguy "Mi laboras en la vojkonstruejo. Ni volas konstrui novan vojon ĝis la montaro, la kampoj kaj la urbo."
+    consguy "Mi laboras en la vojkonstruejo. Ni volas konstrui novan vojon ĝis la montaro, la kamparo kaj la urbo."
 
 # /home/vince/betria.rpyc:393
 translate esperanto betriamount2_b2f74649:
@@ -700,7 +700,7 @@ translate esperanto betriamount2_66b0e8af:
 translate esperanto betriamount2_6b5058b6:
 
     # mountguy "Hello. That was a good deal with you! Anytime again!"
-    mountguy "Saluton. Estis bona negoco kun vi! Espereble baldaŭ denove!"
+    mountguy "Saluton. Estis bone negoci kun vi! Espereble baldaŭ denove!"
 
 # /home/vince/betria.rpyc:429
 translate esperanto betriamount2_fdb65536:
@@ -712,7 +712,7 @@ translate esperanto betriamount2_fdb65536:
 translate esperanto betriamount3_39acabc8:
 
     # m "Oh there is 10c!"
-    m "Ho, jen estas 10 cendoj!"
+    m "Ho, jen 10 cendoj!"
 
 # /home/vince/betria.rpyc:451
 translate esperanto betriamount3_493c15d8:
@@ -742,7 +742,7 @@ translate esperanto betriamountlake_f08b9a22:
 translate esperanto betriamountlake_8362d52c:
 
     # "Property of the Fields Company. No entry. For any questions please visit us at the Fields House.\nHow to go there? We are at Column 0 Row 0 in the Fields. Or just go out the Fields Train Station and follow the rails to the west to the Fields House."
-    "Bieno de la Kampoj-firmao. Eniro malpermesita. Bonvolu faru viajn demandojn ĉe la Kampoj-ĉefdomo. \nKiel iri tien? Ni situas ĉe Kolumno 0 Vico 0 en la kampoj. Aŭ simple, el la Kampoj-stacidomo, sekvu la relojn okcidenten ĝis la Kampoj-ĉefdomo."
+    "Bieno de la Kampara Firmao. Eniro malpermesita. Bonvolu faru viajn demandojn ĉe la Kampara ĉefdomo. \nKiel iri tien? Ni situas ĉe Kolumno 0 Vico 0 en la kampoj. Aŭ simple, el la Kampoj-stacidomo, sekvu la relojn okcidenten ĝis la Kampoj-ĉefdomo."
 
 # /home/vince/betria.rpyc:673
 translate esperanto betriacoast1_39acabc8:
@@ -826,7 +826,7 @@ translate esperanto strings:
 
     # game/betria.rpy:76
     old "go to the bar"
-    new "iri al la verŝotablo"
+    new "iri al la trinkejo"
 
     # game/betria.rpy:96
     old "enter into the building"
@@ -1017,7 +1017,7 @@ translate esperanto betriabar_e8d27e4d:
 translate esperanto betriamount2_7ec6838b:
 
     # consguy "Here are 200c for the job. Thanks!"
-    consguy "Jen 200 cendoj por la laboro. Dankon!"
+    consguy "Jen 200 cendoj pro la laboro. Dankon!"
 
 # /home/vince/betria.rpyc:416
 translate esperanto betriamount2_f42ea9b7:

@@ -10,7 +10,7 @@ translate esperanto ioinstall_55bdfd3f:
 translate esperanto _call_ioupdate_71f6e38d:
 
     # "Welcome to IO-net!\n\nNode Status: Connected\nNodes in Network: [io_nodes]\n\nPlease enter ionet in a Terminal for more information."
-    "Bonvenon al IO-net!\n\nNoda Statuso: Konektita\nNodoj en Reto: [io_nodes]\n\nBonvolu tajpi 'ionet' en la Terminalo por ricevi pli da informoj."
+    "Bonvenon al IO-net!\n\nNoda Statuso: Konektita\nNodoj en Reto: [io_nodes]\n\nBonvolu tajpi 'ionet' en la Terminalo por ricevi pliajn informojn."
 
 # TODO: Translation updated at 2016-04-18 00:47
 
@@ -42,7 +42,7 @@ translate esperanto strings:
 
     # game/ionet.rpy:61
     old "Sending request\nfor Node ID..."
-    new "Sendanta peton\npor Nodo ID ..."
+    new "Sendanta peton\nal ID-Nodo..."
 
     # game/ionet.rpy:63
     old "Create Node..."

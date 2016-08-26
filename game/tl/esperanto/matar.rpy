@@ -4,7 +4,7 @@
 translate esperanto matar_588dbefa:
 
     # m "It's closed."
-    m "Fermita."
+    m "Estas fermita."
 
 # /home/vince/matar.rpyc:34
 translate esperanto matarwaste_7b812927:
@@ -16,7 +16,7 @@ translate esperanto matarwaste_7b812927:
 translate esperanto matarwaste_17d1032e:
 
     # m "Hoo there is a mine tool for digging!"
-    m "Ho jen fosilo!"
+    m "Ho, jen fosilo!"
 
 # /home/vince/matar.rpyc:43
 translate esperanto matarwaste_e41f1403:
@@ -28,7 +28,7 @@ translate esperanto matarwaste_e41f1403:
 translate esperanto matarwaste_f543207f:
 
     # m "Hoo there is a nice stone there. It looks like an original matar stone... ?"
-    m "Ho jen bela ŝtono. Aspektas kiel Originala Ŝtono el Matar', ĉu...?"
+    m "Ho, jen bela ŝtono. Aspektas kiel Originala Ŝtono el Matar', ĉu...?"
 
 # /home/vince/matar.rpyc:55
 translate esperanto matarwaste_76a0e7ce:
@@ -46,7 +46,7 @@ translate esperanto matarwaste_363278fc:
 translate esperanto matarshop_7e7049f5:
 
     # matarshop "Hey, what do you like to buy?\n\nMine Tool = 30c\nOriginal Matar Stone = 50c\nNavigation System = 200c"
-    matarshop "Hej, kion vi plaĉas aĉeti?\n\nFosilo = 30 cendoj\nOriginala Ŝtono el Matar' = 50 cendoj\nBirilo = 200 cendoj"
+    matarshop "Hej, kion al vi plaĉas aĉeti?\n\nFosilo = 30 cendoj\nOriginala Ŝtono el Matar' = 50 cendoj\nBirilo = 200 cendoj"
 
 # /home/vince/matar.rpyc:84
 translate esperanto matarshop_e41f1403:

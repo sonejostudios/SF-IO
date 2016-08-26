@@ -40,7 +40,7 @@ translate esperanto strings:
 
     # game/screens.rpy:335
     old "Empty Slot."
-    new "Malplena Ingo."
+    new "Malplena Memoringo."
 
     # game/screens.rpy:399
     old "Display"
@@ -96,7 +96,7 @@ translate esperanto strings:
 
     # game/screens.rpy:444
     old "Sound Volume"
-    new "Volumo de la Sonoj"
+    new "Sona Volumo"
 
     # game/screens.rpy:451
     old "Test"

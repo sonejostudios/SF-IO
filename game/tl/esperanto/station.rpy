@@ -40,7 +40,7 @@ translate esperanto stationshop_8e6cae69_2:
 translate esperanto issexpo_b3cc4ce8:
 
     # m "This look like an exposition where I can get some interesting information!"
-    m "Tio ŝajnas esti ekspozicio, kie mi povas ricevi interesajn informojn!"
+    m "Tio ŝajnas esti ekspozicio kie eblas ricevi interesajn informojn!"
 
 # /home/vince/station.rpyc:218
 translate esperanto issexpo_d291f949:
@@ -88,13 +88,13 @@ translate esperanto issexpo_6b9de275:
 translate esperanto issexpo_2ee07eeb:
 
     # issmatar "I will announce you, then you can go there anytime."
-    issmatar "Mi anoncu pri vi, tiel vi povas iam ajn iri tien."
+    issmatar "Mi anoncu pri vi, tiel vi rajtos iam ajn iri tien."
 
 # /home/vince/station.rpyc:237
 translate esperanto issexpo_2fb9b2ac:
 
     # issmatar "Just give your visitor number before landing."
-    issmatar "Nur indiku vian vizitantan numeron antaŭ ol surteriĝi."
+    issmatar "Nur indiku vian vizitantan numeron antaŭ ol surplanediĝi."
 
 # /home/vince/station.rpyc:238
 translate esperanto issexpo_307fbe24:
@@ -112,13 +112,13 @@ translate esperanto issexpo_c02a247c:
 translate esperanto issexpo_a166bb86:
 
     # issmatar "Yes, could be... let me think..."
-    issmatar "Jes, povus esti ... lasu min pensi ..."
+    issmatar "Jes, povus esti... lasu min pensi..."
 
 # /home/vince/station.rpyc:248
 translate esperanto issexpo_b3b82e1c:
 
     # issmatar "...I'm looking for someone who can bring me an original matar stone for the shop."
-    issmatar "... mi serĉas iun, kiu povas alporti al mi Originala Ŝtonon el Matar' por la butiko."
+    issmatar "... mi serĉas iun, kiu povas alporti al mi Originala Ŝtonon el Matar', por la butiko."
 
 # /home/vince/station.rpyc:249
 translate esperanto issexpo_29088274:
@@ -148,13 +148,13 @@ translate esperanto issexpo_70bdb334:
 translate esperanto issexpo_2f530528:
 
     # m "But a huge poster about the Betria Colony!"
-    m "Krom grandega afiŝo pri la Betria-a kolonio!"
+    m "Krom grandega afiŝo pri la Betria-a Kolonio!"
 
 # /home/vince/station.rpyc:265
 translate esperanto issexpo_39f3fd35:
 
     # "BETRIA and its Colony\n\nDo you want to have nice holydays?\nCome to the Betria Planet!\nYou will discover many amazing things! The Colony, the Fields, the Mountains, the Sea, the Train, and many more!\nTo come to us just find the fastest way to x402 y242, or just locate betria in the Terminal!\nIf you need a ticket to travel around betria, just ask us.\nSee you soon on Betria!"
-    "BETRIA' kaj ĝia Kolonio\n\nĈu vi ŝatas belajn feriojn?\nVenu al la Betria-a Planedo!\nVi malkovros multajn mirindaĵojn! La Kolonio, la Kampoj, la Montoj, la Maro, la Trajno, kaj multe pli!\nPor veni ĉe ni nur trovu la plej rapidan vojon al x402 y242, aŭ simple tajpu 'locate betria' ĉe la Terminalo!\nSe vi bezonas bileton por vojaĝi ĉirkaŭ Betria', simple demandu al ni.\nĜis baldaŭ sur Betria'!"
+    "BETRIA' kaj ĝia Kolonio\n\nĈu vi ŝatas belajn feriojn?\nVenu al la Betria-a Planedo!\nVi malkovros multajn mirindaĵojn! Estas la Kolonio, la Kampoj, la Montoj, la Maro, la Trajno, kaj multe pli!\nPor veni ĉe ni nur trovu la plej rapidan vojon al x402 y242, aŭ simple tajpu 'locate betria' ĉe la Terminalo!\nSe vi bezonas bileton por vojaĝi ĉirkaŭ Betria', simple demandu al ni.\nĜis baldaŭ sur Betria'!"
 
 # /home/vince/station.rpyc:270
 translate esperanto issexpo_81a5df1a:
@@ -184,7 +184,7 @@ translate esperanto issexpo_644827eb:
 translate esperanto issexpo_8b03a2a3:
 
     # "You got a train ticket to Betria's Fields!"
-    "Vi ricevas trajn-bileton por la Kampoj de Betria'!"
+    "Vi ricevas trajn-bileton al la Kampoj de Betria'!"
 
 # /home/vince/station.rpyc:290
 translate esperanto issexpo_530fb6b8:
@@ -204,7 +204,7 @@ translate esperanto strings:
 
     # game/station.rpy:12
     old "go to the Warehouse"
-    new "irui al la Stokejo"
+    new "iri al la Stokejo"
 
     # game/station.rpy:12
     old "go down"
@@ -212,15 +212,15 @@ translate esperanto strings:
 
     # game/station.rpy:80
     old "buy SD-02"
-    new "aĉeti je SD-02"
+    new "aĉeti SD-02-n"
 
     # game/station.rpy:80
     old "buy IO-1"
-    new "aĉeti je IO-1"
+    new "aĉeti IO-1-n"
 
     # game/station.rpy:80
     old "buy SF-3"
-    new "aĉeti je SF-03"
+    new "aĉeti SF-03-n"
 
     # game/station.rpy:80
     old "show next ship"
@@ -324,5 +324,4 @@ translate esperanto strings:
 translate esperanto issexpo_ab359cf5:
 
     # "BETRIA and its Colony\n\nDo you want to have nice holidays?\nCome to the Betria Planet!\nYou will discover many amazing things! The Colony, the Fields, the Mountains, the Sea, the Train, and many more!\nTo come to us just find the fastest way to x402 y242, or just locate betria in the Terminal!\nIf you need a ticket to travel around betria, just ask us.\nSee you soon on Betria!"
-    "BETRIA kaj ĝia Kolonio\n\nĈu vi volas havi belajn feriojn?\nVenu al la Betria Planedo!\nVi malkovros multajn mirindajn aferojn! La Kolonio, la Kampoj, la Montoj, la Maro, la Trajno, kaj multaj pli!\nPor venu al ni nur trovas la plej rapida vojo al x402 y242, aŭ simple locate betria en la Terminalo!\nSe vi bezonas bileton por vojaĝi ĉirkaŭ Betria, simple demandu al ni.\nĜis baldaŭ sur Betria!"
-
+    "BETRIA' kaj ĝia Kolonio\n\nĈu vi ŝatus belajn feriojn?\nVenu al la Betria-a Planedo!\nVi malkovros multajn mirindaĵojn! Estas la Kolonio, la Kampoj, la Montoj, la Maro, la Trajno kaj multe pli!\nPor veni ĉe ni, trovu la plej rapidan vojon al x402 y242, aŭ simple tajpu 'locate betria' ĉe la Terminalo!\nSe vi bezonas bileton por vojaĝi ĉirkaŭ Betria', demandu al ni.\nĜis baldaŭ sur Betria'!"

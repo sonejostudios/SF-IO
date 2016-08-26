@@ -4,13 +4,13 @@
 translate esperanto spaceship_7e506960:
 
     # m "Maybe I should go to Planet XY now..."
-    m "Eble mi devus iri al Planedo XY nun ..."
+    m "Eble mi devus iri al Planedo XY nun..."
 
 # /home/vince/script.rpyc:591
 translate esperanto spaceship_7789ef50:
 
     # m "Oh nice, the spaceship destination is already set to Planet XY!"
-    m "Ho bonega, la kosmoŝipa direkto estas jam agordita al Planedo XY!"
+    m "Ho bonege, la kosmoŝipa direkto estas jam agordita al Planedo XY!"
 
 # /home/vince/script.rpyc:592
 translate esperanto spaceship_a3659783:
@@ -28,7 +28,7 @@ translate esperanto spaceship_b2a7487a:
 translate esperanto takeoff_09c183b8:
 
     # m "The winds are to strong to land with this space ship..."
-    m "La ventoj estas tro fortaj por surterigi ĉi kosmoŝipon..."
+    m "La ventoj estas tro fortaj por surplanedigi ĉi kosmoŝipon..."
 
 # /home/vince/script.rpyc:1128
 translate esperanto orbitview_f9e85c2a:
@@ -57,8 +57,8 @@ translate esperanto orbitmenu_b1117673:
 # /home/vince/script.rpyc:1251
 translate esperanto orbitmenu_2ca19e4c:
 
-    # "Landing Authorisation granted."
-    "Surteriĝa permeso konsentita."
+    # "Landing Autorisation granted."
+    "Surplanediĝa permeso konsentita."
 
 # /home/vince/script.rpyc:1258
 translate esperanto orbitmenu_6dad9157:
@@ -69,26 +69,26 @@ translate esperanto orbitmenu_6dad9157:
 # /home/vince/script.rpyc:1259
 translate esperanto orbitmenu_80cb32d5:
 
-    # "Landing Authorisation denied."
-    "Surteriĝa permeso rifuzita."
+    # "Landing Autorisation denied."
+    "Surplanediĝa Permeso rifuzita."
 
 # /home/vince/script.rpyc:1262
 translate esperanto orbitmenu_80cb32d5_1:
 
-    # "Landing Authorisation denied."
-    "Surteriĝa Permeso rifuzita."
+    # "Landing Autorisation denied."
+    "Surplanediĝa Permeso rifuzita."
 
 # /home/vince/script.rpyc:1266
 translate esperanto orbitmenu_2ca19e4c_1:
 
-    # "Landing Authorisation granted."
+    # "Landing Autorisation granted."
     "Surteriĝa Permeso konsentita."
 
 # /home/vince/script.rpyc:1326
 translate esperanto spaceport_e5ca2a2a:
 
     # m "Haaaaaa..... I can't breath here I need a space suit!!"
-    m "Haaaaaa..... Mi ne povas spiri ĉi tie mi bezonas kosmokombineon!!"
+    m "Haaaaaa..... Mi ne povas spiri ĉi tie, mi bezonas kosmokombineon!!"
 
 translate esperanto strings:
 
@@ -142,7 +142,7 @@ translate esperanto strings:
 
     # game/script.rpy:612
     old "Set to Right Camera"
-    new "Ŝalti tribordan filmilo"
+    new "Ŝalti tribordan filmilon"
 
     # game/script.rpy:692
     old "Go in Orbit of Prison"
@@ -205,8 +205,8 @@ translate esperanto strings:
     new "Skani denove"
 
     # game/script.rpy:1230
-    old "Ask for Landing Authorisation"
-    new "Peti pri Surteriĝa Permeso"
+    old "Ask for Landing Autorisation"
+    new "Peti pri Surplanediĝa Permeso"
 
     # game/script.rpy:1241
     old "Try Landing"
@@ -218,15 +218,15 @@ translate esperanto strings:
 
     # game/script.rpy:1248
     old "Tralalilalu?"
-    new "Tralalilalu?"
+    new "Tralalilalu"
 
     # game/script.rpy:1252
     old "Start Landing"
-    new "Komenci Surteriĝon"
+    new "Komenci Surplanediĝon"
 
     # game/script.rpy:1442
     old "Take off"
-    new "Elteriĝi"
+    new "Ekflugi"
 
     # game/script.rpy:1442
     old "Enter into the Prison"
@@ -234,23 +234,23 @@ translate esperanto strings:
 
     # game/script.rpy:1442
     old "Enter into the Space Base of Planet XY"
-    new "Eniri en la Kosma Bazo de Planedo XY"
+    new "Eniri en la Kosmobazo de Planedo XY"
 
     # game/script.rpy:1442
     old "Enter into the Mine of Meteoroid 539"
-    new "Eniri en la mino de la Meteoroid' 539"
+    new "Eniri en la Mino de la Meteoroid' 539"
 
     # game/script.rpy:1442
     old "Enter into the Betria Colony"
-    new "Eniri en kolonio de Betria'"
+    new "Eniri en la Kolonio de Betria'"
 
     # game/script.rpy:1442
     old "Enter into the Mine Station of Matar"
-    new "Eniri en la mina stacidomo de Matar'"
+    new "Eniri en la Mina Stacio de Matar'"
 
     # game/script.rpy:1442
     old "Enter into the Research Station of Polaris"
-    new "Eniri en la Esplora Stacidomo de Polaris'"
+    new "Eniri en la Esplora Stacio de Polaris'"
 
     # game/script.rpy:1442
     old "Enter into the Industrial Space Station"
@@ -330,7 +330,7 @@ translate esperanto strings:
 
     # game/script.rpy:1370
     old "METEOROID\n539\nSPACEPORT"
-    new "KOSMOHAVENO\nDE\nMETEOROID' \n539"
+    new "KOSMOHAVENO\nDE METEOROID' \n539"
 
     # game/script.rpy:1384
     old "BETRIA\nSPACEPORT"
@@ -366,7 +366,7 @@ translate esperanto strings:
 
     # game/script.rpy:263
     old "Space Dealer"
-    new "Kosma Komercisto"
+    new "Komercisto Dealer'"
 
     # game/script.rpy:264
     old "Barman"
@@ -437,16 +437,48 @@ translate esperanto strings:
 # /home/vince/script.rpyc:1255
 translate esperanto orbitmenu_91afe165:
 
-    # "This is a valid visitor number. Welcome to Matar Mines! \nLanding Authorisation granted."
-    "Tiu estas valida vizitanto nombro. Bonvenon al Matar Minoj! \nSurteriĝa permeso konsentita."
+    # "This is a valid visitor number. Welcome to Matar Mines! \nLanding Autorisation granted."
+    "Tiu estas valida vizitanto nombro. Bonvenon al Matar Minoj! \nSurplanediĝa Permeso konsentita."
 
 # /home/vince/script.rpyc:1263
 translate esperanto orbitmenu_1a66e54d:
 
+    # "This is not a valid visitor number, sorry. \nLanding Autorisation denied."
+    "Tiu ne estas valida vizitanto nombro, pardonu. \nSurplanediĝa Permeso malkonsentita."
+
+
+
+# TODO: Translation updated at 2016-08-26 20:45
+
+# /home/vince/script.rpyc:1255
+translate esperanto orbitmenu_6b415819:
+
+    # "This is a valid visitor number. Welcome to Matar Mines! \nLanding Authorisation granted."
+    "Tiu estas valida vizitanto nombro. Bonvenon al Matar Minoj! \nSurplanediĝa Permeso konsentita."
+
+# /home/vince/script.rpyc:1263
+translate esperanto orbitmenu_0352cb15:
+
     # "This is not a valid visitor number, sorry. \nLanding Authorisation denied."
-    "Tiu ne estas valida vizitanto nombro, pardonu. \nSurteriĝa permeso malkonsentita."
+    "Tiu ne estas valida vizitanto nombro, pardonu. \nSurplanediĝa Permeso malkonsentita."
+
+# /home/vince/script.rpyc:1267
+translate esperanto orbitmenu_92f359f3:
+
+    # "Landing Authorisation denied."
+    "Surplanediĝa Permeso malkonsentita."
+
+# /home/vince/script.rpyc:1272
+translate esperanto orbitmenu_5d41fd22:
+
+    # "Landing Authorisation granted."
+    "Surplanediĝa Permeso konsentita."
 
 translate esperanto strings:
+
+    # game/script.rpy:1229
+    old "Ask for Landing Authorisation"
+    new "Peti pri Surplanediĝa Permeso"
 
     # game/script.rpy:277
     old "Construcion Worker"

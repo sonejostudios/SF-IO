@@ -4,7 +4,7 @@
 translate esperanto bfields_a0794b9d:
 
     # m "At some places they are still some vegetables left... Maybe I could collect them?"
-    m "En iuj lokoj ankoraŭ restas legomojn... Eble mi povus kolekti ilin?"
+    m "En iuj lokoj ankoraŭ restas legomoj... Eble mi povus kolekti ilin?"
 
 # /home/vince/betriafields.rpyc:153
 translate esperanto _call_robotback_3_088159e6:
@@ -22,37 +22,37 @@ translate esperanto bfieldsmenu_b9fbe247:
 translate esperanto bfieldsmenu_909694ed:
 
     # "You got 1kg of food!\n\nYour food balance is [food] kg."
-    "Vi havas 1 kg-n da manĝaĵo!\n\nVia kvanto de manĝaĵo estas [food] kg."
+    "Vi havas 1 kg-n da manĝaĵo!\n\nVia kvanto da manĝaĵo estas [food] kg."
 
 # /home/vince/betriafields.rpyc:204
 translate esperanto bfieldsmenu_d1d591d1:
 
     # "You are at Field Junction: Column [desertx], Row [deserty].\n\nTo the Train Station:\nFollow the rails to the east."
-    "Vi situas ĉe Kampoj-Vojkruciĝo: Kolumno [desertx], Vico [deserty].\n\nAl la Trajna Stacidomo:\nSekvu la relojn orienten."
+    "Vi situas ĉe Kampara Vojkruciĝo: Kolumno [desertx], Vico [deserty].\n\nAl la Trajna Stacidomo:\nSekvu la relojn orienten."
 
 # /home/vince/betriafields.rpyc:207
 translate esperanto bfieldsmenu_0bba8efc:
 
     # "You are at Field Junction: Column [desertx], Row [deserty].\n\nTo the Fields House:\nFollow the rails to the west."
-    "Vi situas ĉe Kampoj-Vojkruciĝo: Kolumno [desertx], Vico [deserty].\n\nAl Kampoj-domo:\nSekvu la relojn okcidenten."
+    "Vi situas ĉe Kampara Vojkruciĝo: Kolumno [desertx], Vico [deserty].\n\nAl Kampara Domo:\nSekvu la relojn okcidenten."
 
 # /home/vince/betriafields.rpyc:210
 translate esperanto bfieldsmenu_69a25d31:
 
     # "You are at Field Junction: Column [desertx], Row [deserty]."
-    "Vi situas ĉe Kampoj-Vojkruciĝo: Kolumno [desertx], Vico [deserty]."
+    "Vi situas ĉe Kampara Vojkruciĝo: Kolumno [desertx], Vico [deserty]."
 
 # /home/vince/betriafields.rpyc:285
 translate esperanto bfieldshouse_cb633d1b:
 
     # "There is not that much, only a field engineer working at some control machines."
-    "Ne estas multe, estas nur iu kampa inĝeniero kiu laboras per kontrolaj maŝinoj."
+    "Ne estas multe, estas nur iu kampa inĝeniero kiu laboras ĉe kontrolaj maŝinoj."
 
 # /home/vince/betriafields.rpyc:299
 translate esperanto bfieldshouse_4f8efb71:
 
     # bfhguy "Nice! I see they are on their way back to me."
-    bfhguy "Nice! Mi vidas ke ili survojas reen al mi."
+    bfhguy "Hura! Mi vidas ke ili survojas reen al mi."
 
 # /home/vince/betriafields.rpyc:300
 translate esperanto bfieldshouse_7cdf684e:
@@ -208,7 +208,7 @@ translate esperanto bfieldshouse_51a3d795:
 translate esperanto bfieldshouse_39acabc8:
 
     # m "Oh there is 10c!"
-    m "Ho jen 10 cendoj!"
+    m "Ho, jen 10 cendoj!"
 
 # /home/vince/betriafields.rpyc:362
 translate esperanto bfieldshouse_a5fbd96b:
@@ -250,27 +250,27 @@ translate esperanto strings:
 
     # game/betriafields.rpy:167
     old "read signs"
-    new "legi signojn"
+    new "legi panelon"
 
     # game/betriafields.rpy:167
     old "go into the fields house"
-    new "iri en la kampa domo"
+    new "iri en la kampara domo"
 
     # game/betriafields.rpy:287
     old "talk to the field engineer"
-    new "paroli al la kampa inĝeniero"
+    new "paroli al la kampara inĝeniero"
 
     # game/betriafields.rpy:287
     old "talk to the satisfied field engineer"
-    new "paroli al la kontenta kampa inĝeniero"
+    new "paroli al la kontenta kampara inĝeniero"
 
     # game/betriafields.rpy:287
     old "talk to the very satisfied field engineer"
-    new "paroli al la tre kontenta kampa inĝeniero"
+    new "paroli al la tre kontenta kampara inĝeniero"
 
     # game/betriafields.rpy:287
     old "talk to the very very satisfied field engineer"
-    new "paroli al la treege kontenta kampa inĝeniero"
+    new "paroli al la treege kontenta kampara inĝeniero"
 
     # game/betriafields.rpy:287
     old "look under the control machines"
@@ -278,7 +278,7 @@ translate esperanto strings:
 
     # game/betriafields.rpy:297
     old "I sent all robots back to you"
-    new "Mi sendis ĉiujn robotojn reen al vi"
+    new "mi sendis ĉiujn robotojn reen al vi"
 
     # game/betriafields.rpy:317
     old "yes, sure"

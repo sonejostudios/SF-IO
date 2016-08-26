@@ -24,7 +24,7 @@ translate esperanto strings:
 
     # renpy/common/00library.rpy:248
     old "This program contains free software under a number of licenses, including the MIT License and GNU Lesser General Public License. A complete list of software, including links to full source code, can be found {a=https://www.renpy.org/l/license/}here{/a}."
-    new "Ĉi programo entenas liberfontan kodon disponebla laŭ pluraj permesiloj, inkluzive la MIT-permesilon kaj la GNU Lesser General Public License-permesilon. Kompleta listo de programoj, inkluzive ligilojn al la tuta fontkodo, troviĝas ĉe {a=https://www.renpy.org/l/license/}ĉi paĝo{/a}."
+    new "Ĉi programo entenas liberfontan kodon disponebla laŭ pluraj permesiloj, inkluzive la MIT-permesilon kaj la 'GNU Lesser General Public License'-permesilon. Kompleta listo de programoj, inkluzive ligilojn al la tuta fontkodo, troviĝas ĉe {a=https://www.renpy.org/l/license/}ĉi paĝo{/a}."
 
 # TODO: Translation updated at 2016-04-16 01:27
 
@@ -44,7 +44,7 @@ translate esperanto strings:
 
     # renpy/common/00layout.rpy:453
     old "Loading will lose unsaved progress.\nAre you sure you want to do this?"
-    new "Ŝargo forigos ne konservitan progreson.\nĈu vi certas pri fari tion?"
+    new "Ŝarĝo forigos ne konservitan progreson.\nĈu vi certas pri fari tion?"
 
     # renpy/common/00layout.rpy:454
     old "Are you sure you want to quit?"
@@ -132,7 +132,7 @@ translate esperanto strings:
 
     # renpy/common/00console.rpy:488
     old "unwatch <expression>: stop watching an expression"
-    new "ĉesi rigardi <expresssion>: ĉesirigardi esprimon"
+    new "ĉesi rigardi <expresssion>: ĉesi rigardi esprimon"
 
     # renpy/common/00console.rpy:514
     old "unwatchall: stop watching all expressions"
@@ -620,7 +620,7 @@ translate esperanto strings:
 
     # renpy/common/_developer/developer.rpym:81
     old "Show Image Load Log"
-    new "Montri Ŝargan Protokolon pri Bildoj"
+    new "Montri Ŝarĝan Protokolon pri Bildoj"
 
     # renpy/common/_developer/developer.rpym:84
     old "Hide Image Load Log"
